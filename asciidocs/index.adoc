@@ -20,3 +20,7 @@ ifdef::backend-html5[]
 == Pflichtenheft
 
 <<pflichtenheft.adoc#, Pflichtenheft öffnen>>
+
+== Usecase Diagram
+
+<<usecases.adoc#, Usecase Diagram>>
