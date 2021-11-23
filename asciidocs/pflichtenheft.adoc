@@ -20,19 +20,24 @@ endif::backend-html5[]
 // print the toc here (not at the default position)
 //toc::[]
 
-== Beschreibung der Ausgangssituation
+== Description of the initial situation
+- The HTBLA - Leonding would like to create a one-question-survey
+for its students and/or employees.
 
+== Current state
+- Currently we do not have a "doodle-like" survey site.
 
-== Istzustand
+== Problem definition
+- At this point in time we can't create a short survey which displays
+the votes/answers.
 
+== Assignment
+- Creation of a Web App application with which it is possible to create a
+simple survey. Afterwards the survey can be evaluated.
 
-== Problemstellung
+=== Functional Demands
 
-== Aufgabenstellung
-
-=== Funktionale Anforderungen
-
-====  Anwendungsfalldiagramm (Use-Case-Diagram)
+==== Use-Case-Diagram
 
 
 .leoQuest usecase diagram
@@ -57,10 +62,6 @@ u1 --> UC4
 @enduml
 ----
 
-== Zielsetzung
-
-* Der reibungslose Ablauf eines Events
-
-== Mengengerüst
-
+== Goal
+- User can create a survey and evaluate the answers.
 
