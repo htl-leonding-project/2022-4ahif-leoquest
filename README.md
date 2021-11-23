@@ -6,9 +6,8 @@ With Leo-quest you can create an online survey.
 Abazovic Edina  (PL), Bogdan Sebastijan, 
 (Binder Paul, Plakolb Marcel)
 
-## Github repo:
+## Github-Repo:
 https://github.com/htl-leonding-project/2022-4ahif-leoquest.git
 
-## Github pages: 
+## Github-Pages: 
 https://htl-leonding-project.github.io/2022-4ahif-leoquest
-
