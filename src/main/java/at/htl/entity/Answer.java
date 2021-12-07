@@ -6,14 +6,6 @@ import javax.inject.Inject;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
-/*
-@NamedQueries({
-        @NamedQuery(
-                name = "A.findByUser",
-                query = "SELECT a FROM Answer a WHERE a.userName LIKE :USERNAME AND a.answerOption.survey.id = :ID"
-        )
-})
-*/
 
 @Entity
 @Table(name = "LD_ANSWER")
