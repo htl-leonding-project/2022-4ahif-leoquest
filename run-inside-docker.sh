@@ -1,13 +1,12 @@
 set -e
 BUILD_DIR="gh-pages"
 echo "BUILD_DIR->${BUILD_DIR}"
-[ -d $BUILD_DIR ] && rm -r $BUILD_DIR  # remove dir, if existing
 OLD=${PWD}
 echo "OLD->${OLD}"
 docker run --rm \
            -v ${PWD}:/documents \
            --env-file ./.env \
-           asciidoctor/docker-asciidoctor:1.11.0  /bin/bash -c "/documents/publish-gh-pages-inside-docker.sh"
+           asciidoctor/docker-asciidoctor:1.2.0  /bin/bash -c "/documents/publish-gh-pages-inside-docker.sh"
            #asciidoctor/docker-asciidoctor:1.2.0  /bin/bash -c "/documents/build-html-docker-inside-docker.sh"
 cd $PWD/$BUILD_DIR
 CURRENT_FOLDER=${PWD}
