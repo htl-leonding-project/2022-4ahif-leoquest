@@ -25,7 +25,8 @@ endif::backend-html5[]
 for its students and/or employees.
 
 == Current state
-- Currently we do not have a "doodle-like" survey site.
+- We want to create a short one question survey, but currently
+we do not have a "doodle-like" survey site.
 
 == Problem definition
 - At this point in time we can't create a short survey which displays
