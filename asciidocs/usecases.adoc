@@ -4,18 +4,21 @@
 @startuml
 left to right direction
 
-actor "User 1" as u1
+actor "user" as u1
+actor "admin" as a1
 
 rectangle "LeoQuest" {
     usecase "Create Survey" as UC1
     usecase "Vote" as UC2
     usecase "Assign Members" as UC3
-    usecase "Evaluate Results" as UC4
+    usecase "Evaluate Results/Close Survey" as UC4
+    usecase "View Survey" as UC5
 }
-u1 --> UC1
+a1 --> UC1
 u1 --> UC2
-u1 --> UC3
-u1 --> UC4
+a1 --> UC3
+a1 --> UC4
+u1 --> UC5
 
 @enduml
 ----
