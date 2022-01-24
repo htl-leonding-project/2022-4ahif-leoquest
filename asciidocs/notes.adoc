@@ -1,0 +1,21 @@
+bis 24.01
+Bogdan: Github-pages/ Youtrack updaten
+Edina: D3.js demo
+
+files eingelesen
+info aus dem header auslesen und durchlaufen
+2x mal stream machen
+
+nur mit der klasse files arbeiten
+stream bekommt man
+clients.get kriegt man die erste zeile
+
+files.lines
+
+api kommt
+qute
+js
+
+kleiner algorithmus
+
+von null an aufsetzten
