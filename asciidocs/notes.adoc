@@ -1,21 +1,13 @@
-bis 24.01
-Bogdan: Github-pages/ Youtrack updaten
-Edina: D3.js demo
+Task register
 
-files eingelesen
-info aus dem header auslesen und durchlaufen
-2x mal stream machen
+bis 24.01:
 
-nur mit der klasse files arbeiten
-stream bekommt man
-clients.get kriegt man die erste zeile
+- Bogdan: Github-pages
 
-files.lines
+- Edina: D3.js demo/ Youtrack updaten (erledigt)
 
-api kommt
-qute
-js
+bis 25.01:
 
-kleiner algorithmus
+- Edina: edit pflichtenheft.adoc
 
-von null an aufsetzten
+
