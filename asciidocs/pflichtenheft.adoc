@@ -25,18 +25,25 @@ endif::backend-html5[]
 for its students and/or employees.
 
 == Current state
-- A survey demo is available
+- Paper polls/ no polls
 
 
 == Problem definition
 - At this point in time we can't create a short survey which displays
-the votes/answers.
+the votes.
 
 == Assignment
 - Creation of a Web App application with which it is possible to create a
 simple survey. Afterwards the survey can be evaluated.
 
-=== Functional Demands
+=== Functional Demands / Use-cases
+
+- Admin can create a survey
+- Admin can invite/assign members to survey
+- Admin can close survey
+- Admin can view statistics
+- User can vote
+- User can view results
 
 ==== Use-Case-Diagram
 
@@ -68,5 +75,19 @@ u2 --> UC4
 ----
 
 == Goal
-- User can create a survey and evaluate the answers.
+- Every use case needs to be fulfilled. User can create a survey and evaluate the answers.
+
+== Framework
+
+IDE: Intellij
+
+Programming Languages: Java
+
+Database language:
+https://www.postgresql.org/[postgresql-DB]
+
+VCS:
+https://github.com/htl-leonding-project/2022-4ahif-leoquest[GitHub]
+
+Organization: https://vm81.htl-leonding.ac.at/projects/3a20a750-7b76-4121-a4a6-c488b62fb0d3[YouTrack]
 
