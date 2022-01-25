@@ -51,5 +51,5 @@ Binder, Abazovic#
 
 ---
 
-= Offene Fragen:
+== Offene Fragen:
 - Wie verknüpft man commits mit Youtrack?
