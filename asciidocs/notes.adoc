@@ -1,14 +1,49 @@
-Task register
+= Task register
+geführt von Abazovic Edina
+1.1.0, 2021-01-25: Documentation
 
-bis 24.01:
+=== bis 24.01:
 
-- Bogdan: Github-pages
+- Bogdan:
+* [ ] Github-pages
 
-- Edina: D3.js demo/ Youtrack updaten (erledigt)
+- Abazovic:
+* [*] D3.js demo erstellen
+* [*] Youtrack auf den neusten Stand updaten,
+nach Änderung der Use-cases
 
-bis 25.01:
+-
 
-- Edina: edit pflichtenheft.adoc, survey-formular
-https://form.jotform.com/220232242102332[Layout]
+=== 24.01 Stundenprotokoll:
+
+- Anwesend:
+Binder, Abazovic
+
+==== Abazovic:
+- Testen der D3.js demo und ändern von DateType auf String (barchart.html)
+- erstellen des Demo-Layouts des Frageformulars:
+https://form.jotform.com/220232242102332[JotForm Layout]
 
 
+=== bis 25.01:
+
+- Abazovic:
+* [*] pflichtenheft.adoc bearbeiten
+* [*] survey-formular layout entwerfen
+
+-
+
+=== 25.01 Stundenprotokoll
+
+- Anwesend:
+Binder, Abazovic
+
+==== Abazovic:
+
+-
+
+
+- - -
+
+= Offene Fragen:
+- Wie verknüpft man commits mit Youtrack?
