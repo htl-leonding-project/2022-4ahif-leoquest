@@ -42,6 +42,8 @@ Binder, Abazovic#
 
 ==== Abazovic:
 * Protokoll überarbeiten
+* survey-layout.html erstellt
+* php/html csv einlesen und erstellen
 
 === _bis 31.01:_
 
@@ -53,3 +55,7 @@ Binder, Abazovic#
 
 == Offene Fragen:
 - Wie verknüpft man commits mit Youtrack?
+bzw. ist es richtig gemacht worden
+- Wie liest man die Daten des forms in ein csv ein
+- wie benutzt man einen Text aus einem csv
+als Titel im html
