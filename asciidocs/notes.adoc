@@ -1,6 +1,6 @@
 = [big]#Task register#
 geführt von Abazovic Edina
-1.1.0, 2021-01-25: Documentation
+1.1.1, 2021-01-25: Documentation
 
 
 
@@ -48,8 +48,8 @@ Binder, Abazovic#
 === _bis 31.01:_
 
 - Abazovic:
-* noch ausstehend
-
+* pflichtenheft überarbeiten
+* über php informieren
 
 ---
 
