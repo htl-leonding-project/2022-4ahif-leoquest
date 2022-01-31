@@ -78,6 +78,7 @@ Back-end wie bei https://github.com/htl-leonding-project/questionz/blob/master/D
 - Wie verknüpft man commits mit Youtrack?
 bzw. ist es richtig gemacht worden
 
+dshhs
 ===== für später:
 - Wie liest man die Daten des forms in ein csv ein
 - wie benutzt man einen Text aus einem csv
