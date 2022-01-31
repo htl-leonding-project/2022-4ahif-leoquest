@@ -101,8 +101,87 @@
             .attr("height", function(d) { return height - y(d.value); });
 
     });
+</script>
+
+
+<h3 style="color:#061923">Vote Race</h3>
+
+<!--
+<script>
+    var margin1 = {top: 60, right: 70, bottom: 170, left: 60},
+        width1 = 600 - margin.left - margin.right,
+        height1 = 300 - margin.top - margin.bottom;
+
+    // Parse the date / time
+    var	parseDate = d3.time.format("%Y-%m").parse;
+
+    var x = d3.scale.ordinal().rangeRoundBands([0, width1], .05);
+
+    var y = d3.scale.linear().range([height1, 0]);
+
+    var xAxis = d3.svg.axis()
+        .scale(x)
+        .orient("bottom")
+        .tickFormat(d3.value);
+
+    var yAxis = d3.svg.axis()
+        .scale(y)
+        .orient("left")
+        .ticks(10);
+
+    var svg = d3.select("body").append("svg")
+        .attr("width", width1 + margin1.left + margin1.right)
+        .attr("height", height1 + margin1.top + margin1.bottom)
+        .append("g")
+        .attr("transform",
+            "translate(" + margin1.left + "," + margin1.top + ")");
+
+    d3.csv("survey-data.csv", function(error, data) {
+
+        data.forEach(function(d) {
+            d.value= d.value;
+            d.cnt = +d.cnt;
+        });
+
+        x.domain(data.map(function(d) { return d.value; }));
+        y.domain([0, d3.max(data, function(d) { return d.cnt; })]);
+
+        svg.append("g")
+            .attr("class", "x axis")
+            .attr("transform", "translate(0," + height1 + ")")
+            .call(xAxis)
+            .selectAll("text")
+            .style("text-anchor", "end")
+            .attr("dx", "-.8em")
+            .attr("dy", "-.55em")
+            .attr("transform", "rotate(-90)" );
+
+        svg.append("g")
+            .attr("class", "y axis")
+            .call(yAxis)
+            .append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("y", 6)
+            .attr("dy", ".71em")
+            .style("text-anchor", "end")
+            .text("Value (#)");
+
+        svg.selectAll("bar")
+            .data(data)
+            .enter().append("rect")
+            .style("fill", "steelblue")
+            .attr("x", function(d) { return x(d.value); })
+            .attr("width", x.rangeBand())
+            .attr("y", function(d) { return y(d.cnt); })
+            .attr("height", function(d) { return height1 - y(d.cnt); });
+
+    });
 
 </script>
+-->
+
+
+
 
 </body>
 
