@@ -53,6 +53,18 @@ Binder, Abazovic#
 
 ---
 
+
+---
+
+== 31.01 Stundenprotokoll:
+
+[small]#Anwesend:
+Binder, Abazovic, Bogdan#
+
+==== Bogdan:
+
+=== _bis 01.02:_
+
 == Offene Fragen:
 - Wie verknüpft man commits mit Youtrack?
 bzw. ist es richtig gemacht worden

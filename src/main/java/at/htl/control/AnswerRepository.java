@@ -9,7 +9,7 @@ import javax.persistence.EntityManager;
 import javax.transaction.Transactional;
 
 @ApplicationScoped
-public class AnswerRepository implements PanacheRepository<Answer> {
+public class   AnswerRepository implements PanacheRepository<Answer> {
 
 
     @Transactional
