@@ -16,5 +16,5 @@ echo gh-pages pushed to github ...
 cd $OLD
 rm -rf $BUILD_DIR
 
-
+read usInp
 # docker run --rm -it -v ${PWD}/$BUILD_DIR:/documents asciidoctor/docker-asciidoctor  /bin/bash
