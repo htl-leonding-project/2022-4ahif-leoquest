@@ -49,7 +49,7 @@ Binder, Abazovic#
 
 - Abazovic:
 * pflichtenheft überarbeiten
-* über php informieren
+
 
 ---
 
@@ -63,11 +63,22 @@ Binder, Abazovic, Bogdan#
 
 ==== Bogdan:
 
-=== _bis 01.02:_
+==== Abazovic:
+- var auf let ändern in html [minor]
+- https://github.com/htl-leonding-project/questionz/blob/master/Datenmodell.png[questionz]
+-Teacher, Questionnare, Question, AnswerOption
+
+=== _bis 06.02:_
+
+
+- Abazovic & Bogdan:
+Back-end wie bei https://github.com/htl-leonding-project/questionz/blob/master/Datenmodell.png[questionz] [major!]
 
 == Offene Fragen:
 - Wie verknüpft man commits mit Youtrack?
 bzw. ist es richtig gemacht worden
+
+===== für später:
 - Wie liest man die Daten des forms in ein csv ein
 - wie benutzt man einen Text aus einem csv
 als Titel im html
