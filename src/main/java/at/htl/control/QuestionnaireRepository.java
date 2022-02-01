@@ -1,14 +1,17 @@
 package at.htl.control;
 
 import at.htl.entity.Questionnaire;
-import at.htl.entity.Teacher;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
+import javax.persistence.Entity;
 import javax.persistence.EntityManager;
 import javax.transaction.Transactional;
 import java.util.List;
 
+@ApplicationScoped
 public class QuestionnaireRepository {
+
     @Inject
     EntityManager em;
 
