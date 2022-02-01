@@ -122,6 +122,7 @@ class SurveyRepositoryTest {
         Answer a6 = new Answer(ao1, "Trick");
         Answer a7 = new Answer(ao1, "Track");
 
+/*
         a1 = answerRepository.save(a1);
         a2 = answerRepository.save(a2);
         a3 = answerRepository.save(a3);
@@ -129,6 +130,7 @@ class SurveyRepositoryTest {
         a5 = answerRepository.save(a5);
         a6 = answerRepository.save(a6);
         a7 = answerRepository.save(a7);
+*/
 
         assertThat(a1.answerOption.text).isEqualTo("ja");
         assertThat(a2.answerOption.text).isEqualTo("nein");

@@ -5,8 +5,14 @@ import at.htl.entity.AnswerOption;
 import javax.inject.Inject;
 import javax.persistence.*;
 import java.time.LocalDateTime;
+@NamedQueries({
 
+        @NamedQuery(
+                name = "Answer.findAll",
+                query = "select a from Answer a"
+        )
 
+})
 @Entity
 @Table(name = "LD_ANSWER")
 public class Answer {

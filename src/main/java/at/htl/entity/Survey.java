@@ -7,6 +7,10 @@ import java.time.LocalDateTime;
         @NamedQuery(
                 name="S.findByQuestion",
                 query="SELECT s FROM Survey s where s.question LIKE :QUESTION"
+        ),
+        @NamedQuery(
+                name = "Survey.findAll",
+                query = "select s from Survey s"
         )
 })
 

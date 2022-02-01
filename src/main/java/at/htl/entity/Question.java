@@ -20,8 +20,10 @@ public class Question {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "q_id")
     private Long id;
+
     @Column(name = "q_text")
     private String text;
+
     @Column(name = "q_seqNumber")
     private int seqNumber;
 
@@ -77,9 +79,9 @@ public class Question {
         this.seqNumber = q_sequenceNumber;
     }
 
-    public String getType(Long id) {
+/*    public String getType(Long id) {
         return type.getMap().get(id);
-    }
+    }*/
 
     public void setType(QuestionType q_type) {
         this.type = q_type;

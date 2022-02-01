@@ -4,6 +4,15 @@ import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
+@NamedQueries({
+
+        @NamedQuery(
+                name = "AnswerOption.findAll",
+                query = "select a from AnswerOption a"
+        )
+
+})
+
 @Entity
 @Table(name = "LD_ANSWER_OPTION")
 @SequenceGenerator(name = "ld_answer_option_seq",
