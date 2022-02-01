@@ -2,16 +2,12 @@ package at.htl.entity;
 
 import javax.persistence.*;
 
-
 @NamedQueries({
-
         @NamedQuery(
                 name = "Teacher.findAll",
                 query = "select t from Teacher t order by t.name"
         )
-
 })
-
 
 @Entity
 @Table(name = "Teacher")
@@ -20,6 +16,7 @@ public class Teacher {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "t_id")
     private Long id;
+
     @Column(name = "t_name")
     private String name;
 

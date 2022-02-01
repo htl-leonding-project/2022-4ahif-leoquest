@@ -3,16 +3,12 @@ package at.htl.entity;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
-
-
-
 @NamedQueries({
         @NamedQuery(
                 name="S.findByQuestion",
                 query="SELECT s FROM Survey s where s.question LIKE :QUESTION"
         )
 })
-
 
 @Entity
 @Table(name = "LD_SURVEY")
@@ -40,9 +36,7 @@ public class Survey {
     public Survey(String qs) {
         this.question = qs;
         this.createDateTime = LocalDateTime.now();
-
     }
-
 
     @Override
     public String toString() {
