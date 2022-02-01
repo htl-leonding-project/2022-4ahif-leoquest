@@ -67,6 +67,13 @@
           <artifactId>quarkus-hibernate-orm-panache</artifactId>
           <version>2.5.0.Final</version>
       </dependency>
+
+    <!-- JDBC driver dependencies -->
+    <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-jdbc-postgresql</artifactId>
+    </dependency>
+
   </dependencies>
   <build>
     <plugins>
