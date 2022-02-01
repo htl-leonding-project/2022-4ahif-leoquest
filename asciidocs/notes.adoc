@@ -2,8 +2,6 @@
 geführt von Abazovic Edina
 1.1.1, 2021-01-25: Documentation
 
-
-
 ==== _bis 24.01:_
 
 - Bogdan:
