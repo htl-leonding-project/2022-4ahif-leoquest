@@ -20,8 +20,8 @@ public class AnswerRepository {
     }
 
     @Transactional
-    public void save(Answer answer){
-        em.merge(answer);
+    public Answer save(Answer answer){
+        return em.merge(answer);
     }
 
     public List<Answer> findAll() {
