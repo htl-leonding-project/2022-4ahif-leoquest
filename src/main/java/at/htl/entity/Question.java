@@ -1,5 +1,6 @@
-package at.htl.entity;
+package at.htl.model;
 
+import at.htl.entity.QuestionType;
 import at.htl.entity.Questionnaire;
 import com.sun.xml.bind.v2.TODO;
 
@@ -7,12 +8,10 @@ import javax.persistence.*;
 import java.sql.Blob;
 
 @NamedQueries({
-
         @NamedQuery(
                 name = "Question.findAll",
                 query = "select q from Question q"
         )
-
 })
 @Entity
 @Table(name = "Question")
@@ -42,15 +41,13 @@ public class Question {
     public Question(String text, int seqNumber, QuestionType type, Questionnaire questionnaire) {
         this.text = text;
         this.seqNumber = seqNumber;
-
         this.type = type;
         this.questionnaire = questionnaire;
     }
 
-    public Question(Long id, String text, Blob image, int seqNumber, QuestionType type, Questionnaire questionnaire) {
+    public Question(Long id, String text, int seqNumber, QuestionType type, Questionnaire questionnaire) {
         this.id = id;
         this.text = text;
-
         this.seqNumber = seqNumber;
         this.type = type;
         this.questionnaire = questionnaire;
@@ -80,6 +77,13 @@ public class Question {
         this.seqNumber = q_sequenceNumber;
     }
 
+    public String getType(Long id) {
+        return type.getMap().get(id);
+    }
+
+    public void setType(QuestionType q_type) {
+        this.type = q_type;
+    }
 
     public Questionnaire getQuestionnaire() {
         return questionnaire;

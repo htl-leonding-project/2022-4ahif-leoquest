@@ -16,7 +16,19 @@ public class QuestionType {
     String name;
 
     //TODO JPA map
+    @ElementCollection
+    @CollectionTable(name = "questionType")
+    @MapKeyColumn(name = "user_type_col")
+    @Column(name = "qt_map")
+    Map<Long, String> map = new HashMap<>();
 
+    public Map<Long, String> getMap() {
+        return map;
+    }
+
+    public void setMap(Long id, String name) {
+        map.put(id, name);
+    }
 
     public QuestionType() {
     }
@@ -24,6 +36,6 @@ public class QuestionType {
     public QuestionType(Long id, String name) {
         this.id = id;
         this.name = name;
+        setMap(id, name);
     }
-
 }
