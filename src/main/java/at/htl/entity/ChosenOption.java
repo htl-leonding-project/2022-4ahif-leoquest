@@ -14,16 +14,19 @@ import javax.persistence.*;
 @Entity
 @Table(name = "ChosenOption")
 public class ChosenOption {
-    @EmbeddedId
-    ChosenOptionId id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    Long id;
+
+    @ManyToOne
+    @JoinColumn(name = "co_answerOption")
+    private AnswerOption answerOption;
+
+    @ManyToOne
+    @JoinColumn(name = "co_answer")
+    private Answer answer;
 
     public ChosenOption() {
-    }
-
-    public ChosenOption(AnswerOption answerOption, Answer answer) {
-
-        id.setAnswerOption(answerOption);
-        id.setAnswer(answer);
     }
 
 }
