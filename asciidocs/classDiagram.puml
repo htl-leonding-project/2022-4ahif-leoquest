@@ -24,7 +24,6 @@ class Question {
 - Long id
 - String text
 - int seqNo
-- Blob image
 - Questionnaire questionnaire
 
 
