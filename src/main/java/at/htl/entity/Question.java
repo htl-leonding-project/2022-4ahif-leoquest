@@ -1,11 +1,6 @@
 package at.htl.entity;
 
-import at.htl.entity.QuestionType;
-import at.htl.entity.Questionnaire;
-import com.sun.xml.bind.v2.TODO;
-
 import javax.persistence.*;
-import java.sql.Blob;
 
 @NamedQueries({
         @NamedQuery(

@@ -1,53 +1,97 @@
 package at.htl.entity;
 
+import at.htl.entity.Questionnaire;
+import at.htl.entity.Teacher;
+
 import javax.persistence.*;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @NamedQueries({
-        @NamedQuery(
-                name="S.findByQuestion",
-                query="SELECT s FROM Survey s where s.question LIKE :QUESTION"
-        ),
+
         @NamedQuery(
                 name = "Survey.findAll",
                 query = "select s from Survey s"
+        ),
+        @NamedQuery(
+                name = "Survey.findQuestion",
+                query = "SELECT s FROM Survey s WHERE s.questionnaire.id = :questionnaire_id AND s.teacher.id = :teacher_id"
         )
 })
-
 @Entity
 @Table(name = "LD_SURVEY")
-@SequenceGenerator(name = "surveySeq",
-        sequenceName = "LD_SURVEY_SEQ",
-        initialValue = 1000,
-        allocationSize = 1
-)
 public class Survey {
 
     @Id
-    @Column(name="S_ID")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "surveySeq")
-    public Long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "s_id")
+    private Long id;
 
-    @Column(name="S_QUESTION")
-    public String question;
+    @Column(name = "s_date")
+    private LocalDate date;
 
-    @Column(name="S_CREATE_DATE_TIME")
-    public LocalDateTime createDateTime;
+    @ManyToOne
+    @JoinColumn(name = "s_teacher")
+    private Teacher teacher;
+
+    @ManyToOne
+    @JoinColumn(name = "s_questionnaire")
+    private Questionnaire questionnaire;
 
     public Survey() {
     }
 
-    public Survey(String qs) {
-        this.question = qs;
-        this.createDateTime = LocalDateTime.now();
+    public Survey(LocalDate date, Teacher teacher, Questionnaire questionnaire) {
+        this.date = date;
+        this.teacher = teacher;
+        this.questionnaire = questionnaire;
+    }
+
+    public Survey(Long id, LocalDate date, Teacher teacher, Questionnaire questionnaire) {
+        this.id = id;
+        this.date = date;
+        this.teacher = teacher;
+        this.questionnaire = questionnaire;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long s_id) {
+        this.id = s_id;
+    }
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate s_date) {
+        this.date = s_date;
+    }
+
+    public Teacher getTeacher() {
+        return teacher;
+    }
+
+    public void setTeacher(Teacher s_teacher) {
+        this.teacher = s_teacher;
+    }
+
+    public Questionnaire getQuestionnaire() {
+        return questionnaire;
+    }
+
+    public void setQuestionnaire(Questionnaire s_questionnaire) {
+        this.questionnaire = s_questionnaire;
     }
 
     @Override
     public String toString() {
         return "Survey{" +
                 "id=" + id +
-                ", question='" + question + '\'' +
-                ", createDateTime=" + createDateTime +
+                ", date=" + date +
+                ", teacher=" + teacher +
+                ", questionnaire=" + questionnaire +
                 '}';
     }
 }

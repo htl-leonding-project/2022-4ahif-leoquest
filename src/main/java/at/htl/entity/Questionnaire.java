@@ -8,7 +8,6 @@ import javax.persistence.*;
                 name = "Questionnaire.findAll",
                 query = "select qn from Questionnaire qn"
         )
-
 })
 @Entity
 @Table(name = "LD_QUESTIONNAIRE")

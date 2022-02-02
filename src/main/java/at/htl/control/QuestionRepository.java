@@ -1,6 +1,6 @@
 package at.htl.control;
 
-import at.htl.model.Question;
+import at.htl.entity.Question;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
