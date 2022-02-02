@@ -60,6 +60,11 @@ Binder, Abazovic#
 Binder, Abazovic, Bogdan#
 
 ==== Bogdan:
+* [ ] Tests sollen gehen
+* [*] keine composite keys
+* [*] table names mit underline
+* [*] LD vor jeder Tabelle
+* [ ] insert.sql file was einfügen
 
 ==== Abazovic:
 - var auf let ändern in html [minor]

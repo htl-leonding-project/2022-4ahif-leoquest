@@ -14,7 +14,7 @@ import java.sql.Blob;
         )
 })
 @Entity
-@Table(name = "Question")
+@Table(name = "LD_QUESTION")
 public class Question {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
