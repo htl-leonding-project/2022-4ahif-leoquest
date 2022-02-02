@@ -21,6 +21,7 @@ public class Answer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
 
+    @Column(name = "A_USER_NAME")
     public String userName;
 
     @ManyToOne(cascade = CascadeType.ALL)

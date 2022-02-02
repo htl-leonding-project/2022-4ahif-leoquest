@@ -1,4 +1,4 @@
-package at.htl.model;
+package at.htl.entity;
 
 import at.htl.entity.QuestionType;
 import at.htl.entity.Questionnaire;
@@ -18,22 +18,22 @@ import java.sql.Blob;
 public class Question {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "q_id")
+        @Column(name = "Q_ID")
     private Long id;
 
-    @Column(name = "q_text")
+    @Column(name = "Q_TEXT")
     private String text;
 
-    @Column(name = "q_seqNumber")
+    @Column(name = "Q_SEQ_NUMBER")
     private int seqNumber;
 
     //TODO change to lookup table
     @ManyToOne
-    @JoinColumn(name = "q_type")
+    @JoinColumn(name = "Q_TYPE")
     private QuestionType type;
 
     @ManyToOne
-    @JoinColumn(name = "q_questionnaire")
+    @JoinColumn(name = "Q_QUESTIONNAIRE")
     private Questionnaire questionnaire;
 
     public Question() {
