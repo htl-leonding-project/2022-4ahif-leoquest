@@ -5,34 +5,28 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 
+import java.time.LocalDate;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class EntitiesTest {
 
-    @Order(1000)
-    @Test
-    void createSimpleSurvey() {
-        Survey survey = new Survey("Wann haben Sie Zeit?");
-        AnswerOption a1 = new AnswerOption("1. Dezember", survey);
-        AnswerOption a2 = new AnswerOption("2. Dezember", survey);
-        AnswerOption a3 = new AnswerOption("3. Dezember", survey);
-        AnswerOption a4 = new AnswerOption("4. Dezember", survey);
+    Teacher teacher = new Teacher("Max Mustermann");
+    Questionnaire questionnaire = new Questionnaire("Schüler zufriedenheit", "In diesem Fragebogen wird die zufriedenheit der Schüler abgefragt.");
+    Survey survey = new Survey(LocalDate.of(2020, 8,1), teacher, questionnaire);
 
-        assertThat(survey).isNotNull();
+
+    @Test
+    @Order(10)
+    void createSurvey_Test() {
+        //assert
+        assertThat(survey.getDate()).isEqualTo(LocalDate.of(2020, 8,1));
     }
 
-    @Order(1010)
     @Test
-    void answerSimpleSurvey() {
-        Survey survey = new Survey("Wann haben Sie Zeit?");
-        AnswerOption ao1 = new AnswerOption("1. Dezember", survey);
-        AnswerOption ao2 = new AnswerOption("2. Dezember", survey);
-        AnswerOption ao3 = new AnswerOption("3. Dezember", survey);
-        AnswerOption ao4 = new AnswerOption("4. Dezember", survey);
-
-        Answer a1 = new Answer(ao1, "Dagobert");
-
-        assertThat(a1.answerOption.text).isEqualTo("1. Dezember");
+    @Order(20)
+    void toString_test() {
+        assertThat(survey.toString()).isEqualTo("Survey{id=null, date=2020-08-01, teacher=Teacher{id=null, name='Max Mustermann'}, questionnaire=Questionnaire{id=null, name='Schüler zufriedenheit', desc='In diesem Fragebogen wird die zufriedenheit der Schüler abgefragt.'}}");
     }
 }
