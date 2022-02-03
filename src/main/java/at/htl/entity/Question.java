@@ -96,7 +96,7 @@ public class Question {
                 "id=" + id +
                 ", text='" + text + '\'' +
                 ", sequenceNumber=" + seqNumber +
-                ", type=" + type +
+                ", type=" + type.name +
                 ", questionnaire=" + questionnaire +
                 '}';
     }
