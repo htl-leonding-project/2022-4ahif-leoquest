@@ -11,18 +11,21 @@ import javax.persistence.*;
 
 })
 @Entity
-@Table(name = "answer")
+@Table(name = "LD_ANSWER")
 public class Answer {
 
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "a_id")
     private Long id;
+
     @Column(name = "a_text")
     private String text;
+
     @ManyToOne
     @JoinColumn(name = "a_transaction")
     private Transaction transaction;
+
     @ManyToOne
     @JoinColumn(name = "a_question")
     private Question question;

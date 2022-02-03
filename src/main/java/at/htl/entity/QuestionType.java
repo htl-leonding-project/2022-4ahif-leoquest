@@ -23,6 +23,6 @@ public class QuestionType {
     public QuestionType(Long id, String name) {
         this.id = id;
         this.name = name;
-        //setMap(id, name);
+
     }
 }
