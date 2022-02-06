@@ -10,3 +10,7 @@ values ('Parmenter'),
        ('Parmenter'),
        ('Collins'),
        ('Miller');
+
+insert into ld_survey (s_date,s_questionnaire,s_teacher)
+values ();
+
