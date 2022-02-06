@@ -22,7 +22,7 @@ public class QuestionnaireRepository {
 
     @Transactional
     public void save(Questionnaire questionnaire){
-        em.merge(questionnaire);
+        em.persist(questionnaire);
     }
 
     public List<Questionnaire> findAll() {

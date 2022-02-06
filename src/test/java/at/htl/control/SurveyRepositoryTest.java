@@ -30,6 +30,9 @@ class SurveyRepositoryTest {
     AnswerRepository answerRepository;
 
     @Inject
+    QuestionnaireRepository questionnaireRepository;
+
+    @Inject
     AgroalDataSource ds;
 
     Teacher teacher = new Teacher("Max Mustermann");
@@ -46,8 +49,8 @@ class SurveyRepositoryTest {
         Table table = new Table(ds, "LD_SURVEY");
         org.assertj.db.api.Assertions.assertThat(table).hasNumberOfRows(1);
         org.assertj.db.api.Assertions.assertThat(table)
-                .column("S_TEACHER").value().isEqualTo("Max Mustermann")
-                .column("S_QUESTIONNAIRE").value().isEqualTo("Quest1")
-                .column("S_DATE").value().isEqualTo("16/08/2016");
+                .column("S_TEACHER").value().isEqualTo(teacher.getId())
+                .column("S_QUESTIONNAIRE").value().isEqualTo(questionnaire.getId())
+                .column("S_DATE").value().isEqualTo("2022-03-02");
     }
 }

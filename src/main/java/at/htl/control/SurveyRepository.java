@@ -14,15 +14,20 @@ public class SurveyRepository {
     @Inject
     EntityManager em;
 
+    @Inject
+    QuestionnaireRepository qR;
+
+
     @Transactional
     public void delete(Survey survey) {
         em.remove(survey);
     }
 
     @Transactional
-    public void save(Survey survey){
 
-        em.merge(survey);
+    public void save(Survey survey){
+        //survey = em.merge(survey);
+        em.persist(survey);
     }
 
     public List<Survey> findAll() {

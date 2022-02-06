@@ -21,7 +21,7 @@ public class TeacherRepository {
 
     @Transactional
     public void save(Teacher teacher){
-        em.merge(teacher);
+        em.persist(teacher);
     }
 
     public List<Teacher> findAll() {

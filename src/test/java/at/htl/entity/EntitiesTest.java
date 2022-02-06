@@ -26,7 +26,6 @@ public class EntitiesTest {
     int sequenceNumber = 2;
     AnswerOption answerOption = new AnswerOption(text, value, sequenceNumber, question);
 
-
     EntitiesTest() throws SQLException {}
 
     @Test
