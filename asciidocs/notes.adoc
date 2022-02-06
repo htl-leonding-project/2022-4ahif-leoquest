@@ -64,7 +64,7 @@ Binder, Abazovic, Bogdan#
 * [*] keine composite keys
 * [*] table names mit underline
 * [*] LD vor jeder Tabelle
-* [ ] insert.sql file was einfügen
+* [ ] import.sql file was einfügen
 
 ==== Abazovic:
 - var auf let ändern in html [minor]
