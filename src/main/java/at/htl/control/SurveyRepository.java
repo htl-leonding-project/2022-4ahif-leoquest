@@ -30,6 +30,7 @@ public class SurveyRepository {
         em.persist(survey);
     }
 
+
     public List<Survey> findAll() {
         return em
                 .createNamedQuery("Survey.findAll", Survey.class)

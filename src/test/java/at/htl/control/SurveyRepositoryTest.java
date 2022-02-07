@@ -1,20 +1,17 @@
 package at.htl.control;
 
-import at.htl.entity.*;
+
+import at.htl.entity.Survey;
+import at.htl.entity.Teacher;
+import at.htl.entity.Questionnaire;
 import io.agroal.api.AgroalDataSource;
 import io.quarkus.test.junit.QuarkusTest;
 import org.assertj.db.type.Table;
-import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestMethodOrder;
 
 import javax.inject.Inject;
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.db.output.Outputs.output;
 
 @QuarkusTest
 class SurveyRepositoryTest {
