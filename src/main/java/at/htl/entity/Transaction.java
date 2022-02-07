@@ -26,7 +26,7 @@ public class Transaction {
     @Column(name = "t_isUsed")
     public boolean isUsed;
 
-    @ManyToOne
+    @ManyToOne(cascade=CascadeType.ALL)
     @JoinColumn(name = "t_survey")
     private Survey survey;
 

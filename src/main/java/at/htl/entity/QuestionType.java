@@ -20,6 +20,10 @@ public class QuestionType {
     public QuestionType() {
     }
 
+    public QuestionType(String name) {
+        this.name = name;
+    }
+
     public QuestionType(Long id, String name) {
         this.id = id;
         this.name = name;

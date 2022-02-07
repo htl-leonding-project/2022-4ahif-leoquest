@@ -17,20 +17,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.db.output.Outputs.output;
 
 @QuarkusTest
-@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class SurveyRepositoryTest {
 
     @Inject
     SurveyRepository surveyRepository;
-
-    @Inject
-    AnswerOptionRepository answerOptionRepository;
-
-    @Inject
-    AnswerRepository answerRepository;
-
-    @Inject
-    QuestionnaireRepository questionnaireRepository;
 
     @Inject
     AgroalDataSource ds;
@@ -46,11 +36,13 @@ class SurveyRepositoryTest {
         //surveyRepository.save(survey);
         surveyRepository.save(survey);
 
-        Table table = new Table(ds, "LD_SURVEY");
+        Table table = new Table(ds,"LD_SURVEY");
         org.assertj.db.api.Assertions.assertThat(table).hasNumberOfRows(1);
         org.assertj.db.api.Assertions.assertThat(table)
                 .column("S_TEACHER").value().isEqualTo(teacher.getId())
                 .column("S_QUESTIONNAIRE").value().isEqualTo(questionnaire.getId())
                 .column("S_DATE").value().isEqualTo("2022-03-02");
     }
+
+
 }

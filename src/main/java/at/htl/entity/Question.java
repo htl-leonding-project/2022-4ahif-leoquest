@@ -13,7 +13,7 @@ import javax.persistence.*;
 public class Question {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-        @Column(name = "Q_ID")
+    @Column(name = "Q_ID")
     private Long id;
 
     @Column(name = "Q_TEXT")
@@ -23,7 +23,7 @@ public class Question {
     private int seqNumber;
 
     //TODO change to lookup table
-    @ManyToOne
+    @ManyToOne(cascade=CascadeType.ALL)
     @JoinColumn(name = "Q_TYPE")
     private QuestionType type;
 

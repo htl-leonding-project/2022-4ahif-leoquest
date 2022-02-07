@@ -18,11 +18,11 @@ public class ChosenOption {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
-    @ManyToOne
+    @ManyToOne(cascade=CascadeType.ALL)
     @JoinColumn(name = "co_answerOption")
     private AnswerOption answerOption;
 
-    @ManyToOne
+    @ManyToOne(cascade=CascadeType.ALL)
     @JoinColumn(name = "co_answer")
     private Answer answer;
 

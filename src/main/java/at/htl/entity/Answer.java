@@ -22,11 +22,11 @@ public class Answer {
     @Column(name = "a_text")
     private String text;
 
-    @ManyToOne
+    @ManyToOne(cascade=CascadeType.ALL)
     @JoinColumn(name = "a_transaction")
     private Transaction transaction;
 
-    @ManyToOne
+    @ManyToOne(cascade=CascadeType.ALL)
     @JoinColumn(name = "a_question")
     private Question question;
 
