@@ -27,7 +27,7 @@ public class Question {
     @JoinColumn(name = "Q_TYPE")
     private QuestionType type;
 
-    @ManyToOne
+    @ManyToOne(cascade=CascadeType.ALL)
     @JoinColumn(name = "Q_QUESTIONNAIRE")
     private Questionnaire questionnaire;
 
