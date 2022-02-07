@@ -15,8 +15,6 @@ public class QuestionType {
     @Column(name = "qt_name")
     String name;
 
-    // TODO: UNIDIREKTIONAL
-
     public QuestionType() {
     }
 

@@ -24,9 +24,9 @@ public class QuestionRepositoryTest {
     @Order(100)
     @Test
     void persistAQuestion() {
-        Questionnaire questionnaire = new Questionnaire("Quest1",
+        Questionnaire questionnaire = new Questionnaire(1L,"Quest1",
                 "TestQuestionnaire 1");
-        QuestionType questionType = new QuestionType("qType 01");
+        QuestionType questionType = new QuestionType(1L,"qType 01");
 
         Question question = new Question(
                 "This is a question",
@@ -40,8 +40,8 @@ public class QuestionRepositoryTest {
         Table table = new Table(ds,"LD_QUESTION");
         Assertions.assertThat(table).hasNumberOfRows(1);
         Assertions.assertThat(table)
-                .column("Q_TEXT").value().isEqualTo("qType 01")
+                .column("Q_TEXT").value().isEqualTo("This is a question")
                 .column("Q_QUESTIONNAIRE").value().isEqualTo(questionnaire.getId())
-                .column("Q_TYPE").value().isEqualTo("qType 01");
+                .column("Q_TYPE").value().isEqualTo(questionType.getId());
     }
 }
