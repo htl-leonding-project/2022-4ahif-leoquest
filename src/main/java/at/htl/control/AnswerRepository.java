@@ -5,6 +5,7 @@ import at.htl.entity.Answer;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 import javax.transaction.Transactional;
 import java.util.List;
 
@@ -28,5 +29,15 @@ public class AnswerRepository {
         return em
                 .createNamedQuery("Answer.findAll", Answer.class)
                 .getResultList();
+    }
+
+    public Answer findById(Long id) {
+
+        Query query = em.createNamedQuery("Answer.findById",
+                Answer.class);
+        query.setParameter("id", id);
+
+        return (Answer) query.getSingleResult();
+
     }
 }
