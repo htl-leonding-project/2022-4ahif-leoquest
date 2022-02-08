@@ -24,6 +24,9 @@ endif::backend-html5[]
 - The HTBLA - Leonding would like to create a question-survey
 for its students and/or employees.
 
+image::/images/survey.png[]
+
+
 == Current state
 - Paper polls/ verbal votes/ no polls
 
@@ -160,7 +163,7 @@ Survey -- Transaction
 @enduml
 ----
 
-=== architecture
+=== System Architecture
 
 .leoQuest system architecture
 [plantuml, sysa, png]
