@@ -38,7 +38,6 @@ public class Survey {
     private Teacher teacher;
 
 
-
     @ManyToOne(cascade=CascadeType.ALL)
     @JoinColumn(name = "s_questionnaire")
     private Questionnaire questionnaire;

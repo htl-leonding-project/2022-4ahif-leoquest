@@ -40,4 +40,5 @@ public class AnswerRepository {
         return (Answer) query.getSingleResult();
 
     }
+
 }

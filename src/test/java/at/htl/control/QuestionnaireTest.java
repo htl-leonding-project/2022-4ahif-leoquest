@@ -28,7 +28,6 @@ public class QuestionnaireTest {
         questionnaireRepository.save(questionnaire);
 
         Table table = new Table(ds,"LD_QUESTIONNAIRE");
-        Assertions.assertThat(table).hasNumberOfRows(1);
         Assertions.assertThat(table)
                 .column("QN_DESC").value().isEqualTo("descrTest")
                 .column("QN_NAME").value().isEqualTo("nameTest");

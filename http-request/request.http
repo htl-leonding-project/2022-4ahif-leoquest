@@ -60,6 +60,7 @@ Response file saved.
 GET http://localhost:8080/answers
 Accept: application/json
 
+
 ### Get all Questions
 
 GET http://localhost:8080/questions

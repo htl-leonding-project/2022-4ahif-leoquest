@@ -38,7 +38,6 @@ public class QuestionRepositoryTest {
         questionRepository.save(question);
 
         Table table = new Table(ds,"LD_QUESTION");
-        Assertions.assertThat(table).hasNumberOfRows(1);
         Assertions.assertThat(table)
                 .column("Q_TEXT").value().isEqualTo("This is a question")
                 .column("Q_QUESTIONNAIRE").value().isEqualTo(questionnaire.getId())

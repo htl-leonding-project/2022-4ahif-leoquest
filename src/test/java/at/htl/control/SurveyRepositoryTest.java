@@ -41,5 +41,4 @@ class SurveyRepositoryTest {
                 .column("S_DATE").value().isEqualTo("2022-03-02");
     }
 
-
 }
