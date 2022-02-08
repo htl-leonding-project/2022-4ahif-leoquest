@@ -30,7 +30,6 @@ class SurveyRepositoryTest {
     @Test
     void persistASurvey() {
 
-        //surveyRepository.save(survey);
         surveyRepository.save(survey);
 
         Table table = new Table(ds,"LD_SURVEY");

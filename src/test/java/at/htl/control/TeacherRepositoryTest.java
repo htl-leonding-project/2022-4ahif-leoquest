@@ -40,4 +40,18 @@ public class TeacherRepositoryTest {
 
         assertThat(newTeacher.getName()).doesNotMatch("Parmenter");
     }
+
+    @Test
+    void DeleteATeacher(){
+        Teacher newTeacher = new Teacher("New Musterfrau");
+        teacherRepository.save(newTeacher);
+
+        assertThat((teacherRepository.findById(12L)).getName())
+                .isEqualTo(newTeacher.getName());
+
+        //teacherRepository.delete(newTeacher);
+
+        //assertThat((teacherRepository.findById(12L)).getName())
+        //        .doesNotMatch(newTeacher.getName());
+    }
 }
