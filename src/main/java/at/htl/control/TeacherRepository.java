@@ -5,6 +5,7 @@ import at.htl.entity.Teacher;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 import javax.transaction.Transactional;
 import java.util.List;
 
@@ -28,5 +29,15 @@ public class TeacherRepository {
         return em
                 .createNamedQuery("Teacher.findAll", Teacher.class)
                 .getResultList();
+    }
+
+    public Teacher findById(Long id) {
+
+        Query query = em.createNamedQuery("Teacher.findById",
+                Teacher.class);
+        query.setParameter("id", id);
+
+        return (Teacher)query.getSingleResult();
+
     }
 }

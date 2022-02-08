@@ -6,6 +6,10 @@ import javax.persistence.*;
         @NamedQuery(
                 name = "Teacher.findAll",
                 query = "select t from Teacher t order by t.name"
+        ),
+        @NamedQuery(
+                name = "Teacher.findById",
+                query = "select t from Teacher t where t.id = :id order by t.name"
         )
 })
 
