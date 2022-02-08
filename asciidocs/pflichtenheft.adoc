@@ -145,8 +145,6 @@ class Transaction {
 - String password
 - boolean isUsed
 - Survey survey
-
-
 }
 
 Teacher -down- Survey
