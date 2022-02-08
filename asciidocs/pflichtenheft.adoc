@@ -74,7 +74,7 @@ u2 --> UC4
 @enduml
 ----
 
-.leoQuest usecase Diagram
+.leoQuest class Diagram
 [plantuml, cld, png]
 ----
 @startuml
