@@ -7,6 +7,10 @@ import javax.persistence.*;
         @NamedQuery(
                 name = "Transaction.findAll",
                 query = "select ta from Transaction ta"
+        ),
+        @NamedQuery(
+                name = "Transaction.findById",
+                query = "select t from Transaction t where t.id = :id order by t.code"
         )
 })
 @Entity

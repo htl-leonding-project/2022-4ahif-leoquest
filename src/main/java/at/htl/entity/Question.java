@@ -6,6 +6,10 @@ import javax.persistence.*;
         @NamedQuery(
                 name = "Question.findAll",
                 query = "select q from Question q"
+        ),
+        @NamedQuery(
+                name = "Question.findById",
+                query = "select q from Question q where q.id = :id order by q.text"
         )
 })
 @Entity
@@ -22,7 +26,6 @@ public class Question {
     @Column(name = "Q_SEQ_NUMBER")
     private int seqNumber;
 
-    //TODO change to lookup table
     @ManyToOne(cascade=CascadeType.ALL)
     @JoinColumn(name = "Q_TYPE")
     private QuestionType type;

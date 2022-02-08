@@ -7,6 +7,10 @@ import javax.persistence.*;
         @NamedQuery(
                 name = "Answer.findAll",
                 query = "select a from Answer a"
+        ),
+        @NamedQuery(
+                name = "Answer.findById",
+                query = "select a from Answer a where a.id = :id order by a.text"
         )
 
 })

@@ -15,6 +15,10 @@ import java.time.LocalDate;
         @NamedQuery(
                 name = "Survey.findQuestion",
                 query = "SELECT s FROM Survey s WHERE s.questionnaire.id = :questionnaire_id AND s.teacher.id = :teacher_id"
+        ),
+        @NamedQuery(
+                name = "Survey.findById",
+                query = "select s from Survey s where s.id = :id order by s.date"
         )
 })
 @Entity

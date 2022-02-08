@@ -1,10 +1,12 @@
 package at.htl.control;
 
+import at.htl.entity.Teacher;
 import at.htl.entity.Transaction;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 import javax.transaction.Transactional;
 import java.util.List;
 
@@ -28,5 +30,15 @@ public class TransactionRepository {
         return em
                 .createNamedQuery("Transaction.findAll", Transaction.class)
                 .getResultList();
+    }
+
+    public Transaction findById(Long id) {
+
+        Query query = em.createNamedQuery("Transaction.findById",
+                Transaction.class);
+        query.setParameter("id", id);
+
+        return (Transaction)query.getSingleResult();
+
     }
 }

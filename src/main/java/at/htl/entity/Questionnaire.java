@@ -7,6 +7,10 @@ import javax.persistence.*;
         @NamedQuery(
                 name = "Questionnaire.findAll",
                 query = "select qn from Questionnaire qn"
+        ),
+        @NamedQuery(
+                name = "Questionnaire.findById",
+                query = "select qn from Questionnaire qn where qn.id = :id order by qn.name"
         )
 })
 @Entity
