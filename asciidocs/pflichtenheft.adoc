@@ -21,11 +21,11 @@ endif::backend-html5[]
 //toc::[]
 
 == Description of the initial situation
-- The HTBLA - Leonding would like to create a one-question-survey
+- The HTBLA - Leonding would like to create a question-survey
 for its students and/or employees.
 
 == Current state
-- Paper polls/ no polls
+- Paper polls/ verbal votes/ no polls
 
 
 == Problem definition
