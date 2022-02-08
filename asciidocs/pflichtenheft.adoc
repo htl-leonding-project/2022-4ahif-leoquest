@@ -74,6 +74,8 @@ u2 --> UC4
 @enduml
 ----
 
+==== Class Diagram
+
 .leoQuest class Diagram
 [plantuml, cld, png]
 ----
