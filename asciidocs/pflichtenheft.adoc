@@ -81,8 +81,6 @@ u2 --> UC4
 ----
 @startuml
 
-@startuml
-
 class Teacher {
 - Long id
 - String name
@@ -149,8 +147,8 @@ class Transaction {
 - Survey survey
 }
 
-Teacher -down- Survey
-Survey -left- Questionnaire
+Teacher "*" -down- "*" Survey
+Survey -left-  Questionnaire
 Questionnaire -- Question
 Question -left- QuestionType
 Question -- AnswerOption
@@ -159,11 +157,51 @@ ChosenOption  -right- Answer
 Answer -up- Transaction
 Survey -- Transaction
 
-
 @enduml
+----
+
+=== architecture
+
+.leoQuest system architecture
+[plantuml, sysa, png]
+----
+@startuml
+
+rectangle Browser {
+    rectangle "Angular Client (runtime)"
+}
+
+rectangle Traefik
+
+Browser <-down- Traefik
+Browser -down-> Traefik
+
+package "docker-compose - network" {
+
+
+
+    rectangle Quarkus
+
+    rectangle Keycloak
+
+    database database
+
+    rectangle nginx {
+        rectangle "Angular Client (to be deployed)"
+    }
+
+}
+
+Traefik <-- Quarkus
+Traefik --> Quarkus
+
+Keycloak --> Browser
+Browser --> Keycloak
+nginx --> Browser
 
 @enduml
 ----
+
 
 == Goal
 - Every use case needs to be fulfilled. User can create a survey and evaluate the answers.
