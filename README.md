@@ -1,6 +1,5 @@
 # LEOQUEST
-Questionnaire for HTL-Leonding
-With Leo-quest you can create an online survey.
+Questionnaire for HTL-Leonding. With Leo-quest you can create an online survey.
 
 ## Members: 
 Abazovic Edina  (PL), Bogdan Sebastijan, 
