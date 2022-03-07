@@ -1,0 +1,77 @@
+@startuml
+
+class Teacher {
+- Long id
+- String name
+
+}
+
+class Survey {
+- Long id
+- LocalDate date
+- Teacher teacher
+- Questionnaire questionnaire
+
+}
+
+class Questionnaire {
+- Long id
+- String name
+- String desc
+}
+
+class Question {
+- Long id
+- String text
+- int seqNo
+- Questionnaire questionnaire
+}
+
+class QuestionType {
+- Long id
+- String name
+- HashMap map
+}
+
+class AnswerOption {
+- Long id
+- String text
+- int value
+- int seqNo
+- Question question
+
+}
+
+class ChosenOption {
+- AnswerOption answerOption
+- Answer answer
+
+}
+
+class Answer {
+- Long id
+- String text
+- Transaction transaction
+- Question question
+}
+
+class Transaction {
+- Long id
+- String code
+- String password
+- boolean isUsed
+- Survey survey
+}
+
+Teacher -down- Survey
+Survey -left- Questionnaire
+Questionnaire -- Question
+Question -left- QuestionType
+Question -- AnswerOption
+AnswerOption -right- ChosenOption
+ChosenOption  -right- Answer
+Answer -up- Transaction
+Survey -- Transaction
+
+
+@enduml

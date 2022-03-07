@@ -1,0 +1,24 @@
+.leoQuest usecase diagram
+[plantuml,usecase,png]
+----
+@startuml
+left to right direction
+
+actor "user" as u1
+actor "admin" as a1
+
+rectangle "LeoQuest" {
+    usecase "Create Survey" as UC1
+    usecase "Vote" as UC2
+    usecase "Assign Members" as UC3
+    usecase "Evaluate Results/Close Survey" as UC4
+    usecase "View Survey" as UC5
+}
+a1 --> UC1
+u1 --> UC2
+a1 --> UC3
+a1 --> UC4
+u1 --> UC5
+
+@enduml
+----

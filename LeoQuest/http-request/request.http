@@ -1,0 +1,76 @@
+### Get all Teachers
+GET localhost:8080/teacher
+
+HTTP/1.1 200 OK
+Content-Type: application/json
+content-length: 286
+
+[
+  {
+    "id": 2,
+    "name": "Baker"
+  },
+  {
+    "id": 10,
+    "name": "Collins"
+  },
+  {
+    "id": 5,
+    "name": "Collins"
+  },
+  {
+    "id": 4,
+    "name": "Everett"
+  },
+  {
+    "id": 3,
+    "name": "Hope"
+  },
+  {
+    "id": 11,
+    "name": "Miller"
+  },
+  {
+    "id": 6,
+    "name": "Moorman"
+  },
+  {
+    "id": 8,
+    "name": "Newcastle"
+  },
+  {
+    "id": 9,
+    "name": "Parmenter"
+  },
+  {
+    "id": 1,
+    "name": "Parmenter"
+  },
+  {
+    "id": 7,
+    "name": "Wise"
+  }
+]
+Response file saved.
+> 2022-02-06T170647.200.json
+
+
+### Get all Answers
+
+GET http://localhost:8080/answers
+Accept: application/json
+
+
+### Get all Questions
+
+GET http://localhost:8080/questions
+Accept: application/json
+
+### Get all AnswerOptions
+
+GET http://localhost:8080/options
+Accept: application/json
+
+
+
+
