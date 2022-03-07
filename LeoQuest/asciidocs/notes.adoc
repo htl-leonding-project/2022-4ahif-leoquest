@@ -48,10 +48,6 @@ Binder, Abazovic#
 - Abazovic:
 * pflichtenheft überarbeiten
 
-
----
-
-
 ---
 
 == 31.01 Stundenprotokoll:
@@ -77,23 +73,11 @@ Binder, Abazovic, Bogdan#
 - Abazovic & Bogdan:
 Back-end wie bei https://github.com/htl-leonding-project/questionz/blob/master/Datenmodell.png[questionz] [major!]
 
-== Offene Fragen:
-- Wie verknüpft man commits mit Youtrack?
-bzw. ist es richtig gemacht worden
-
-dshhs
-===== für später:
-- Wie liest man die Daten des forms in ein csv ein
-- wie benutzt man einen Text aus einem csv
-als Titel im html
-
-
-
 
 == 07.03.22 Stundenprotokoll:
 
 [small]#Anwesend:
-Binder, Abazovic, Bogdan#
+Binder, Abazovic, Bogdan, Plakolb#
 
 ==== Bogdan:
 * [*] create new Workbranch and separate the backend from frontend
@@ -101,8 +85,16 @@ Binder, Abazovic, Bogdan#
 * [ ] Angular backend button logic
 
 ==== Abazovic:
-- var auf let ändern in html [minor]
-- https://github.com/htl-leonding-project/questionz/blob/master/Datenmodell.png[questionz]
--Teacher, Questionnare, Question, AnswerOption
+- integrate angular front-end (add the demo htmls to project)
+- minor clean ups
+- add logic to front-end
 
-=== _bis 06.02:_
+=== _bis 08.03:_
+
+== Offene Fragen:
+- Wie verknüpft man commits mit Youtrack?
+bzw. ist es richtig gemacht worden
+
+
+===== für später:
+- /
