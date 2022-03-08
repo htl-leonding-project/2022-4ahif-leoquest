@@ -11,7 +11,7 @@ https://github.com/htl-leonding-project/2022-4ahif-leoquest.git
 ## Github-Pages: 
 https://htl-leonding-project.github.io/2022-4ahif-leoquest
 
-## Youtrack:
+## YouTrack:
 https://vm81.htl-leonding.ac.at/projects/3a20a750-7b76-4121-a4a6-c488b62fb0d3
 
 ## Documentation:
