@@ -1,6 +1,6 @@
 = Documentation LeoQuest
 Abazovic Edina, Bogdan Sebastijan, Plakolb Marcel, Binder Paul
-3.1.0, 2022-03-07: Documentation
+3.2.0, 2022-03-07: Documentation
 ifndef::imagesdir[:imagesdir: images]
 //:toc-placement!:  // prevents the generation of the doc at this position, so it can be printed afterwards
 :sourcedir: ../src/main/java
@@ -15,6 +15,21 @@ ifdef::backend-html5[]
 //icon:github-square[link=https://github.com/htl-leonding-college/asciidoctor-docker-template]
 //icon:home[link=https://htl-leonding.github.io/]
 endif::backend-html5[]
+
+== 08.03. Stundenprotokoll
+[small]#Anwesend:
+Binder, Abazovic, Bogdan, Plakolb#
+
+==== Bogdan
+
+
+==== Abazovic
+- add YoutTrack tasks
+- simple homepage and vote html
+- inserts
+
+=== _bis 14.03_
+- /
 
 == 07.03. Stundenprotokoll
 [small]#Anwesend:
