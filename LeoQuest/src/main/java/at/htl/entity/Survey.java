@@ -22,7 +22,7 @@ import java.time.LocalDate;
         )
 })
 @Entity
-@Table(name = "LD_SURVEY")
+@Table(name = "LQ_SURVEY")
 public class Survey {
 
     @Id

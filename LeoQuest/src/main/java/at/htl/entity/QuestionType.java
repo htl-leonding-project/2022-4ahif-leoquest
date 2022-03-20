@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Entity
-@Table(name = "LD_QUESTION_TYPE")
+@Table(name = "LQ_QUESTION_TYPE")
 public class QuestionType {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)

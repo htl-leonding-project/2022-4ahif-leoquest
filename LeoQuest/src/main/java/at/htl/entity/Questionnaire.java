@@ -14,7 +14,7 @@ import javax.persistence.*;
         )
 })
 @Entity
-@Table(name = "LD_QUESTIONNAIRE")
+@Table(name = "LQ_QUESTIONNAIRE")
 public class Questionnaire {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -9,7 +9,7 @@ import javax.persistence.*;
         )
 })
 @Entity
-@Table(name = "LD_ANSWER_OPTION")
+@Table(name = "LQ_ANSWER_OPTION")
 public class AnswerOption {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
