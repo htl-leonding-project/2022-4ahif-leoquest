@@ -1,6 +1,6 @@
 = Pflichtenheft LeoQuest
 Abazovic Edina, Bogdan Sebastijan, Plakolb Marcel, Binder Paul
-4.1.0, 2022-03-07: Pflichtenheft
+4.2.0, 2022-03-20: Pflichtenheft
 ifndef::imagesdir[:imagesdir: images]
 //:toc-placement!:  // prevents the generation of the doc at this position, so it can be printed afterwards
 :sourcedir: ../src/main/java
@@ -39,12 +39,27 @@ the votes.
 - Creation of a Web App application with which it is possible to create a
 simple survey. Afterwards the survey can be evaluated.
 
+=== Nonfunctional Demands
+- security
+- efficiency
+- usability
+- Portability
+- robustness
+- usability
+
 === Functional Demands / Use-cases
 
 - Admin can create a survey
+* questiontypes
+
+** multiple choice questions
+** single choice questions
+** text questions
+** The Dichotomous Question (yes/no questions)
+
 - Admin can invite/assign members to survey
 - Admin can close survey
-- Admin can view statistics
+- Evaluate the results
 - User can vote
 - User can view results
 
@@ -163,7 +178,7 @@ Survey -- Transaction
 @enduml
 ----
 
-=== System Architecture
+=== System Architecture - "How do I do it?"
 
 .leoQuest system architecture
 [plantuml, sysa, png]
@@ -208,6 +223,8 @@ nginx --> Browser
 
 == Goal
 - Every use case needs to be fulfilled. User can create a survey and evaluate the answers.
+- Simplified and time-saving polling
+- Higher number of participants
 
 == Framework
 
