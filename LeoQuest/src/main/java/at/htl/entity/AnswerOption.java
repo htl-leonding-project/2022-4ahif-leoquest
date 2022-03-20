@@ -21,6 +21,7 @@ public class AnswerOption {
     private int value;
     @Column(name = "ao_seqNo")
     private int seqNumber;
+
     @ManyToOne(cascade=CascadeType.ALL)
     @JoinColumn(name = "ao_question_id")
     private Question question;

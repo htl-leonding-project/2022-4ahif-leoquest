@@ -118,6 +118,17 @@ https://form.jotform.com/220232242102332[JotForm Layout]
 * [*] Youtrack auf den neusten Stand updaten,
 nach Änderung der Use-cases
 
+==== _bis 28.03.
+
+- Bogdan
+* [*] LD -> LQ umschreiben
+* [*] Number -> No
+* [*] fremdschlüsselspalten mit _id enden
+* [ ] Tag-> Freitext - jede Frage (Question) kriegt freitext (250 Zeichen)
+* [ ] Tests für Questionnaire
+* [ ] Tests für Survey
+* [ ] in Youtrack eintragen
+
 
 == Offene Fragen
 - Wie verknüpft man commits mit Youtrack?
