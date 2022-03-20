@@ -19,11 +19,11 @@ public class ChosenOption {
     Long id;
 
     @ManyToOne(cascade=CascadeType.ALL)
-    @JoinColumn(name = "co_answerOption")
+    @JoinColumn(name = "co_answerOption_id")
     private AnswerOption answerOption;
 
     @ManyToOne(cascade=CascadeType.ALL)
-    @JoinColumn(name = "co_answer")
+    @JoinColumn(name = "co_answer_id")
     private Answer answer;
 
     public ChosenOption() {

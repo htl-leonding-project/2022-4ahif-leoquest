@@ -27,11 +27,11 @@ public class Question {
     private int seqNumber;
 
     @ManyToOne(cascade=CascadeType.ALL)
-    @JoinColumn(name = "Q_TYPE")
+    @JoinColumn(name = "Q_TYPE_ID")
     private QuestionType type;
 
     @ManyToOne(cascade=CascadeType.ALL)
-    @JoinColumn(name = "Q_QUESTIONNAIRE")
+    @JoinColumn(name = "Q_QUESTIONNAIRE_ID")
     private Questionnaire questionnaire;
 
     public Question() {

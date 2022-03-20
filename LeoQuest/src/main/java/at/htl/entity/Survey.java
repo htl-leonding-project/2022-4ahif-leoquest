@@ -34,12 +34,12 @@ public class Survey {
     private LocalDate date;
 
     @ManyToOne(cascade=CascadeType.ALL)
-    @JoinColumn(name = "s_teacher")
+    @JoinColumn(name = "s_teacher_id")
     private Teacher teacher;
 
 
     @ManyToOne(cascade=CascadeType.ALL)
-    @JoinColumn(name = "s_questionnaire")
+    @JoinColumn(name = "s_questionnaire_id")
     private Questionnaire questionnaire;
 
     public Survey() {

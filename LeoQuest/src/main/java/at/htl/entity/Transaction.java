@@ -31,7 +31,7 @@ public class Transaction {
     public boolean isUsed;
 
     @ManyToOne(cascade=CascadeType.ALL)
-    @JoinColumn(name = "t_survey")
+    @JoinColumn(name = "t_survey_id")
     private Survey survey;
 
     public Transaction() {
