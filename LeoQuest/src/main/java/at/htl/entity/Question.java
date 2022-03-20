@@ -23,7 +23,7 @@ public class Question {
     @Column(name = "Q_TEXT")
     private String text;
 
-    @Column(name = "Q_SEQ_NUMBER")
+    @Column(name = "Q_SEQ_NO")
     private int seqNumber;
 
     @ManyToOne(cascade=CascadeType.ALL)

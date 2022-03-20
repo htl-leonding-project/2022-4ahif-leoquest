@@ -19,7 +19,7 @@ public class AnswerOption {
     private String text;
     @Column(name = "ao_value")
     private int value;
-    @Column(name = "ao_seqNumber")
+    @Column(name = "ao_seqNo")
     private int seqNumber;
     @ManyToOne(cascade=CascadeType.ALL)
     @JoinColumn(name = "ao_question")
