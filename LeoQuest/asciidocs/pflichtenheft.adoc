@@ -50,11 +50,11 @@ simple survey. Afterwards the survey can be evaluated.
 === Functional Demands / Use-cases
 
 - Admin can create a survey
-* questiontypes
+* Question types
 
-** multiple choice questions
-** single choice questions
-** text questions
+** Multiple choice questions
+** Single choice questions
+** Text questions
 ** The Dichotomous Question (yes/no questions)
 
 - Admin can invite/assign members to survey
@@ -87,8 +87,6 @@ u1 --> UC2
 u2 --> UC3
 u2 --> UC4
 
-
-
 @enduml
 ----
 
@@ -117,6 +115,7 @@ class Questionnaire {
 - Long id
 - String name
 - String desc
+- Question[] questions
 }
 
 class Question {
@@ -131,7 +130,6 @@ class Question {
 class QuestionType {
 - Long id
 - String name
-- HashMap map
 }
 
 class AnswerOption {

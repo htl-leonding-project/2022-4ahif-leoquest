@@ -25,6 +25,10 @@ public class Questionnaire {
     @Column(name = "qn_desc")
     private String desc;
 
+    @ManyToOne(cascade=CascadeType.ALL)
+    @JoinColumn(name = "a_question_id")
+    private Question[] question;
+
     public Questionnaire() {
     }
 
