@@ -22,21 +22,20 @@ class SurveyRepositoryTest {
     @Inject
     AgroalDataSource ds;
 
-    Teacher teacher = new Teacher("Max Mustermann");
-    Questionnaire questionnaire = new Questionnaire("Quest1", "TestQuestionnaire 1");
-    Survey survey = new Survey(LocalDate.of(2022,3,2),teacher,questionnaire);
-
     @Order(100)
     @Test
     void persistASurvey() {
+        Teacher teacher = new Teacher("Max Mustermann");
+        Questionnaire questionnaire = new Questionnaire("Quest1", "TestQuestionnaire 1");
+        Survey survey = new Survey(LocalDate.of(2022,3,2),teacher,questionnaire);
 
         surveyRepository.save(survey);
 
         Table table = new Table(ds,"LQ_SURVEY");
         org.assertj.db.api.Assertions.assertThat(table).hasNumberOfRows(1);
         org.assertj.db.api.Assertions.assertThat(table)
-                .column("S_TEACHER").value().isEqualTo(teacher.getId())
-                .column("S_QUESTIONNAIRE").value().isEqualTo(questionnaire.getId())
+                .column("S_TEACHER_ID").value().isEqualTo(teacher.getId())
+                .column("S_QUESTIONNAIRE_ID").value().isEqualTo(questionnaire.getId())
                 .column("S_DATE").value().isEqualTo("2022-03-02");
     }
 

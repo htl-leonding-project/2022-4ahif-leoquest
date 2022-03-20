@@ -40,7 +40,7 @@ public class QuestionRepositoryTest {
         Table table = new Table(ds,"LQ_QUESTION");
         Assertions.assertThat(table)
                 .column("Q_TEXT").value().isEqualTo("This is a question")
-                .column("Q_QUESTIONNAIRE").value().isEqualTo(questionnaire.getId())
+                .column("Q_QUESTIONNAIRE_ID").value().isEqualTo(questionnaire.getId())
                 .column("Q_TYPE").value().isEqualTo(questionType.getId());
     }
 }
