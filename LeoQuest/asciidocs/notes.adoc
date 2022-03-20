@@ -1,61 +1,59 @@
-= [big]#Task register#
-geführt von Abazovic Edina
-1.1.1, 2021-01-25: Documentation
+= Documentation LeoQuest
+Abazovic Edina, Bogdan Sebastijan, Plakolb Marcel, Binder Paul
+3.2.0, 2022-03-07: Documentation
+ifndef::imagesdir[:imagesdir: images]
+//:toc-placement!:  // prevents the generation of the doc at this position, so it can be printed afterwards
+:sourcedir: ../src/main/java
+:icons: font
+:toc: left
 
-==== _bis 24.01:_
 
-- Bogdan:
-* [ ] Github-pages
+ifdef::backend-html5[]
 
-- Abazovic:
-* [*] D3.js demo erstellen
-* [*] Youtrack auf den neusten Stand updaten,
-nach Änderung der Use-cases
+// https://fontawesome.com/v4.7.0/icons/
+//icon:file-text-o[link=https://raw.githubusercontent.com/htl-leonding-college/asciidoctor-docker-template/master/asciidocs/{docname}.adoc] ‏ ‏ ‎
+//icon:github-square[link=https://github.com/htl-leonding-college/asciidoctor-docker-template]
+//icon:home[link=https://htl-leonding.github.io/]
+endif::backend-html5[]
 
----
-
-== 24.01 Stundenprotokoll:
-
+== 08.03. Stundenprotokoll
 [small]#Anwesend:
-Binder, Abazovic#
+Binder, Abazovic, Bogdan, Plakolb#
 
-==== Abazovic:
-- Testen der D3.js demo und ändern von DateType auf String (barchart.html)
-- erstellen des Demo-Layouts des Frageformulars:
-https://form.jotform.com/220232242102332[JotForm Layout]
+==== Bogdan
 
 
-=== _bis 25.01:_
+==== Abazovic
+- add YoutTrack tasks
+- simple homepage and vote html
+- inserts
 
-- Abazovic:
-* [*] pflichtenheft.adoc bearbeiten
-* [*] survey-formular layout entwerfen
+=== _bis 14.03_
+- /
 
-
-
-== 25.01 Stundenprotokoll
-
+== 07.03. Stundenprotokoll
 [small]#Anwesend:
-Binder, Abazovic#
+Binder, Abazovic, Bogdan, Plakolb#
 
-==== Abazovic:
-* Protokoll überarbeiten
-* survey-layout.html erstellt
-* php/html csv einlesen und erstellen
+==== Bogdan
+* [*] create new Workbranch and separate the backend from frontend
+* [*] merge with main branch
+* [ ] Angular backend button logic
 
-=== _bis 31.01:_
+==== Abazovic
+- integrate angular front-end (add the demo htmls to project)
+- minor clean ups
+- add logic to front-end
 
-- Abazovic:
-* pflichtenheft überarbeiten
+=== _bis 08.03_
+- /
 
----
-
-== 31.01 Stundenprotokoll:
+== 31.01 Stundenprotokoll
 
 [small]#Anwesend:
 Binder, Abazovic, Bogdan#
 
-==== Bogdan:
+==== Bogdan
 * [*] Tests sollen gehen
 * [*] keine composite keys
 * [*] table names mit underline
@@ -63,38 +61,68 @@ Binder, Abazovic, Bogdan#
 * [*] import.sql file was einfügen
 * Frontend nicht nötig
 
-==== Abazovic:
+==== Abazovic
 - var auf let ändern in html [minor]
 - https://github.com/htl-leonding-project/questionz/blob/master/Datenmodell.png[questionz]
 -Teacher, Questionnare, Question, AnswerOption
 
-=== _bis 06.02:_
+=== _bis 06.02_
 
 - Abazovic & Bogdan:
 Back-end wie bei https://github.com/htl-leonding-project/questionz/blob/master/Datenmodell.png[questionz] [major!]
 
 
-== 07.03.22 Stundenprotokoll:
+== 25.01 Stundenprotokoll
 
 [small]#Anwesend:
-Binder, Abazovic, Bogdan, Plakolb#
+Binder, Abazovic#
 
-==== Bogdan:
-* [*] create new Workbranch and separate the backend from frontend
-* [*] merge with main branch
-* [ ] Angular backend button logic
+==== Abazovic
+* Protokoll überarbeiten
+* survey-layout.html erstellt
+* php/html csv einlesen und erstellen
 
-==== Abazovic:
-- integrate angular front-end (add the demo htmls to project)
-- minor clean ups
-- add logic to front-end
+=== _bis 31.01_
 
-=== _bis 08.03:_
+- Abazovic:
+* pflichtenheft überarbeiten
 
-== Offene Fragen:
+
+== 24.01 Stundenprotokoll
+
+[small]#Anwesend:
+Binder, Abazovic#
+
+==== Abazovic
+- Testen der D3.js demo und ändern von DateType auf String (barchart.html)
+- erstellen des Demo-Layouts des Frageformulars:
+https://form.jotform.com/220232242102332[JotForm Layout]
+
+
+=== _bis 25.01_
+
+- Abazovic:
+* [*] pflichtenheft.adoc bearbeiten
+* [*] survey-formular layout entwerfen
+
+
+---
+
+==== _bis 24.01_
+
+- Bogdan
+* [*] Github-pages
+
+- Abazovic
+* [*] D3.js demo erstellen
+* [*] Youtrack auf den neusten Stand updaten,
+nach Änderung der Use-cases
+
+
+== Offene Fragen
 - Wie verknüpft man commits mit Youtrack?
 bzw. ist es richtig gemacht worden
 
 
-===== für später:
+===== für später
 - /

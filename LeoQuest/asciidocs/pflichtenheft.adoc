@@ -1,6 +1,6 @@
 = Pflichtenheft LeoQuest
 Abazovic Edina, Bogdan Sebastijan, Plakolb Marcel, Binder Paul
-1.1.0, 2021-11-22: Pflichtenheft
+4.1.0, 2022-03-07: Pflichtenheft
 ifndef::imagesdir[:imagesdir: images]
 //:toc-placement!:  // prevents the generation of the doc at this position, so it can be printed afterwards
 :sourcedir: ../src/main/java
@@ -24,7 +24,7 @@ endif::backend-html5[]
 - The HTBLA - Leonding would like to create a question-survey
 for its students and/or employees.
 
-image::/images/survey.png[]
+image::https://github.com/htl-leonding-project/2022-4ahif-leoquest/blob/main/LeoQuest/asciidocs/images/survey.png[Survey, 300, 200]
 
 
 == Current state
