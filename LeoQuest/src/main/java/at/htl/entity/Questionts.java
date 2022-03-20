@@ -1,4 +1,4 @@
-package at.htl;
+package at.htl.entity;
 
 public enum Questionts {
     MultipleChoice,

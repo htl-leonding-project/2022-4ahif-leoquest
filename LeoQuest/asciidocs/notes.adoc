@@ -124,16 +124,37 @@ nach Änderung der Use-cases
 * [*] LD -> LQ umschreiben
 * [*] Number -> No
 * [*] fremdschlüsselspalten mit _id enden
-* [ ] Tag-> Freitext - jede Frage (Question) kriegt freitext (250 Zeichen)
+* [*] fix pflichtenheft
+* [*] enum for question types
+* [*] Tag-> Freitext - jede Frage (Question) kriegt freitext (250 Zeichen)
 * [ ] Tests für Questionnaire
 * [ ] Tests für Survey
-* [ ] in Youtrack eintragen
-
+* [*] Questionnaire -> array of questions
+* [*] in Youtrack eintragen
 
 == Offene Fragen
 - Wie verknüpft man commits mit Youtrack?
 bzw. ist es richtig gemacht worden
 
+== Wichtig
+Technisch gesehen ist jede Reihe von Fragen,
+die zum Sammeln von Informationen geschrieben wurden, ein Fragebogen.
+
+Sie sind in der Regel in Umfang, Länge und Zielgruppe begrenzt und haben das Ziel,
+nur einen Datensatz zu sammeln.
+
+Bewerbungen enthalten in der Regel einen Fragebogen in irgendeiner Form zur Beschäftigungshistorie
+oder zu medizinischen Informationen eines Bewerbers. Diese Daten würden für die Kandidatenauswahl
+und nicht weiter verwendet.
+
+
+Eine Umfrage ist ein Prozess zum Sammeln von Daten, um Informationen für eine breitere Aktivität oder
+Forschung zu erhalten, und wird normalerweise häufig durchgeführt.
+
+Durchführung eines Marktforschungsprojekts
+eine Umfrage mit Kunden durchführen, um die Stärken und Schwächen Ihrer Marke zu ermitteln.
+Diese Daten würden verwendet, um Kundendienstprotokolle, Produktpaletten und Marketingaktivitäten
+zu verbessern.
 
 ===== für später
 - /
