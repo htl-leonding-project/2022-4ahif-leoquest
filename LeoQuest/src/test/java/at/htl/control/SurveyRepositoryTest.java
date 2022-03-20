@@ -32,7 +32,7 @@ class SurveyRepositoryTest {
 
         surveyRepository.save(survey);
 
-        Table table = new Table(ds,"LD_SURVEY");
+        Table table = new Table(ds,"LQ_SURVEY");
         org.assertj.db.api.Assertions.assertThat(table).hasNumberOfRows(1);
         org.assertj.db.api.Assertions.assertThat(table)
                 .column("S_TEACHER").value().isEqualTo(teacher.getId())

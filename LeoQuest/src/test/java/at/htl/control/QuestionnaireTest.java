@@ -27,7 +27,7 @@ public class QuestionnaireTest {
         Questionnaire questionnaire = new Questionnaire("nameTest", "descrTest");
         questionnaireRepository.save(questionnaire);
 
-        Table table = new Table(ds,"LD_QUESTIONNAIRE");
+        Table table = new Table(ds,"LQ_QUESTIONNAIRE");
         Assertions.assertThat(table)
                 .column("QN_DESC").value().isEqualTo("descrTest")
                 .column("QN_NAME").value().isEqualTo("nameTest");

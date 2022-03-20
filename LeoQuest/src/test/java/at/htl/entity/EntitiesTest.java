@@ -15,7 +15,8 @@ public class EntitiesTest {
 
     Teacher teacher = new Teacher("Max Mustermann");
     QuestionType questionType = new QuestionType(1L, "FREETEXT");
-    Questionnaire questionnaire = new Questionnaire("Schüler zufriedenheit", "In diesem Fragebogen wird die zufriedenheit der Schüler abgefragt.");
+    Questionnaire questionnaire = new Questionnaire("Schüler zufriedenheit",
+            "In diesem Fragebogen wird die zufriedenheit der Schüler abgefragt.");
     Question question = new Question("An diesem Lehrer gefällt mir...", 1, questionType, questionnaire);
     Survey survey = new Survey(LocalDate.of(2020, 8,1), teacher, questionnaire);
     Transaction transaction = new Transaction("code", "password123", false, survey);
@@ -145,7 +146,11 @@ public class EntitiesTest {
     @Test
     @Order(20)
     void toStringTransaction_Test(){
-        assertThat(transaction.toString()).isEqualTo("Transaction{id=null, code='code', password='password123', isUsed=false, survey=Survey{id=null, date=2020-08-01, teacher=Teacher{id=null, name='Max Mustermann'}, questionnaire=Questionnaire{id=null, name='Schüler zufriedenheit', desc='In diesem Fragebogen wird die zufriedenheit der Schüler abgefragt.'}}}");
+        assertThat(transaction.toString()).isEqualTo("Transaction{id=null, code='code', " +
+                "password='password123', isUsed=false, survey=Survey{id=null, date=2020-08-01, " +
+                "teacher=Teacher{id=null, name='Max Mustermann'}, " +
+                "questionnaire=Questionnaire{id=null, name='Schüler zufriedenheit', " +
+                "desc='In diesem Fragebogen wird die zufriedenheit der Schüler abgefragt.'}}}");
     }
 
     // Survey Questionnaire Answer AnswerOption Question
