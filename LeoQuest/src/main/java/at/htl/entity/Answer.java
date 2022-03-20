@@ -15,7 +15,7 @@ import javax.persistence.*;
 
 })
 @Entity
-@Table(name = "LD_ANSWER")
+@Table(name = "LQ_ANSWER")
 public class Answer {
 
 

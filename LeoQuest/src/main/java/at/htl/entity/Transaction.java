@@ -14,7 +14,7 @@ import javax.persistence.*;
         )
 })
 @Entity
-@Table(name = "LD_TRANSACTION")
+@Table(name = "LQ_TRANSACTION")
 public class Transaction {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
