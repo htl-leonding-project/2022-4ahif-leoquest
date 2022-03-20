@@ -1,4 +1,4 @@
 import { Component } from '@angular/core';
 
 @Component({ templateUrl: 'vote.component.html' })
-export class HomeComponent {}
+export class VoteComponent {}
