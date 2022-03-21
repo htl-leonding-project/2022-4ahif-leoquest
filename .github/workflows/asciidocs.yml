@@ -5,11 +5,11 @@ name: asciidoctor-ghpages
 on:
   push:
     paths:
-      - 'leoQuest/asciidocs/**'
+      - 'LeoQuest/asciidocs/**'
     branches: [ master, main ]
   pull_request:
     paths:
-      - 'leoQuest/asciidocs/**'
+      - 'LeoQuest/asciidocs/**'
     branches: [ master, main ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
