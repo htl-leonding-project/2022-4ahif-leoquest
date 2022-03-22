@@ -1,4 +1,4 @@
-insert into ld_teacher (t_name)
+insert into lq_teacher (t_name)
 values ('Parmenter'),
        ('Baker'),
        ('Hope'),
@@ -10,6 +10,7 @@ values ('Parmenter'),
        ('Parmenter'),
        ('Collins'),
        ('Miller');
+
 
 
 

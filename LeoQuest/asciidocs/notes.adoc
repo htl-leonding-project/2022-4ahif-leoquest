@@ -16,6 +16,28 @@ ifdef::backend-html5[]
 //icon:home[link=https://htl-leonding.github.io/]
 endif::backend-html5[]
 
+== 22.03. Stundenprotokoll
+[small]#Anwesend:
+Binder, Abazovic, Bogdan, Plakolb#
+
+==== Abazovic
+- create inserts
+
+
+==== _bis 28.03._
+
+- Bogdan
+* [*] LD -> LQ umschreiben
+* [*] Number -> No
+* [*] fremdschlüsselspalten mit _id enden
+* [*] fix pflichtenheft
+* [*] enum for question types
+* [*] Tag-> Freitext - jede Frage (Question) kriegt freitext (250 Zeichen)
+* [ ] Tests für Questionnaire
+* [ ] Tests für Survey
+* [*] Questionnaire -> array of questions
+* [*] in Youtrack eintragen
+
 == 08.03. Stundenprotokoll
 [small]#Anwesend:
 Binder, Abazovic, Bogdan, Plakolb#
@@ -118,19 +140,6 @@ https://form.jotform.com/220232242102332[JotForm Layout]
 * [*] Youtrack auf den neusten Stand updaten,
 nach Änderung der Use-cases
 
-==== _bis 28.03.
-
-- Bogdan
-* [*] LD -> LQ umschreiben
-* [*] Number -> No
-* [*] fremdschlüsselspalten mit _id enden
-* [*] fix pflichtenheft
-* [*] enum for question types
-* [*] Tag-> Freitext - jede Frage (Question) kriegt freitext (250 Zeichen)
-* [ ] Tests für Questionnaire
-* [ ] Tests für Survey
-* [*] Questionnaire -> array of questions
-* [*] in Youtrack eintragen
 
 == Offene Fragen
 - Wie verknüpft man commits mit Youtrack?
