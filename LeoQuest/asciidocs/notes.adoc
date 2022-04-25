@@ -16,6 +16,29 @@ ifdef::backend-html5[]
 //icon:home[link=https://htl-leonding.github.io/]
 endif::backend-html5[]
 
+=== _bis 02.05_
+==== Abazovic
+- setting up a new project with correct datamodel
+- creating a presentation for leo quest
+- deleting old work-branches
+- writing instructions for the project
+
+
+== 25.04. Stundenprotokoll
+[small]#Anwesend:
+Binder, Abazovic, Plakolb#
+
+
+== 22.03. Stundenprotokoll
+[small]#Anwesend:
+Binder, Abazovic, Plakolb#
+
+====== Question Type und Questionts!
+
+==== Abazovic
+- trying to fix asciidocs
+
+
 == 22.03. Stundenprotokoll
 [small]#Anwesend:
 Binder, Abazovic, Bogdan, Plakolb#
