@@ -1,0 +1,33 @@
+= Demo-Presentation1
+Thomas W. Stütz
+1.0, 2020-08-22
+ifndef::sourcedir[:sourcedir: ../src/main/java]
+ifndef::imagesdir[:imagesdir: images]
+ifndef::backend[:backend: html5]
+:icons: font
+
+== First Slide
+
+* aaa
+* bbb
+* ccc [red]#red text#
+
+=== Second Slide
+
+[plantuml,cld,png]
+----
+@startuml
+class Person {
+brand: String
+type: String
+}
+@enduml
+----
+
+== Third Slide
+
+image:https://images.pexels.com/photos/3966425/pexels-photo-3966425.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940[VW]
+
+== Fourth Slide
+
+IMPORTANT: Something very important

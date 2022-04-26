@@ -1,0 +1,58 @@
+### Create a new Questionnaire
+
+POST http://localhost:8080/questionnaire
+Content-Type:application/json
+
+{
+  "qn_id": 1,
+  "qn_name": "test Questionnaire",
+  "qn_description": "Ein Fragebogen zum Testen meiner Entities",
+  "qn_questions": [
+    {
+      "q_id": 1,
+      "q_text": "Yes or No",
+      "q_image": null,
+      "q_sequenceNumber": 0,
+      "q_type": "SINGLECHOICE",
+      "q_answerOptions": [
+        {
+          "ao_id": 1,
+          "ao_text": "YES",
+          "ao_value": 1,
+          "ao_sequenceNumber": 1,
+          "ao_isChosen": true
+        },
+        {
+          "ao_id": 2,
+          "ao_text": "NO",
+          "ao_value": 2,
+          "ao_sequenceNumber": 2,
+          "ao_isChosen": false
+        }
+      ]
+    },
+    {
+      "q_id": 1,
+      "q_text": "No or Yes",
+      "q_image": null,
+      "q_sequenceNumber": 1,
+      "q_type": "SINGLECHOICE",
+      "q_answerOptions": [
+        {
+          "ao_id": 3,
+          "ao_text": "NO",
+          "ao_value": 3,
+          "ao_sequenceNumber": 3,
+          "ao_isChosen": false
+        },
+        {
+          "ao_id": 4,
+          "ao_text": "YES",
+          "ao_value": 4,
+          "ao_sequenceNumber": 4,
+          "ao_isChosen": true
+        }
+      ]
+    }
+  ]
+}

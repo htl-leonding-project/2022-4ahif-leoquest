@@ -1,0 +1,57 @@
+### Get all Questions
+
+GET http://localhost:8080/leosurvey/questions
+Accept: application/json
+
+### Get all AnswerOptions
+
+GET http://localhost:8080/leosurvey/options
+Accept: application/json
+
+### Create a ChosenOption
+
+POST http://localhost:8080/leosurvey/chosenoptions/add
+Content-Type:application/json
+
+{
+  "co_ao": {
+    "ao_text": "xx",
+    "ao_value": 0,
+    "ao_sequenceNumber": 1,
+    "ao_question": {
+      "q_text": "xx",
+      "q_sequenceNumber": 1,
+      "qq_type": "xx",
+      "q_questionnaire": {
+        "qn_name": "xx",
+        "qn_description": "xx"
+      }
+    },
+    "co_a" : {
+      "a_answer_text": "xx",
+      "q_question": {
+        "q_text": "xx",
+        "q_sequenceNumber": 1,
+        "qq_type": "xx",
+        "q_questionnaire": {
+          "qn_name": "xx",
+          "qn_description": "xx"
+        }
+      }
+    },
+    "co_q": {
+      "q_text": "xx",
+      "q_sequenceNumber": 1,
+      "qq_type": "xx",
+      "q_questionnaire": {
+        "qn_name": "xx",
+        "qn_description": "xx"
+      }
+    }
+  }
+}
+
+### Get all Questionnaires
+
+GET http://localhost:8080/leosurvey/questionnaire
+Accept: application/json

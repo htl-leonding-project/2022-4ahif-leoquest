@@ -1,0 +1,33 @@
+### Get all Surveys
+
+GET http://localhost:8080/survey
+Accept: application/json
+
+### Delete a Survey
+
+DELETE http://localhost:8080/survey/1
+
+### Get all Questionnaires
+
+GET http://localhost:8080/questionnaire
+Accept: application/json
+
+### Get all Questions
+
+GET http://localhost:8080/question
+Accept: application/json
+
+### Get all AnswerOptions
+
+GET http://localhost:8080/answeroptions
+Accept: application/json
+
+### Get all Transactions
+
+GET http://localhost:8080/s_transaction
+Accept: application/json
+
+### Get all Teachers
+
+GET http://localhost:8080/teacher
+Accept: application/json
