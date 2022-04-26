@@ -2,6 +2,12 @@ db-postgres/
 *.jar
 db/
 
+.DS_Store
+gh-pages
+/asciidocs-slides/revealjs/
+/build-slides-revealjs/
+/build-docs-pdf/
+
 #Maven
 target/
 pom.xml.tag
