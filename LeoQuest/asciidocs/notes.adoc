@@ -17,9 +17,24 @@ ifdef::backend-html5[]
 endif::backend-html5[]
 
 === _bis 02.05_
+- /
+
+
+== 26.04. Stundenprotokoll
+[small]#Anwesend:
+Binder, Abazovic, Bogdan, Plakolb#
+
+==== Bogdan
+* [ ] fix Test datasource
+
+==== Abazovic
+* [ ] set up youtrack connection
+* [*] adding reveal js slides
+* [*] adding http-requests
+
+=== _bis 02.05_
 ==== Abazovic
 - setting up a new project with correct datamodel
-- creating a presentation for leo quest
 - deleting old work-branches
 - writing instructions for the project
 
@@ -32,8 +47,6 @@ Binder, Abazovic, Plakolb#
 == 22.03. Stundenprotokoll
 [small]#Anwesend:
 Binder, Abazovic, Plakolb#
-
-====== Question Type und Questionts!
 
 ==== Abazovic
 - trying to fix asciidocs

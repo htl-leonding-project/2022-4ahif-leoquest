@@ -1,26 +1,45 @@
-= Demo-Presentation1
-Thomas W. Stütz
+= Demo-Presentation
+Edina Abazovic
 1.0, 2020-08-22
 ifndef::sourcedir[:sourcedir: ../src/main/java]
 ifndef::imagesdir[:imagesdir: images]
 ifndef::backend[:backend: html5]
 :icons: font
 
-== First Slide
+=== HTL Leonding Leo Quest
 
-* aaa
-* bbb
-* ccc [red]#red text#
 
-=== Second Slide
+=== Use cases
 
-[plantuml,cld,png]
+- Admin can create a survey
+- Admin can invite/assign members to survey
+- Admin can evaluate the results (close the survey)
+- User can vote
+- User can view results
+
+== Use case diagram
+
+
+[plantuml,usecase,png]
 ----
 @startuml
-class Person {
-brand: String
-type: String
+left to right direction
+
+actor "survey respondent" as u1
+actor "poll creator"as u2
+
+rectangle "LeoQuest" {
+    usecase "Create Survey" as UC1
+    usecase "Answer Survey" as UC2
+    usecase "Assign Members" as UC3
+    usecase "Evaluate Results" as UC4
+
 }
+u2 --> UC1
+u1 --> UC2
+u2 --> UC3
+u2 --> UC4
+
 @enduml
 ----
 
