@@ -1,4 +1,5 @@
-package at.htl.entity;
+package at.htl.entities;
+
 
 import javax.persistence.*;
 
@@ -9,7 +10,7 @@ import javax.persistence.*;
         )
 })
 @Entity
-@Table(name = "LD_ANSWER_OPTION")
+@Table(name = "LQ_ANSWER_OPTION")
 public class AnswerOption {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,28 +20,24 @@ public class AnswerOption {
     private String text;
     @Column(name = "ao_value")
     private int value;
-    @Column(name = "ao_seqNumber")
+    @Column(name = "ao_seqNo")
     private int seqNumber;
+
     @ManyToOne(cascade=CascadeType.ALL)
-    @JoinColumn(name = "ao_question")
+    @JoinColumn(name = "ao_question_id")
     private Question question;
+
+    private int how_often;
 
     public AnswerOption() {
     }
 
-    public AnswerOption(String text, int value, int seqNumber, Question question) {
+    public AnswerOption(String text, int value, int seqNumber, Question question, int how_often) {
         this.text = text;
         this.value = value;
         this.seqNumber = seqNumber;
         this.question = question;
-    }
-
-    public AnswerOption(Long id, String text, int value, int seqNumber, Question question) {
-        this.id = id;
-        this.text = text;
-        this.value = value;
-        this.seqNumber = seqNumber;
-        this.question = question;
+        this.how_often = how_often;
     }
 
     public Long getId() {
@@ -82,6 +79,16 @@ public class AnswerOption {
     public void setQuestion(Question ao_question) {
         this.question = ao_question;
     }
+
+
+    public int getHow_often() {
+        return how_often;
+    }
+
+    public void setHow_often(int how_often) {
+        this.how_often = how_often;
+    }
+
 
     @Override
     public String toString() {

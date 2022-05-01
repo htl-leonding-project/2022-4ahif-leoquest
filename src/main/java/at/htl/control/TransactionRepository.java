@@ -1,44 +1,49 @@
 package at.htl.control;
 
-import at.htl.entity.Teacher;
-import at.htl.entity.Transaction;
+
+import at.htl.entities.Survey;
+import at.htl.entities.Transaction;
+import io.quarkus.hibernate.orm.panache.PanacheRepository;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
-import javax.persistence.EntityManager;
-import javax.persistence.Query;
 import javax.transaction.Transactional;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Random;
 
 @ApplicationScoped
-public class TransactionRepository {
+public class TransactionRepository implements PanacheRepository<Transaction> {
+     @Inject
+     SurveyRepository surveyRepository;
 
-    @Inject
-    EntityManager em;
+     @Transactional
+     public Transaction save(Transaction transaction){
+          return getEntityManager().merge(transaction);
+     }
 
-    @Transactional
-    public void delete(Transaction transaction) {
-        em.remove(transaction);
-    }
+     @Transactional
+     public List<Transaction> generateTransactionCode(Survey survey, int amount){
+          final LinkedList<Transaction> transactions = new LinkedList<>();
+          System.out.println(survey.getId());
+          survey = surveyRepository.find("id", survey.getId()).firstResult();
+          System.out.println(survey);
 
-    @Transactional
-    public void save(Transaction transaction){
-        em.merge(transaction);
-    }
-
-    public List<Transaction> findAll() {
-        return em
-                .createNamedQuery("Transaction.findAll", Transaction.class)
-                .getResultList();
-    }
-
-    public Transaction findById(Long id) {
-
-        Query query = em.createNamedQuery("Transaction.findById",
-                Transaction.class);
-        query.setParameter("id", id);
-
-        return (Transaction)query.getSingleResult();
-
-    }
+          Random r = new Random();
+          String back = "";
+          for(int i = 0; i <= amount; i++){
+               for(int o = 0; o < 4; o++){
+                    char c = (char)(r.nextInt(26) + 'a');
+                    back += c;
+               }
+               Transaction transaction = new Transaction();
+               transaction.setCode(back);
+               transaction.setIsUsed(false);
+               transaction.setSurvey(survey);
+               getEntityManager().persist(transaction);
+               transactions.add(transaction);
+               back = "";
+          }
+          return transactions;
+     }
 }

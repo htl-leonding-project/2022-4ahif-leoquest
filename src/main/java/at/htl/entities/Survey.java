@@ -1,7 +1,5 @@
-package at.htl.entity;
+package at.htl.entities;
 
-import at.htl.entity.Questionnaire;
-import at.htl.entity.Teacher;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -22,7 +20,7 @@ import java.time.LocalDate;
         )
 })
 @Entity
-@Table(name = "LD_SURVEY")
+@Table(name = "LQ_SURVEY")
 public class Survey {
 
     @Id
@@ -34,36 +32,23 @@ public class Survey {
     private LocalDate date;
 
     @ManyToOne(cascade=CascadeType.ALL)
-    @JoinColumn(name = "s_teacher")
+    @JoinColumn(name = "s_teacher_id")
     private Teacher teacher;
 
-
     @ManyToOne(cascade=CascadeType.ALL)
-    @JoinColumn(name = "s_questionnaire")
+    @JoinColumn(name = "s_questionnaire_id")
     private Questionnaire questionnaire;
 
     public Survey() {
     }
 
-    public Survey(LocalDate date, Teacher teacher, Questionnaire questionnaire) {
+    public Survey(LocalDate date, Questionnaire questionnaire) {
         this.date = date;
-        this.teacher = teacher;
-        this.questionnaire = questionnaire;
-    }
-
-    public Survey(Long id, LocalDate date, Teacher teacher, Questionnaire questionnaire) {
-        this.id = id;
-        this.date = date;
-        this.teacher = teacher;
         this.questionnaire = questionnaire;
     }
 
     public Long getId() {
         return id;
-    }
-
-    public void setId(Long s_id) {
-        this.id = s_id;
     }
 
     public LocalDate getDate() {
@@ -74,13 +59,6 @@ public class Survey {
         this.date = s_date;
     }
 
-    public Teacher getTeacher() {
-        return teacher;
-    }
-
-    public void setTeacher(Teacher s_teacher) {
-        this.teacher = s_teacher;
-    }
 
     public Questionnaire getQuestionnaire() {
         return questionnaire;
@@ -95,7 +73,6 @@ public class Survey {
         return "Survey{" +
                 "id=" + id +
                 ", date=" + date +
-                ", teacher=" + teacher +
                 ", questionnaire=" + questionnaire +
                 '}';
     }

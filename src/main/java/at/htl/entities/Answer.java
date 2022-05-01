@@ -1,4 +1,4 @@
-package at.htl.entity;
+package at.htl.entities;
 
 import javax.persistence.*;
 
@@ -15,9 +15,8 @@ import javax.persistence.*;
 
 })
 @Entity
-@Table(name = "LD_ANSWER")
+@Table(name = "LQ_ANSWER")
 public class Answer {
-
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "a_id")
@@ -27,26 +26,14 @@ public class Answer {
     private String text;
 
     @ManyToOne(cascade=CascadeType.ALL)
-    @JoinColumn(name = "a_transaction")
-    private Transaction transaction;
-
-    @ManyToOne(cascade=CascadeType.ALL)
-    @JoinColumn(name = "a_question")
+    @JoinColumn(name = "a_question_id")
     private Question question;
 
     public Answer() {
     }
 
-    public Answer(String text, Transaction transaction, Question question) {
+    public Answer(String text, Question question) {
         this.text = text;
-        this.transaction = transaction;
-        this.question = question;
-    }
-
-    public Answer(Long id, String text, Transaction transaction, Question question) {
-        this.id = id;
-        this.text = text;
-        this.transaction = transaction;
         this.question = question;
     }
 
@@ -66,14 +53,6 @@ public class Answer {
         this.text = a_text;
     }
 
-    public Transaction getTransaction() {
-        return transaction;
-    }
-
-    public void setTransaction(Transaction a_transaction) {
-        this.transaction = a_transaction;
-    }
-
     public Question getQuestion() {
         return question;
     }
@@ -87,7 +66,6 @@ public class Answer {
         return "Answer{" +
                 "id=" + id +
                 ", text='" + text + '\'' +
-                ", transaction=" + transaction +
                 ", question=" + question +
                 '}';
     }

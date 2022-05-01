@@ -1,39 +1,38 @@
-package at.htl.control;
+package at.htl.entities;
 
-import at.htl.entities.Questionnaire;
-import at.htl.entities.Survey;
-import at.htl.entities.Teacher;
 import io.agroal.api.AgroalDataSource;
 import io.quarkus.test.junit.QuarkusTest;
 import org.assertj.db.type.Table;
-import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestMethodOrder;
 
 import javax.inject.Inject;
+import javax.persistence.EntityManager;
+import javax.transaction.*;
 import java.time.LocalDate;
 
 import static org.assertj.db.api.Assertions.assertThat;
 
 @QuarkusTest
-@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class TeacherRepositoryTest {
-
+class TeacherTest {
     @Inject
-    TeacherRepository teacherRepository;
+    EntityManager em;
+    @Inject
+    UserTransaction tm;
     @Inject
     AgroalDataSource ds;
 
-    Table teacher = new Table(ds, "lq_teacher");
-
     @Test
-    @Order(10)
-    void createTeacherTest(){
+    void createTeacherTest() throws SystemException, NotSupportedException,
+            HeuristicRollbackException, HeuristicMixedException, RollbackException {
         Questionnaire q = new Questionnaire(1L, "Test", "Test of the Questionnaire");
         LocalDate dt = LocalDate.now();
         Survey s = new Survey(dt, q);
-        teacherRepository.save(new Teacher("Teach", s));
+        tm.begin();
+        em.persist(q);
+        em.persist(s);
+        em.persist(new Teacher("Teach", s));
+        tm.commit();
+        Table teacher = new Table(ds, "lq_teacher");
         assertThat(teacher).row(0)
                 .value().isEqualTo(1)
                 .value().isEqualTo("Teach")

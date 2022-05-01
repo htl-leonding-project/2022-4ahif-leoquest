@@ -1,20 +1,23 @@
 package at.htl.control;
 
-
-import at.htl.entity.Survey;
-import at.htl.entity.Teacher;
-import at.htl.entity.Questionnaire;
+import at.htl.entities.Questionnaire;
+import at.htl.entities.Survey;
 import io.agroal.api.AgroalDataSource;
 import io.quarkus.test.junit.QuarkusTest;
 import org.assertj.db.type.Table;
+import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
 
 import javax.inject.Inject;
 import java.time.LocalDate;
 
+import static org.assertj.db.api.Assertions.assertThat;
+
 @QuarkusTest
-class SurveyRepositoryTest {
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+public class SurveyRepositoryTest {
 
     @Inject
     SurveyRepository surveyRepository;
@@ -22,22 +25,19 @@ class SurveyRepositoryTest {
     @Inject
     AgroalDataSource ds;
 
-    Teacher teacher = new Teacher("Max Mustermann");
-    Questionnaire questionnaire = new Questionnaire("Quest1", "TestQuestionnaire 1");
-    Survey survey = new Survey(LocalDate.of(2022,3,2),teacher,questionnaire);
+    Table t = new Table(ds, "lq_survey");
 
-    @Order(100)
     @Test
-    void persistASurvey() {
+    @Order(10)
+    void createSurveyTest(){
+        Questionnaire q = new Questionnaire(1L, "Test", "Test of the Questionnaire");
+        LocalDate d = LocalDate.now();
+        Survey s = new Survey(d, q);
 
-        surveyRepository.save(survey);
-
-        Table table = new Table(ds,"LD_SURVEY");
-        org.assertj.db.api.Assertions.assertThat(table).hasNumberOfRows(1);
-        org.assertj.db.api.Assertions.assertThat(table)
-                .column("S_TEACHER").value().isEqualTo(teacher.getId())
-                .column("S_QUESTIONNAIRE").value().isEqualTo(questionnaire.getId())
-                .column("S_DATE").value().isEqualTo("2022-03-02");
+        surveyRepository.save(s);
+        assertThat(t).row(0)
+                .value().isEqualTo(1)
+                .value().isEqualTo(d)
+                .value().isEqualTo(1);
     }
-
 }

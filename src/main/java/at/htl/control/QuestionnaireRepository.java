@@ -1,45 +1,31 @@
 package at.htl.control;
 
-import at.htl.entity.Questionnaire;
-import at.htl.entity.Teacher;
+
+import at.htl.entities.Questionnaire;
+import io.quarkus.hibernate.orm.panache.PanacheRepository;
 
 import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
-import javax.persistence.Entity;
-import javax.persistence.EntityManager;
-import javax.persistence.Query;
 import javax.transaction.Transactional;
 import java.util.List;
 
 @ApplicationScoped
-public class QuestionnaireRepository {
-
-    @Inject
-    EntityManager em;
+public class QuestionnaireRepository implements PanacheRepository<Questionnaire> {
 
     @Transactional
-    public void delete(Questionnaire questionnaire) {
-        em.remove(questionnaire);
+    public Questionnaire save(Questionnaire questionnaire){
+        return getEntityManager().merge(questionnaire);
     }
 
     @Transactional
-    public void save(Questionnaire questionnaire){
-        em.persist(questionnaire);
+    public void delete(long id){
+        delete(findById(id));
     }
 
-    public List<Questionnaire> findAll() {
-        return em
-                .createNamedQuery("Questionnaire.findAll", Questionnaire.class)
-                .getResultList();
+    public Questionnaire findById(long id){
+        return find("id",id).singleResult();
     }
 
-    public Questionnaire findById(Long id) {
-
-        Query query = em.createNamedQuery("Questionnaire.findById",
-                Questionnaire.class);
-        query.setParameter("id", id);
-
-        return (Questionnaire) query.getSingleResult();
-
+    public List<Questionnaire> findAllQuestionnaires(){
+        return listAll();
     }
 }
