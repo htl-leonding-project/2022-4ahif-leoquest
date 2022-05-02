@@ -25,11 +25,12 @@ public class SurveyRepositoryTest {
     @Inject
     AgroalDataSource ds;
 
-    Table t = new Table(ds, "lq_survey");
 
     @Test
     @Order(10)
     void createSurveyTest(){
+        Table t = new Table(ds, "lq_survey");
+
         Questionnaire q = new Questionnaire(1L, "Test", "Test of the Questionnaire");
         LocalDate d = LocalDate.now();
         Survey s = new Survey(d, q);

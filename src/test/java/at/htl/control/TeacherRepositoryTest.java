@@ -25,11 +25,13 @@ public class TeacherRepositoryTest {
     @Inject
     AgroalDataSource ds;
 
-    Table teacher = new Table(ds, "lq_teacher");
+
 
     @Test
     @Order(10)
     void createTeacherTest(){
+        Table teacher = new Table(ds, "lq_teacher");
+
         Questionnaire q = new Questionnaire(1L, "Test", "Test of the Questionnaire");
         LocalDate dt = LocalDate.now();
         Survey s = new Survey(dt, q);

@@ -23,11 +23,11 @@ public class AnswerOptionRepositoryTest {
     @Inject
     AgroalDataSource ds;
 
-    Table ao = new Table(ds, "lq_answer_option");
-
     @Test
     @Order(10)
     void createAnswerOptionTest(){
+        Table ao = new Table(ds, "lq_answer_option");
+
         Questionnaire q = new Questionnaire(1L, "Test", "Test of the Questionnaire");
         Question qn = new Question("Yes or No", 1, QuestionType.SingleChoice.name(), q);
 

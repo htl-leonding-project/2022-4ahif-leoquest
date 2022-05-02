@@ -33,14 +33,14 @@ public class TransactionRepositoryTest {
     @Inject
     AgroalDataSource ds;
 
-    Table transactions = new Table(ds, "lq_transaction");
-
     @PersistenceContext
     EntityManager em;
 
     @Test
     @Order(10)
     void createTransactionTest(){
+        Table transactions = new Table(ds, "lq_transaction");
+
         Questionnaire q = new Questionnaire(1L, "Test", "Test of the Questionnaire");
         LocalDate dt = LocalDate.now();
         Survey survey = new Survey(dt, q);

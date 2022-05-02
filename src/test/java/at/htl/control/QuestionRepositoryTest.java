@@ -31,12 +31,16 @@ public class QuestionRepositoryTest {
     @Inject
     QuestionRepository questionRepository;
 
-    Table t = new Table(ds, "question");
+
+
     Table questionnaire = new Table(ds, "lq_questionnaire");
 
     @Order(100)
     @Test
     void persistAQuestion() {
+
+        Table t = new Table(ds, "question");
+
         Questionnaire questionnaire = new Questionnaire(1L,"Quest1",
                 "TestQuestionnaire 1");
 
@@ -59,6 +63,8 @@ public class QuestionRepositoryTest {
     @Test
     @Order(10)
     void createQuestionTest(){
+        Table t = new Table(ds, "question");
+
         Questionnaire q = new Questionnaire(1L, "Test", "Test of the Questionnaire");
         Question qu = new Question("Yes or No", 1, QuestionType.SingleChoice.name(), q);
 
@@ -74,6 +80,8 @@ public class QuestionRepositoryTest {
     @Test
     @Order(20)
     void deleteQuestionTest(){
+        Table t = new Table(ds, "question");
+
         questionRepository.delete(1);
         assertThat(t).hasNumberOfRows(0);
     }
@@ -81,6 +89,8 @@ public class QuestionRepositoryTest {
     @Test
     @Order(30)
     void createMultipleChoiceQuestionTest(){
+        Table t = new Table(ds, "question");
+
         Questionnaire q = new Questionnaire(2L, "Test", "Test of the Questionnaire");
         Question qu = new Question("MultipleChoice Question", 1, QuestionType.MultipleChoice.name(), q);
 
@@ -91,7 +101,7 @@ public class QuestionRepositoryTest {
     @Test
     @Order(40)
     void createYESORNOQuestionTest(){
-
+        Table t = new Table(ds, "question");
         Question qu = new Question("YESORNO Question", 1, QuestionType.YesNoQuestion.name(), (Questionnaire) em.createQuery("select q from Questionnaire q where q.id = 2").getSingleResult());
 
         questionRepository.save(qu);
@@ -101,7 +111,7 @@ public class QuestionRepositoryTest {
     @Test
     @Order(66)
     void createFreetextQuestionTest(){
-
+        Table t = new Table(ds, "question");
         Question qu = new Question("Freetext Question", 1, QuestionType.Text.name(), (Questionnaire) em.createQuery("select q from Questionnaire q where q.id = 2").getSingleResult());
 
         questionRepository.save(qu);

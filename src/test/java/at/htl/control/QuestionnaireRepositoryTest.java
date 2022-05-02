@@ -24,7 +24,7 @@ public class QuestionnaireRepositoryTest {
     @Inject
     AgroalDataSource ds;
 
-    Table t = new Table(ds, "lq_questionnaire");
+
 
     @Test
     @Order(10)
@@ -32,8 +32,8 @@ public class QuestionnaireRepositoryTest {
         Questionnaire q = new Questionnaire(1L, "Test", "Test of the Questionnaire");
         questionnaireRepository.save(q);
 
+        Table t = new Table(ds, "lq_questionnaire");
 
-        Table t = new Table(ds, "questionnaire");
         assertThat(t).column("qn_id")
                 .value().isEqualTo(1)
                 .column("qn_name")
@@ -46,6 +46,8 @@ public class QuestionnaireRepositoryTest {
     @Test
     @Order(20)
     void deleteQuestionnaireTest(){
+        Table t = new Table(ds, "lq_questionnaire");
+
         questionnaireRepository.delete(1);
         assertThat(t).hasNumberOfRows(0);
     }
@@ -53,6 +55,8 @@ public class QuestionnaireRepositoryTest {
     @Test
     @Order(30)
     void findQuestionnaireById(){
+
+
         Questionnaire q = new Questionnaire(1L,"Test", "Test of the Questionnaire");
         Questionnaire q1 = new Questionnaire(2L, "Test1", "Test1 of the Questionnaire");
         Questionnaire q2 = new Questionnaire(3L, "Test2", "Test2 of the Questionnaire");

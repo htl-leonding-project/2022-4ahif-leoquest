@@ -26,11 +26,13 @@ public class AnswerRepositoryTest {
     @Inject
     AgroalDataSource ds;
 
-    Table a = new Table(ds, "lq_answer");
+
 
     @Test
     @Order(10)
     void createAnswerTest(){
+        Table a = new Table(ds, "lq_answer");
+
         Questionnaire q = new Questionnaire(1L, "Test", "Test of the Questionnaire");
         Question qn = new Question("Yes or No", 1, QuestionType.SingleChoice.name(), q);
         answerRepository.save(new Answer("Yes", qn));
