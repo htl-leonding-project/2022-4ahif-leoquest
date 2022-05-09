@@ -1,6 +1,8 @@
 package at.htl.entities;
 
 
+import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 
@@ -21,7 +23,7 @@ import java.time.LocalDate;
 })
 @Entity
 @Table(name = "LQ_SURVEY")
-public class Survey {
+public class Survey extends PanacheEntityBase {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

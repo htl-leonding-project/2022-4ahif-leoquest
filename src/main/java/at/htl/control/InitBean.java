@@ -41,12 +41,12 @@ public class InitBean {
 
         //Questionaire
         Questionnaire q = new Questionnaire(1L,"Lehrer-Fragebogen", "Fragebogen über einen Lehrer");
-        questionnaireRepository.save(q);
+        questionnaireRepository.persist(q);
 
         //Survey
         LocalDate d = LocalDate.now();
         Survey s = new Survey(d, (Questionnaire) em.createQuery("select q from Questionnaire q where q.id = 1").getSingleResult());
-        surveyRepository.save(s);
+        surveyRepository.persist(s);
 
         //TransactionCodes
         Transaction s_t1 = new Transaction("abc",
@@ -55,14 +55,14 @@ public class InitBean {
                 false, (Survey) em.createQuery("select s from Survey s where s.id = 1").getSingleResult());
         Transaction s_t3 = new Transaction("abc",
                 false, (Survey) em.createQuery("select s from Survey s where s.id = 1").getSingleResult());
-        transactionRepository.save(s_t1);
-        transactionRepository.save(s_t2);
-        transactionRepository.save(s_t3);
+        transactionRepository.persist(s_t1);
+        transactionRepository.persist(s_t2);
+        transactionRepository.persist(s_t3);
 
         //Teacher
         Teacher t = new Teacher("Lehrer",
                 (Survey) em.createQuery("select s from Survey s where s.id = 1").getSingleResult());
-        teacherRepository.save(t);
+        teacherRepository.persist(t);
 
         //Question a - i
         Question qa = new Question("Der Lehrer ist fair - gerecht?", 1,
@@ -93,15 +93,15 @@ public class InitBean {
                 QuestionType.SingleChoice.name(),
                 (Questionnaire) em.createQuery("select q from Questionnaire q where q.id = 1").getSingleResult());
 
-        questionRepository.save(qa);
-        questionRepository.save(qb);
-        questionRepository.save(qc);
-        questionRepository.save(qd);
-        questionRepository.save(qe);
-        questionRepository.save(qf);
-        questionRepository.save(qg);
-        questionRepository.save(qh);
-        questionRepository.save(qi);
+        questionRepository.persist(qa);
+        questionRepository.persist(qb);
+        questionRepository.persist(qc);
+        questionRepository.persist(qd);
+        questionRepository.persist(qe);
+        questionRepository.persist(qf);
+        questionRepository.persist(qg);
+        questionRepository.persist(qh);
+        questionRepository.persist(qi);
 
         //Question 1 - 30
         Question q1 = new Question("Er kann auch schwierige Fragen beantworten, weil er sich in seinem " +
@@ -206,39 +206,39 @@ public class InitBean {
                 QuestionType.Text.name(),
                 (Questionnaire) em.createQuery("select q from Questionnaire q where q.id = 1").getSingleResult());
 
-        questionRepository.save(q1);
-        questionRepository.save(q2);
-        questionRepository.save(q3);
-        questionRepository.save(q4);
-        questionRepository.save(q5);
-        questionRepository.save(q6);
-        questionRepository.save(q7);
-        questionRepository.save(q8);
-        questionRepository.save(q9);
-        questionRepository.save(q10);
-        questionRepository.save(q11);
-        questionRepository.save(q12);
-        questionRepository.save(q13);
-        questionRepository.save(q14);
-        questionRepository.save(q15);
-        questionRepository.save(q16);
-        questionRepository.save(q17);
-        questionRepository.save(q18);
-        questionRepository.save(q19);
-        questionRepository.save(q20);
-        questionRepository.save(q21);
-        questionRepository.save(q22);
-        questionRepository.save(q23);
-        questionRepository.save(q24);
-        questionRepository.save(q25);
-        questionRepository.save(q26);
-        questionRepository.save(q27);
-        questionRepository.save(q28);
-        questionRepository.save(q29);
-        questionRepository.save(q30);
-        questionRepository.save(q31);
-        questionRepository.save(q32);
-        questionRepository.save(q33);
+        questionRepository.persist(q1);
+        questionRepository.persist(q2);
+        questionRepository.persist(q3);
+        questionRepository.persist(q4);
+        questionRepository.persist(q5);
+        questionRepository.persist(q6);
+        questionRepository.persist(q7);
+        questionRepository.persist(q8);
+        questionRepository.persist(q9);
+        questionRepository.persist(q10);
+        questionRepository.persist(q11);
+        questionRepository.persist(q12);
+        questionRepository.persist(q13);
+        questionRepository.persist(q14);
+        questionRepository.persist(q15);
+        questionRepository.persist(q16);
+        questionRepository.persist(q17);
+        questionRepository.persist(q18);
+        questionRepository.persist(q19);
+        questionRepository.persist(q20);
+        questionRepository.persist(q21);
+        questionRepository.persist(q22);
+        questionRepository.persist(q23);
+        questionRepository.persist(q24);
+        questionRepository.persist(q25);
+        questionRepository.persist(q26);
+        questionRepository.persist(q27);
+        questionRepository.persist(q28);
+        questionRepository.persist(q29);
+        questionRepository.persist(q30);
+        questionRepository.persist(q31);
+        questionRepository.persist(q32);
+        questionRepository.persist(q33);
 
 
         //Answer Options for Questions a - i
@@ -246,25 +246,25 @@ public class InitBean {
             Question question = query.setParameter(1, Long.valueOf(i)).getSingleResult();
             AnswerOption a = new AnswerOption("Diese Eigenschaft trifft auf meinen Lehrer" +
                     " völlig zu", 1, i, question, 0);
-            answerOptionRepository.save(a);
+            answerOptionRepository.persist(a);
         }
         for(int i = 1; i <= 9; i++){
             Question question = query.setParameter(1, Long.valueOf(i)).getSingleResult();
             AnswerOption a = new AnswerOption("Diese Eigenschaft trifft auf meinen Lehrer" +
                     " eher zu", 2, i, question, 0);
-            answerOptionRepository.save(a);
+            answerOptionRepository.persist(a);
         }
         for(int i = 1; i <= 9; i++){
             Question question = query.setParameter(1, Long.valueOf(i)).getSingleResult();
             AnswerOption a = new AnswerOption("Diese Eigenschaft trifft auf meinen Lehrer" +
                     " eher nicht zu", 3, i, question, 0);
-            answerOptionRepository.save(a);
+            answerOptionRepository.persist(a);
         }
         for(int i = 1; i <= 9; i++){
             Question question = query.setParameter(1, Long.valueOf(i)).getSingleResult();
             AnswerOption a = new AnswerOption("Diese Eigenschaft trifft auf meinen Lehrer" +
                     " überhaupt nicht zu", 4, i, question, 0);
-            answerOptionRepository.save(a);
+            answerOptionRepository.persist(a);
         }
 
         //ANswer Options for Questions 1 - 30
@@ -272,25 +272,25 @@ public class InitBean {
             Question question = query.setParameter(1, Long.valueOf(i + 9)).getSingleResult();
             AnswerOption a = new AnswerOption("Diese Beschreibung ist völlig richtig",
                     1, i, question, 0);
-            answerOptionRepository.save(a);
+            answerOptionRepository.persist(a);
         }
         for(int i = 1; i <= 30; i++){
             Question question = query.setParameter(1, Long.valueOf(i + 9)).getSingleResult();
             AnswerOption a = new AnswerOption("Diese Beschreibung ist eher richtig",
                     2, i, question, 0);
-            answerOptionRepository.save(a);
+            answerOptionRepository.persist(a);
         }
         for(int i = 1; i <= 30; i++){
             Question question = query.setParameter(1, Long.valueOf(i + 9)).getSingleResult();
             AnswerOption a = new AnswerOption("Diese Beschreibung ist eher falsch",
                     3, i, question, 0);
-            answerOptionRepository.save(a);
+            answerOptionRepository.persist(a);
         }
         for(int i = 1; i <= 30; i++){
             Question question = query.setParameter(1, Long.valueOf(i + 9)).getSingleResult();
             AnswerOption a = new AnswerOption("Diese Beschreibung ist völlig falsch",
                     4, i, question, 0);
-            answerOptionRepository.save(a);
+            answerOptionRepository.persist(a);
         }
 
         //Answer Options for Question 31
@@ -300,11 +300,11 @@ public class InitBean {
         AnswerOption a3 = new AnswerOption("mittelmäßig zufrieden", 3, 3, question, 0);
         AnswerOption a4 = new AnswerOption("eher unzufrieden", 4, 4, question, 0);
         AnswerOption a5 = new AnswerOption("sehr unzufrieden", 5, 5, question, 0);
-        answerOptionRepository.save(a1);
-        answerOptionRepository.save(a2);
-        answerOptionRepository.save(a3);
-        answerOptionRepository.save(a4);
-        answerOptionRepository.save(a5);
+        answerOptionRepository.persist(a1);
+        answerOptionRepository.persist(a2);
+        answerOptionRepository.persist(a3);
+        answerOptionRepository.persist(a4);
+        answerOptionRepository.persist(a5);
 
     }
 }

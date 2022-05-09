@@ -11,12 +11,4 @@ import java.util.List;
 @ApplicationScoped
 public class AnswerOptionRepository implements PanacheRepository<AnswerOption> {
 
-    @Transactional
-    public AnswerOption save(AnswerOption answerOption){
-        return getEntityManager().merge(answerOption);
-    }
-
-    public List<AnswerOption> findAllOptions(){
-        return listAll();
-    }
 }

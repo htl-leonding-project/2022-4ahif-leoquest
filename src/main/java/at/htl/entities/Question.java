@@ -1,6 +1,8 @@
 package at.htl.entities;
 
 
+import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
+
 import javax.persistence.*;
 
 @NamedQueries({
@@ -15,7 +17,7 @@ import javax.persistence.*;
 })
 @Entity
 @Table(name = "LQ_QUESTION")
-public class Question {
+public class Question extends PanacheEntityBase {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Q_ID")
@@ -31,6 +33,7 @@ public class Question {
     @JoinColumn(name = "Q_QUESTIONNAIRE_ID")
     private Questionnaire questionnaire;
 
+    @Enumerated
     private String questype;
 
     public Question() {

@@ -39,7 +39,7 @@ public class ChosenOptionEndpoint {
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/chosenoptions")
     public Response findAllChosenOptions(){
-        final List<ChosenOption> options = chosenOptionRepository.findAllOptions();
+        final List<ChosenOption> options = (List<ChosenOption>) chosenOptionRepository.findAll();
         return Response.ok(options).build();
     }
 
@@ -55,12 +55,12 @@ public class ChosenOptionEndpoint {
     @Path("/chosenoptions/add")
     public Response addChosenOption(ChosenOption chosenOption, @Context UriInfo info){
         if(!chosenOption.getQuestion().getQ_type().equals("FREETEXT")) {
-            AnswerOption ao = answerOptionRepository.findAllOptions().get(Math.toIntExact(chosenOption.getAnswerOption().getId() - 1));
+            AnswerOption ao = (AnswerOption) answerOptionRepository.findAll();//get(Math.toIntExact(chosenOption.getAnswerOption().getId() - 1));
             ao.setHow_often(ao.getHow_often() + 1);
             chosenOption.setAnswerOption(ao);
         }
-        final ChosenOption savedChosenOption = chosenOptionRepository.save(chosenOption);
-        URI uri = info.getAbsolutePathBuilder().path("/leosurvey/chosenoptions/add/" + savedChosenOption.getId()).build();
+        chosenOptionRepository.persist(chosenOption);
+        URI uri = info.getAbsolutePathBuilder().path("/leosurvey/chosenoptions/add/" + chosenOption.getId()).build();
         return Response.created(uri).build();
     }
 

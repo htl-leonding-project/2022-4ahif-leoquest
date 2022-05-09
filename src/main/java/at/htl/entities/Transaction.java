@@ -1,6 +1,8 @@
 package at.htl.entities;
 
 
+import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
+
 import javax.persistence.*;
 import java.util.Random;
 
@@ -17,7 +19,7 @@ import java.util.Random;
 })
 @Entity
 @Table(name = "LQ_TRANSACTION")
-public class Transaction {
+public class Transaction extends PanacheEntityBase {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "t_id")

@@ -20,7 +20,7 @@ public class QuestionnaireEndpoint {
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/questionnaire")
     public Response findAllQuestionnaires(){
-        final List<Questionnaire> questionnaires = questionnaireRepository.findAllQuestionnaires();
+        final List<Questionnaire> questionnaires = (List<Questionnaire>) questionnaireRepository.findAll();
         return Response.ok(questionnaires).build();
     }
 

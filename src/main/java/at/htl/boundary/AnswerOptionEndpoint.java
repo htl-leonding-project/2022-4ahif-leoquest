@@ -20,7 +20,7 @@ public class AnswerOptionEndpoint {
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/options")
     public Response findAllOptions(){
-        final List<AnswerOption> options = answerOptionRepository.findAllOptions();
+        final List<AnswerOption> options = (List<AnswerOption>) answerOptionRepository.findAll();
         return Response.ok(options).build();
     }
 }

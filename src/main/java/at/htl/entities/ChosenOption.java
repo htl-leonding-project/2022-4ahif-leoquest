@@ -1,6 +1,8 @@
 package at.htl.entities;
 
 
+import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
+
 import javax.persistence.*;
 
 @NamedQueries({
@@ -11,7 +13,7 @@ import javax.persistence.*;
 })
 @Entity
 @Table(name = "LQ_CHOSEN_OPTION")
-public class ChosenOption {
+public class ChosenOption extends PanacheEntityBase {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;

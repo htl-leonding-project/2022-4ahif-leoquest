@@ -13,26 +13,10 @@ import java.util.List;
 
 @ApplicationScoped
 public class ChosenOptionRepository implements PanacheRepository<ChosenOption> {
+
+
     @Inject
     QuestionRepository questionRepository;
-
-    @Transactional
-    public ChosenOption save(ChosenOption chosenOption){
-        System.out.println("Test " + chosenOption.getQuestion().getId());
-        final Question q = questionRepository.findById(chosenOption.getQuestion().getId());
-        chosenOption.getAnswerOption().setQuestion(q);
-        var opasd = getEntityManager().merge(chosenOption);
-        System.out.println(opasd);
-        return opasd;
-    }
-
-    public List<ChosenOption> findAllOptions(){
-        return listAll();
-    }
-
-    public ChosenOption findById(Long id) {
-        return getEntityManager().find(ChosenOption.class, id);
-    }
 
     public List<ChosenOption> findChosenOptionsByQuestionnaire(long id){
         Query q = getEntityManager().createQuery("select co from " +
@@ -46,4 +30,5 @@ public class ChosenOptionRepository implements PanacheRepository<ChosenOption> {
         var co = this.find("transaction_code", trcode).list();
         return co;
     }
+
 }

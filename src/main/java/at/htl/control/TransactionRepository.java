@@ -18,11 +18,6 @@ public class TransactionRepository implements PanacheRepository<Transaction> {
      SurveyRepository surveyRepository;
 
      @Transactional
-     public Transaction save(Transaction transaction){
-          return getEntityManager().merge(transaction);
-     }
-
-     @Transactional
      public List<Transaction> generateTransactionCode(Survey survey, int amount){
           final LinkedList<Transaction> transactions = new LinkedList<>();
           System.out.println(survey.getId());

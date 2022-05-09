@@ -32,7 +32,7 @@ public class SurveyEndpoint {
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/survey")
     public Response findAllSurveys(){
-        final List<Survey> surveys = surveyRepository.findAllSurveys();
+        final List<Survey> surveys = (List<Survey>) surveyRepository.findAll();
         return Response.ok(surveys).build();
     }
 
@@ -40,10 +40,10 @@ public class SurveyEndpoint {
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/createSurvey/{amount}")
     public Response createTransactions(@PathParam("amount")int amount){
-        Questionnaire questionnaire = questionnaireRepository.findById(1);
+        Questionnaire questionnaire = questionnaireRepository.findById(1L);
         Survey survey1 = new Survey(LocalDate.now(), questionnaire);
         System.out.println(survey1);
-        survey1 = surveyRepository.save(survey1);
+        surveyRepository.persist(survey1);
         final List<Transaction> transactions = this.transactionRepository.generateTransactionCode(survey1, amount);
         return Response
                 .ok()

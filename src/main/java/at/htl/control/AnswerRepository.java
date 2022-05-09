@@ -9,8 +9,4 @@ import javax.transaction.Transactional;
 @ApplicationScoped
 public class AnswerRepository implements PanacheRepository<Answer> {
 
-    @Transactional
-    public Answer save(Answer answer){
-        return getEntityManager().merge(answer);
-    }
 }

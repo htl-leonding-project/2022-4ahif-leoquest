@@ -10,13 +10,4 @@ import java.util.List;
 
 @ApplicationScoped
 public class SurveyRepository implements PanacheRepository<Survey> {
-
-    @Transactional
-    public Survey save(Survey survey){
-        return getEntityManager().merge(survey);
-    }
-
-    public List<Survey> findAllSurveys() {
-        return listAll();
-    }
 }

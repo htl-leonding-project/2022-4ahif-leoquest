@@ -11,22 +11,6 @@ import java.util.List;
 @ApplicationScoped
 public class QuestionRepository implements PanacheRepository<Question> {
 
-    @Transactional
-    public Question save(Question question){
-        return getEntityManager().merge(question);
-    }
-
-    @Transactional
-    public void delete(long id){
-        delete(find("id",id).singleResult());
-    }
-
-    public List<Question> findAllQuestions(){
-        Query q = getEntityManager().createQuery("select q from Question q order by q.id");
-        List<Question> questions = q.getResultList();
-        return questions;
-    }
-
     public List<Question> findQuestionsByQuestionnaire(long id){
         Query q = getEntityManager().createQuery("select q from " +
                 "Question q where q.questionnaire.id = :id order by q.id");
