@@ -54,7 +54,7 @@ public class ChosenOptionEndpoint {
     @POST
     @Path("/chosenoptions/add")
     public Response addChosenOption(ChosenOption chosenOption, @Context UriInfo info){
-        if(chosenOption.getQuestion().getQ_type().equals("FREETEXT") == false) {
+        if(!chosenOption.getQuestion().getQ_type().equals("FREETEXT")) {
             AnswerOption ao = answerOptionRepository.findAllOptions().get(Math.toIntExact(chosenOption.getAnswerOption().getId() - 1));
             ao.setHow_often(ao.getHow_often() + 1);
             chosenOption.setAnswerOption(ao);

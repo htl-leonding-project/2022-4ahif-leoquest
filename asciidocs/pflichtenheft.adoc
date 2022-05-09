@@ -151,8 +151,8 @@ class Transaction {
 }
 
 Teacher "*" -down- "*" Survey
-Survey -left-  Questionnaire
-Questionnaire -- Question
+Survey "*" -left- "*" Questionnaire
+Questionnaire "*" -- "*" Question
 Question -left- QuestionType
 Question -- AnswerOption
 AnswerOption -right- ChosenOption

@@ -9,7 +9,8 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 @ApplicationScoped
-public class QuestionnaireRepository implements PanacheRepository<Questionnaire> {
+public class QuestionnaireRepository
+        implements PanacheRepository<Questionnaire> {
 
     @Transactional
     public Questionnaire save(Questionnaire questionnaire){

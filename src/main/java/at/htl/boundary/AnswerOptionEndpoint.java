@@ -23,6 +23,4 @@ public class AnswerOptionEndpoint {
         final List<AnswerOption> options = answerOptionRepository.findAllOptions();
         return Response.ok(options).build();
     }
-
-
 }
