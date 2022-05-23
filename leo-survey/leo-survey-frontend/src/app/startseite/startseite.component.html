@@ -1,0 +1,11 @@
+<app-header></app-header>
+<div id="content">
+        <form>
+            <mat-form-field appearance="fill">
+              <mat-label i18n="Input Label|Input Transaction label">Transaktionscode</mat-label>
+              <input matInput name="code" maxlength="36" [(ngModel)]="transactioncode" placeholder="0000-0000-abcd" (keydown.enter)="checkTransaction()" maxlength="14">
+                <mat-hint align="end"><p>{{transactioncode.length}}/14</p></mat-hint>
+            </mat-form-field>
+            <button i18n="Button label|Transfer to Answer Questions" mat-raised-button color="primary" (click)="checkTransaction()">Weiter</button>
+        </form>
+</div>

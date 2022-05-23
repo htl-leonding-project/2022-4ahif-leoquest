@@ -1,0 +1,12 @@
+<input type="text" placeholder="AnswerOptiontext" name="answeerOptionText" [(ngModel)]="answerOption.text">
+<div>
+    <input type="number" placeholder="Value" name="answeerOptionValue" [(ngModel)]="answerOption.value">
+</div>
+
+<section>
+    <mat-checkbox (click)="emitAnswer(answerOption.sequenceNumber)" [(ngModel)]="answerOption.isCorrectAnswer" i18n="checkbox text|right answer">Richtige Antwort</mat-checkbox>
+</section>
+
+<mat-icon (click)="deleteAOption(answerOption.sequenceNumber)">close</mat-icon>
+
+<div id="clear"></div>

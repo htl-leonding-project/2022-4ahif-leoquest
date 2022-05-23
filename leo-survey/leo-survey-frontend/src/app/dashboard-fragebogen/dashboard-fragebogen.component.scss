@@ -1,0 +1,31 @@
+$orange:#FF7700;
+$grey: #717070;
+
+mat-expansion-panel{
+    padding-top: 0.2em;
+}
+
+mat-panel-title span, h3 span{
+    font-size:xx-small;
+}
+
+mat-panel-description{
+    display: flex;
+    justify-content: end;
+    margin-right: 2em;
+}
+
+mat-icon{
+    color: $orange;
+    cursor: pointer;
+    margin-left: 0.7em;
+}
+
+p{
+    font-size: smaller;
+    margin-left: 1em;
+}
+
+div{
+    margin-bottom: 0.5em;
+}

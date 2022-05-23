@@ -1,0 +1,53 @@
+= Besprechungsprotokoll 07.10.2021
+Christine Raffeiner
+1.0, 12.10.2021: Some notes
+ifndef::imagesdir[:imagesdir: images]
+:icons: font
+//:sectnums:    // Nummerierung der Überschriften / section numbering
+//:toc: left
+
+//Need this blank line after ifdef, don't know why...
+ifdef::backend-html5[]
+
+// https://fontawesome.com/v4.7.0/icons/
+icon:file-text-o[link=https://raw.githubusercontent.com/htl-leonding-college/asciidoctor-docker-template/master/asciidocs/{docname}.adoc] ‏ ‏ ‎
+icon:github-square[link=https://github.com/htl-leonding-college/asciidoctor-docker-template] ‏ ‏ ‎
+icon:home[link=https://htl-leonding.github.io/]
+endif::backend-html5[]
+
+
+.Teilnehmer
+|===
+|anwesend |Verteiler
+
+|Christine Raffeiner
+|
+
+|Nina Weissengruber
+|
+|===
+
+.Ort und Zeit
+[cols=2*]
+|===
+|Ort
+|Schule
+
+|von-bis
+|15:30 - 16:20
+|Dauer
+|0h 50min
+|===
+
+
+== Besprochene Themen
+* Zuerst haben wir über das Frontend gesprochen. Hier wurde angemerkt, dass bei den AnswerOptions der MultipleChoice Questions auch einen Value eingegeben werden kann. Dazu sollen die Values der AnswerOptions automatisch einen default-Value vergeben bekommen.
+* Auch wurde besprochen, dass die Login-Page nicht nötig ist, da die Autorisierung/Authentifizierung über Keycloak stattfindet.
+* Als Nächstes haben wir über das Backend gesprochen. Die Karate-Tests sollen nach User-Stories kategorisiert werden.
+
+== Nächste Schritte
+* Die angesprochenen Anmerkungen beheben.
+* Die Nächsten Sprints mit UserStories und Task vorplanen um zu sehen was noch zu tun ist und wie lange wir denken, dass wir dafür brauchen.
+* Transaktionscodes in einer angegebenen Menge generieren und alle auf einer Druckbaren Seite darstellen lassen.
+* Die erstellten Fragebögen auf dem Dashboard farblich unterscheidbar darstellen, je nachdem ob der Fragebogen public (für alle verfügbar ist) oder private (nur für den ersteller sichtbar).
+* Github Pages erstellen. Allgemeines über unser Project, Meilensteine und Getting-Started einfügen.

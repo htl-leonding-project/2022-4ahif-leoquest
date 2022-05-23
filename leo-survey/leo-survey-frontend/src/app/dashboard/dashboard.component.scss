@@ -1,0 +1,45 @@
+$orange:#FF7700;
+
+#upperpart{
+    width: 70%;
+    margin: 5em auto 1.5em auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#upperpart span, #upperpart button span{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+#upperpart span a, h4{
+    color: $orange;
+    text-decoration: underline;
+}
+
+#upperpart span mat-icon{
+    color: $orange;
+    transform: rotate(180deg);
+}
+
+.buttonicon{
+    color: white !important;
+    margin-left: 0.2em;
+}
+
+//lowerpart css
+#lowerpart{
+    width: 70%;
+    margin: 0em auto 2em auto;
+}
+
+#controlls{
+    width: 100%;
+    display: block;
+}
+
+mat-form-field{
+    width: 100%;
+}

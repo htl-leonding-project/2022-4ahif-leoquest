@@ -1,0 +1,20 @@
+<mat-icon mat-dialog-close>close</mat-icon>
+<div id="clean"></div>
+
+<h3>{{data.qn.name}}</h3>
+<hr>
+
+<h4><span i18n="headline text|Interviewer">Ersteller:</span> {{data.qn.interviewer.name}}</h4>
+
+<h4><span i18n="headline text|Questions">Fragen:</span></h4>
+<div id="questions">
+    <ul>
+        <div *ngFor="let q of questions let i=index">
+            <li>{{q.text}}</li>
+        </div>
+
+        <div *ngIf="questions.length == 0">
+            <p  i18n="no context text|no questions">Keine Fragen vorhanden</p>
+        </div>
+    </ul>
+</div>

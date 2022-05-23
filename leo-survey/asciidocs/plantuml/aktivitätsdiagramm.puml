@@ -1,0 +1,27 @@
+@startuml
+start
+if (einloggen) then (ja)
+  :Einloggen;
+
+  if (erstellten Fragebogen verwenden) then (nein)
+    :Fragebogen erstellen;
+    :Frage erstellen;
+    :Antwortmöglichkeit erstellen;
+    :Befragung erstellen;
+    :Transactioncodes erstellen;
+    :Befragung ausfüllen;
+    :Befragung auswerten;
+  else (ja)
+    :Befragung erstellen;
+    :Transactioncodes erstellen;
+    :Befragung ausfüllen;
+    :Befragung auswerten;
+  endif
+else (nein)
+    :Befragung ausfüllen;
+    :Befragung auswerten;
+stop
+endif
+stop
+
+@enduml

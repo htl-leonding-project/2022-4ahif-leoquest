@@ -1,0 +1,25 @@
+<mat-card>
+    <mat-icon (click)="deleteQuestion(administration.question.sequenceNumber)" id="close">close</mat-icon>
+    <div id="clear"></div>
+    <mat-card-title i18n="Title|card title" >Frage {{administration.question.sequenceNumber}}</mat-card-title>
+    <mat-form-field appearance="fill">
+        <mat-label i18n="label text|Question text">Fragetext eingeben</mat-label>
+        <input matInput i18n-placeholder="input placeholder|question text" placeholder="Fragetext" type="text" [(ngModel)]="administration.question.text" required minlength="1" maxlength="250">
+        <mat-hint align="end"><p>{{administration.question.text.length}}/250</p></mat-hint>
+    </mat-form-field>
+    <input id="file" type="file" (change)="onChange($event)" multiple = false accept="image/jpeg, image/png, image/gif">
+    <mat-form-field appearance="fill">
+        <mat-label i18n="label text|questiontype">Fragetyp</mat-label>
+        <mat-select name="fragetyp" [(ngModel)]="administration.question.questiontype" (selectionChange)="addAnswerOptionforYN()" required>
+          <mat-option *ngFor="let type of questiontypes" [value]="type">
+            {{type}}
+          </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <div *ngIf="administration.question.questiontype != freetext">
+        <div *ngFor="let a of administration.answerOptionArray">
+            <app-answer-option-erstellen (correctAnswer)="checkAOCount(a.sequenceNumber)" (deleteAO)="deleteAOinArray(a.sequenceNumber)" [answerOption]="a"></app-answer-option-erstellen>
+        </div>
+        <mat-icon *ngIf="administration.question.questiontype != yesno" (click)="addAnswerOption()">add_circle</mat-icon>
+    </div>
+</mat-card>

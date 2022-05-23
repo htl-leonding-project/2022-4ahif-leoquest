@@ -1,0 +1,649 @@
+\setauthor{Weissengruber Nina}
+\section{Endpoints}
+\subsection{Transaction}
+\subsubsection{find all}
+\textbf{GET} \emph{https://localhost:8080/api/transaction}
+
+\textbf{Rückgabewert}
+Zurückgegeben wird eine Liste von allen Transactionen als JSON
+Format.
+
+\subsubsection{find By Id}
+\textbf{GET} \emph{https://localhost:8080/api/transaction/id/\{id\}}
+
+\textbf{Parameter}
+\begin{itemize}
+    \item \emph{id}: eindeutige Nummer einer Transaction
+\end{itemize}
+
+\textbf{Rückgabewert}
+Zurückgegeben wird das gefundene Transaction Objekt als JSON Format. Wenn keines mit der angegeben \emph{id} gefunden wird, so wird der
+HTTP Error \emph{No Content (204)} zurückgegeben.
+
+\subsubsection{create Transaction}
+\textbf{POST} \emph{https://localhost:8080/api/transaction}
+
+\textbf{Body}
+\begin{itemize}
+    \item Transaction Objekt im JSON Format
+    \item UriInfo
+\end{itemize}
+
+\textbf{Aktion}
+In der Datenbank wird das übergebene Transaction Objekt persistiert.
+
+\textbf{Rückgabewert}
+Zurückgegeben wird die URI, über welche das soeben erstellte Objekt über einen anderen Endpoint angefordert werden kann.
+
+\subsubsection{get Transaction with code}
+\textbf{GET} \emph{https://localhost:8080/api/transaction/code/\{code\}}
+
+\textbf{Parameter}
+\begin{itemize}
+    \item \emph{code}: String mit dem Code einer Transaction
+\end{itemize}
+
+\textbf{Rückgabewert}
+Zurückgegeben wird das gefundene Transaction Objekt als JSON Format. Wenn keines mit der angegeben \emph{id} gefunden wird, so wird der
+HTTP Error \emph{No Content (204)} zurückgegeben.
+
+\subsubsection{get Survey with Transaction}
+\textbf{POST} \emph{https://localhost:8080/api/transaction/getSurvey}
+
+\textbf{Body}
+\begin{itemize}
+    \item Transaction Objekt im JSON Format
+\end{itemize}
+
+\textbf{Aktion}
+Es werden alle Survey Objekte mit einer referenz auf das übergebene Transaction Objekt gesucht.
+
+\textbf{Rückgabewert}
+Zurückgegeben wird eine Liste von Survey Objekten.
+
+\subsubsection{update Transaction}
+\textbf{POST} \emph{https://localhost:8080/api/transaction/\{id\}}
+
+\textbf{Body}
+\begin{itemize}
+    \item id: eindeutige Nummer einer Transaction
+    \item Transaction Objekt im JSON Format
+\end{itemize}
+
+\textbf{Aktion}
+In der Datenbank wird das wird das bereits persistierte Objekt aktualisiert.
+
+\textbf{Rückgabewert}
+Zurückgegeben wird das persistierte Objekt. Wenn keines mit der angegeben id gefunden wird, so wird der HTTP Error Bad Request
+(400) zurückgegeben.
+
+\subsubsection{delete Transaction}
+\textbf{DELETE} \emph{https://localhost:8080/api/transaction/\{id\}}
+
+\textbf{Body}
+\begin{itemize}
+    \item id: eindeutige Nummer einer Transaction
+\end{itemize}
+
+\textbf{Aktion}
+Es wird das Transaction Objekt mit der übergebenen Id gesucht und anschließend
+aus der Datenbank gelöscht.
+
+\textbf{Rückgabewert}
+Nach einem erfolgreichen lösch Vorgang wird der http status \emph{ok (200)} zurückgegeben.
+
+\subsubsection{generate Transaction}
+\textbf{GET} \emph{https://localhost:8080/api/transaction/generate/\{number\}/\{surveyId\}}
+
+\textbf{Parameter}
+\begin{itemize}
+    \item \emph{surveyId}: eindeutige Nummer einer Survey
+    \item \emph{number}: Anzahl wie viele Transactions generiert werdern müssen
+\end{itemize}
+
+\textbf{Aktion}
+Es wird die Anzahl der gewünschten Transactions erstellt und in der Datenbank persistiert 
+
+\textbf{Rückgabewert}
+Zurückgegeben wird ein File in dem alle Codes der neu generierten Transactions stehen.
+
+\subsection{Survey}
+\subsubsection{find All}
+\textbf{GET} \emph{https://localhost:8080/api/survey}
+
+\textbf{Rückgabewert}
+Zurückgegeben wird eine Liste von allen Survey Objekten als JSON
+Format.
+
+\subsubsection{find By Id}
+\textbf{GET} \emph{https://localhost:8080/api/survey/id/\{id\}}
+
+\textbf{Parameter}
+\begin{itemize}
+    \item \emph{id}: eindeutige Nummer einer Survey
+\end{itemize}
+
+\textbf{Rückgabewert}
+Zurückgegeben wird das gefundene Survey Objekt als JSON Format. Wenn keines mit der angegeben \emph{id} gefunden wird, so wird der
+HTTP Error \emph{No Content (204)} zurückgegeben.
+
+
+\subsubsection{create Survey}
+\textbf{POST} \emph{https://localhost:8080/api/survey}
+
+\textbf{Body}
+\begin{itemize}
+    \item Survey Objekt im JSON Format
+    \item UriInfo
+\end{itemize}
+
+\textbf{Aktion}
+In der Datenbank wird das übergebene Survey Objekt persistiert.
+
+\textbf{Rückgabewert}
+Zurückgegeben wird die URI, über welche das soeben erstellte Objekt über einen anderen Endpoint angefordert werden kann.
+
+\subsubsection{find Survey by Interviewer Id}
+\textbf{GET} \emph{https://localhost:8080/api/survey/\{interviewerId\}}
+
+\textbf{Parameter}
+\begin{itemize}
+    \item \emph{interviewerId}: eindeutige Nummer eines Interviewers
+\end{itemize}
+
+\textbf{Rückgabewert}
+Zurückgegeben wird das gefundene Survey Objekt als JSON Format. 
+
+\subsubsection{find Questionnaire with Survey Id}
+\textbf{GET} \emph{https://localhost:8080/api/survey/questionnaire/\{surveyId\}}
+
+\textbf{Parameter}
+\begin{itemize}
+    \item \emph{surveyId}: eindeutige Nummer einer Survey
+\end{itemize}
+
+\textbf{Rückgabewert}
+Zurückgegeben wird das gefundene Questionnaire Objekt als JSON Format.
+
+\subsubsection{update Survey}
+\textbf{POST} \emph{https://localhost:8080/api/survey/\{id\}}
+
+\textbf{Body}
+\begin{itemize}
+    \item id: eindeutige Nummer einer Survey
+    \item Survey Objekt im JSON Format
+\end{itemize}
+
+\textbf{Aktion}
+In der Datenbank wird das wird das bereits persistierte Objekt aktualisiert.
+
+\textbf{Rückgabewert}
+Zurückgegeben wird das persistierte Objekt. Wenn keines mit der angegeben id gefunden wird, so wird der HTTP Error Bad Request
+(400) zurückgegeben.
+
+\subsubsection{delete Survey}
+\textbf{DELETE} \emph{https://localhost:8080/api/survey/\{id\}}
+
+\textbf{Body}
+\begin{itemize}
+    \item id: eindeutige Nummer einer Survey
+\end{itemize}
+
+\textbf{Aktion}
+Es wird das Survey Objekt mit der übergebenen Id gesucht und anschließend
+aus der Datenbank gelöscht.
+
+\textbf{Rückgabewert}
+Nach einem erfolgreichen lösch Vorgang wird der http status \emph{ok (200)} zurückgegeben.
+
+\subsubsection{Auswertung}
+\textbf{GET} \emph{https://localhost:8080/api/survey/evaluation/\{surveyId\}}
+
+\textbf{Parameter}
+\begin{itemize}
+    \item \emph{surveyId}: eindeutige Nummer einer Survey
+\end{itemize}
+
+\textbf{Rückgabewert}
+Zurückgegeben wird ein File mit der Auswertung.
+
+\subsection{Question}
+\subsubsection{find All}
+\textbf{GET} \emph{https://localhost:8080/api/question}
+
+\textbf{Rückgabewert}
+Zurückgegeben wird eine Liste von allen Question Objekten als JSON
+Format.
+
+\subsubsection{find By Id}
+\textbf{GET} \emph{https://localhost:8080/api/question/id/\{id\}}
+
+\textbf{Parameter}
+\begin{itemize}
+    \item \emph{id}: eindeutige Nummer einer Question
+\end{itemize}
+
+\textbf{Rückgabewert}
+Zurückgegeben wird das gefundene Question Objekt als JSON Format. Wenn keines mit der angegeben \emph{id} gefunden wird, so wird der
+HTTP Error \emph{No Content (204)} zurückgegeben.
+
+\subsubsection{create Question}
+\textbf{POST} \emph{https://localhost:8080/api/question}
+
+\textbf{Body}
+\begin{itemize}
+    \item Question Objekt im JSON Format
+    \item UriInfo
+\end{itemize}
+
+\textbf{Aktion}
+In der Datenbank wird das übergebene Question Objekt persistiert.
+
+\textbf{Rückgabewert}
+Zurückgegeben wird die URI, über welche das soeben erstellte Objekt über einen anderen Endpoint angefordert werden kann.
+
+\subsubsection{update Question}
+\textbf{POST} \emph{https://localhost:8080/api/question/\{id\}}
+
+\textbf{Body}
+\begin{itemize}
+    \item id: eindeutige Nummer einer Question
+    \item Question Objekt im JSON Format
+\end{itemize}
+
+\textbf{Aktion}
+In der Datenbank wird das wird das bereits persistierte Objekt aktualisiert.
+
+\textbf{Rückgabewert}
+Zurückgegeben wird das persistierte Objekt. Wenn keines mit der angegeben id gefunden wird, so wird der HTTP Error Bad Request
+(400) zurückgegeben.
+
+\subsubsection{delete Question}
+\textbf{DELETE} \emph{https://localhost:8080/api/question/\{id\}}
+
+\textbf{Body}
+\begin{itemize}
+    \item id: eindeutige Nummer einer Question
+\end{itemize}
+
+\textbf{Aktion}
+Es wird das Question Objekt mit der übergebenen Id gesucht und anschließend
+aus der Datenbank gelöscht.
+
+\textbf{Rückgabewert}
+Nach einem erfolgreichen lösch Vorgang wird der http status \emph{ok (200)} zurückgegeben.
+
+\subsection{Questionnaire}
+\subsubsection{find All}
+\textbf{GET} \emph{https://localhost:8080/api/questionnaire}
+
+\textbf{Rückgabewert}
+Zurückgegeben wird eine Liste von allen Questionnaire Objekten als JSON
+Format.
+
+\subsubsection{find By Id}
+\textbf{GET} \emph{https://localhost:8080/api/questionnaire/id/\{id\}}
+
+\textbf{Parameter}
+\begin{itemize}
+    \item \emph{id}: eindeutige Nummer einer Questionnaire
+\end{itemize}
+
+\textbf{Rückgabewert}
+Zurückgegeben wird das gefundene Questionnaire Objekt als JSON Format. Wenn keines mit der angegeben \emph{id} gefunden wird, so wird der
+HTTP Error \emph{No Content (204)} zurückgegeben.
+
+\subsubsection{create Questionnaire}
+\textbf{POST} \emph{https://localhost:8080/api/questionnaire}
+
+\textbf{Body}
+\begin{itemize}
+    \item Questionnaire Objekt im JSON Format
+    \item UriInfo
+\end{itemize}
+
+\textbf{Aktion}
+In der Datenbank wird das übergebene Questionnaire Objekt persistiert.
+
+\textbf{Rückgabewert}
+Zurückgegeben wird die URI, über welche das soeben erstellte Objekt über einen anderen Endpoint angefordert werden kann.
+
+\subsubsection{find public Questionnaires}
+\textbf{GET} \emph{https://localhost:8080/api/questionnaire/public}
+
+\textbf{Rückgabewert}
+Zurückgegeben wird eine Liste von Questionnaire Objekten, bei denen das Attribut isPublic auf true gestezt ist.
+
+\subsubsection{get public and owned Questionnaires}
+\textbf{GET} \emph{https://localhost:8080/api/questionnaire/public/\{interviewerId\}}
+
+\textbf{Body}
+\begin{itemize}
+    \item interviewerId: eindeutige Nummer eines Interviewers
+\end{itemize}
+
+\textbf{Rückgabewert}
+Zurückgegeben wird eine Liste von Questionnaire Objekten, bei denen das Attribut isPublic auf true gestezt ist 
+und eine referenz auf das übergebene Interviewer Onjekt besteht.
+
+\subsubsection{find Questionnaire By Interviwer id}
+\textbf{GET} \emph{https://localhost:8080/api/questionnaire/interviwer/\{interviewerId\}}
+
+\textbf{Body}
+\begin{itemize}
+    \item interviewerId: eindeutige Nummer eines Interviewers
+\end{itemize}
+
+\textbf{Rückgabewert}
+Zurückgegeben wird eine Liste von Questionnaire Objekten, bei denen 
+eine referenz auf das übergebene Interviewer Onjekt besteht.
+
+\subsubsection{duplicate Questionnaire}
+\textbf{POST} \emph{https://localhost:8080/api/duplicateQuestionnaire}
+
+\textbf{Body}
+\begin{itemize}
+    \item Questionnaire Objekt im JSON Format
+\end{itemize}
+
+\textbf{Aktion}
+Es wird ein duplicat des übergebenen Questionnaire Objekts in der Datenbank persistiert.
+
+\textbf{Rückgabewert}
+Zurückgegeben wird das duplizierte Questionnaire Objekt.
+
+\subsubsection{update Questionnaire}
+\textbf{POST} \emph{https://localhost:8080/api/questionnaire/\{id\}}
+
+\textbf{Body}
+\begin{itemize}
+    \item id: eindeutige Nummer einer Questionnaire
+    \item Questionnaire Objekt im JSON Format
+\end{itemize}
+
+\textbf{Aktion}
+In der Datenbank wird das wird das bereits persistierte Objekt aktualisiert.
+
+\textbf{Rückgabewert}
+Zurückgegeben wird das persistierte Objekt. Wenn keines mit der angegeben id gefunden wird, so wird der HTTP Error Bad Request
+(400) zurückgegeben.
+
+\subsubsection{delete Questionnaire}
+\textbf{DELETE} \emph{https://localhost:8080/api/questionnaire/\{id\}}
+
+\textbf{Body}
+\begin{itemize}
+    \item id: eindeutige Nummer eines Questionnaire
+\end{itemize}
+
+\textbf{Aktion}
+Es wird das Questionnaire Objekt mit der übergebenen Id gesucht und anschließend
+aus der Datenbank gelöscht.
+
+\textbf{Rückgabewert}
+Nach einem erfolgreichen lösch Vorgang wird der http status \emph{ok (200)} zurückgegeben.
+
+\subsection{Interviewer}
+\subsubsection{find All}
+\textbf{GET} \emph{https://localhost:8080/api/interviewer}
+
+\textbf{Rückgabewert}
+Zurückgegeben wird eine Liste von allen Interviewer Objekten als JSON
+Format.
+
+\subsubsection{find By Id}
+\textbf{GET} \emph{https://localhost:8080/api/interviewer/id/\{id\}}
+
+\textbf{Parameter}
+\begin{itemize}
+    \item \emph{id}: eindeutige Nummer eines Interviewers
+\end{itemize}
+
+\textbf{Rückgabewert}
+Zurückgegeben wird das gefundene Interviewer Objekt als JSON Format. Wenn keines mit der angegeben \emph{id} gefunden wird, so wird der
+HTTP Error \emph{No Content (204)} zurückgegeben.
+
+\subsubsection{create Question}
+\textbf{POST} \emph{https://localhost:8080/api/interviewer}
+
+\textbf{Body}
+\begin{itemize}
+    \item Interviewer Objekt im JSON Format
+    \item UriInfo
+\end{itemize}
+
+\textbf{Aktion}
+In der Datenbank wird das übergebene Interviewer Objekt persistiert.
+
+\textbf{Rückgabewert}
+Zurückgegeben wird die URI, über welche das soeben erstellte Objekt über einen anderen Endpoint angefordert werden kann.
+
+\subsubsection{update Interviewer}
+\textbf{POST} \emph{https://localhost:8080/api/interviewer/\{id\}}
+
+\textbf{Body}
+\begin{itemize}
+    \item id: eindeutige Nummer einer Interviewer
+    \item Interviewer Objekt im JSON Format
+\end{itemize}
+
+\textbf{Aktion}
+In der Datenbank wird das wird das bereits persistierte Objekt aktualisiert.
+
+\textbf{Rückgabewert}
+Zurückgegeben wird das persistierte Objekt. Wenn keines mit der angegeben id gefunden wird, so wird der HTTP Error Bad Request
+(400) zurückgegeben.
+
+\subsubsection{delete Interviewer}
+\textbf{DELETE} \emph{https://localhost:8080/api/interviewer/\{id\}}
+
+\textbf{Body}
+\begin{itemize}
+    \item id: eindeutige Nummer einer Interviewer
+\end{itemize}
+
+\textbf{Aktion}
+Es wird das Interviewer Objekt mit der übergebenen Id gesucht und anschließend
+aus der Datenbank gelöscht.
+
+\textbf{Rückgabewert}
+Nach einem erfolgreichen lösch Vorgang wird der http status \emph{ok (200)} zurückgegeben.
+
+\subsection{ChosenOption}
+\subsubsection{find All}
+\textbf{GET} \emph{https://localhost:8080/api/chosenOption}
+
+\textbf{Rückgabewert}
+Zurückgegeben wird eine Liste von allen ChosenOption Objekten als JSON
+Format.
+
+\subsubsection{find By Id}
+\textbf{GET} \emph{https://localhost:8080/api/chosenOption/id/\{id\}}
+
+\textbf{Parameter}
+\begin{itemize}
+    \item \emph{id}: eindeutige Nummer einer ChosenOption
+\end{itemize}
+
+\textbf{Rückgabewert}
+Zurückgegeben wird das gefundene ChosenOption Objekt als JSON Format. Wenn keines mit der angegeben \emph{id} gefunden wird, so wird der
+HTTP Error \emph{No Content (204)} zurückgegeben.
+
+\subsubsection{create ChosenOption}
+\textbf{POST} \emph{https://localhost:8080/api/chosenOption}
+
+\textbf{Body}
+\begin{itemize}
+    \item ChosenOption Objekt im JSON Format
+    \item UriInfo
+\end{itemize}
+
+\textbf{Aktion}
+In der Datenbank wird das übergebene ChosenOption Objekt persistiert.
+
+\textbf{Rückgabewert}
+Zurückgegeben wird die URI, über welche das soeben erstellte Objekt über einen anderen Endpoint angefordert werden kann.
+
+\subsubsection{update ChosenOption}
+\textbf{POST} \emph{https://localhost:8080/api/chosenOption/\{id\}}
+
+\textbf{Body}
+\begin{itemize}
+    \item id: eindeutige Nummer einer ChosenOption
+    \item ChosenOption Objekt im JSON Format
+\end{itemize}
+
+\textbf{Aktion}
+In der Datenbank wird das wird das bereits persistierte Objekt aktualisiert.
+
+\textbf{Rückgabewert}
+Zurückgegeben wird das persistierte Objekt. Wenn keines mit der angegeben id gefunden wird, so wird der HTTP Error Bad Request
+(400) zurückgegeben.
+
+\subsubsection{delete ChosenOption}
+\textbf{DELETE} \emph{https://localhost:8080/api/chosenOption/\{id\}}
+
+\textbf{Body}
+\begin{itemize}
+    \item id: eindeutige Nummer einer ChosenOption
+\end{itemize}
+
+\textbf{Aktion}
+Es wird das ChosenOption Objekt mit der übergebenen Id gesucht und anschließend
+aus der Datenbank gelöscht.
+
+\textbf{Rückgabewert}
+Nach einem erfolgreichen lösch Vorgang wird der http status \emph{ok (200)} zurückgegeben.
+
+\subsection{Answer}
+\subsubsection{find All}
+\textbf{GET} \emph{https://localhost:8080/api/answer}
+
+\textbf{Rückgabewert}
+Zurückgegeben wird eine Liste von allen Answer Objekten als JSON
+Format.
+
+\subsubsection{find By Id}
+\textbf{GET} \emph{https://localhost:8080/api/answer/id/\{id\}}
+
+\textbf{Parameter}
+\begin{itemize}
+    \item \emph{id}: eindeutige Nummer einer Answer
+\end{itemize}
+
+\textbf{Rückgabewert}
+Zurückgegeben wird das gefundene Answer Objekt als JSON Format. Wenn keines mit der angegeben \emph{id} gefunden wird, so wird der
+HTTP Error \emph{No Content (204)} zurückgegeben.
+
+\subsubsection{create Answer}
+\textbf{POST} \emph{https://localhost:8080/api/answer}
+
+\textbf{Body}
+\begin{itemize}
+    \item Answer Objekt im JSON Format
+    \item UriInfo
+\end{itemize}
+
+\textbf{Aktion}
+In der Datenbank wird das übergebene Answer Objekt persistiert.
+
+\textbf{Rückgabewert}
+Zurückgegeben wird die URI, über welche das soeben erstellte Objekt über einen anderen Endpoint angefordert werden kann.
+
+\subsubsection{update Answer}
+\textbf{POST} \emph{https://localhost:8080/api/answer/\{id\}}
+
+\textbf{Body}
+\begin{itemize}
+    \item id: eindeutige Nummer einer Answer
+    \item Answer Objekt im JSON Format
+\end{itemize}
+
+\textbf{Aktion}
+In der Datenbank wird das wird das bereits persistierte Objekt aktualisiert.
+
+\textbf{Rückgabewert}
+Zurückgegeben wird das persistierte Objekt. Wenn keines mit der angegeben id gefunden wird, so wird der HTTP Error Bad Request
+(400) zurückgegeben.
+
+\subsubsection{delete Answer}
+\textbf{DELETE} \emph{https://localhost:8080/api/answer/\{id\}}
+
+\textbf{Body}
+\begin{itemize}
+    \item id: eindeutige Nummer einer Answer
+\end{itemize}
+
+\textbf{Aktion}
+Es wird das Answer Objekt mit der übergebenen Id gesucht und anschließend
+aus der Datenbank gelöscht.
+
+\textbf{Rückgabewert}
+Nach einem erfolgreichen lösch Vorgang wird der http status \emph{ok (200)} zurückgegeben.
+
+\subsection{AnswerOption}
+\subsubsection{find All}
+\textbf{GET} \emph{https://localhost:8080/api/answerOption}
+
+\textbf{Rückgabewert}
+Zurückgegeben wird eine Liste von allen AnswerOption Objekten als JSON
+Format.
+
+\subsubsection{find By Id}
+\textbf{GET} \emph{https://localhost:8080/api/answerOption/id/\{id\}}
+
+\textbf{Parameter}
+\begin{itemize}
+    \item \emph{id}: eindeutige Nummer einer AnswerOption
+\end{itemize}
+
+\textbf{Rückgabewert}
+Zurückgegeben wird das gefundene AnswerOption Objekt als JSON Format. Wenn keines mit der angegeben \emph{id} gefunden wird, so wird der
+HTTP Error \emph{No Content (204)} zurückgegeben.
+
+\subsubsection{create Answer}
+\textbf{POST} \emph{https://localhost:8080/api/answerOption}
+
+\textbf{Body}
+\begin{itemize}
+    \item AnswerOption Objekt im JSON Format
+    \item UriInfo
+\end{itemize}
+
+\textbf{Aktion}
+In der Datenbank wird das übergebene AnswerOption Objekt persistiert.
+
+\textbf{Rückgabewert}
+Zurückgegeben wird die URI, über welche das soeben erstellte Objekt über einen anderen Endpoint angefordert werden kann.
+
+\subsubsection{update AnswerOption}
+\textbf{POST} \emph{https://localhost:8080/api/answerOption/\{id\}}
+
+\textbf{Body}
+\begin{itemize}
+    \item id: eindeutige Nummer einer AnswerOption
+    \item AnswerOption Objekt im JSON Format
+\end{itemize}
+
+\textbf{Aktion}
+In der Datenbank wird das wird das bereits persistierte Objekt aktualisiert.
+
+\textbf{Rückgabewert}
+Zurückgegeben wird das persistierte Objekt. Wenn keines mit der angegeben id gefunden wird, so wird der HTTP Error Bad Request
+(400) zurückgegeben.
+
+\subsubsection{delete AnswerOption}
+\textbf{DELETE} \emph{https://localhost:8080/api/answerOption/\{id\}}
+
+\textbf{Body}
+\begin{itemize}
+    \item id: eindeutige Nummer einer AnswerOption
+\end{itemize}
+
+\textbf{Aktion}
+Es wird das AnswerOption Objekt mit der übergebenen Id gesucht und anschließend
+aus der Datenbank gelöscht.
+
+\textbf{Rückgabewert}
+Nach einem erfolgreichen lösch Vorgang wird der http status \emph{ok (200)} zurückgegeben.
+

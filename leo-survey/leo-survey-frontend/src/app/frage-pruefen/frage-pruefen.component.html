@@ -1,0 +1,13 @@
+<mat-card>
+    <mat-card-title>Frage {{administration.question.sequenceNumber}}</mat-card-title>
+    <p>{{administration.question.text}}</p>
+    <p>{{administration.question.questiontype}}</p>
+    <div *ngIf="administration.answerOptionArray.length != 0 && administration.question.questiontype != freetext">
+    <p>AnswerOptions</p>
+    <ul>
+      <li *ngFor="let ao of administration.answerOptionArray">
+        {{ao.text}} mit value: {{ao.value}} <mat-icon *ngIf="!ao.isCorrectAnswer">close</mat-icon> <mat-icon *ngIf="ao.isCorrectAnswer">done</mat-icon>
+      </li>
+    </ul>
+  </div>
+</mat-card>

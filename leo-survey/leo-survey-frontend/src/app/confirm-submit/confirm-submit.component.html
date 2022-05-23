@@ -1,0 +1,6 @@
+<h3 i18n="delete confirm headline|Do you wanna delete?">Wirklich abschicken?</h3>
+<p><span i18n="info text|open questions">Offene Fragen: </span>{{data.notanswered}} / {{data.questions}}</p>
+<div>
+    <button mat-raised-button color="primary" [mat-dialog-close]="true" i18n="button text| back" cdkFocusInitial>Zurück</button>
+    <button mat-raised-button color="primary" (click)="onSumbmit()" i18n="button text| submit">Abschicken</button>
+</div>

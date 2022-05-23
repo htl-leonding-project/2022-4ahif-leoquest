@@ -1,0 +1,41 @@
+//Colors
+$orange:#FF7700;
+$grey: #717070;
+
+html, body { height: 100%;}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+//Navigation
+
+#nav{
+    display: flex;
+    align-items: center;
+    height: 12%;
+    width: 100%;
+    padding: 0.5em 0em 0.5em 0em;
+    border-bottom: 0.25em $orange solid;
+    
+}
+
+#wrapper{
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin: 0em 2em 0em 2em;
+}
+
+#logo{
+    width: 9em;
+    cursor: pointer;
+}
+
+#nav div h1{
+    color: $orange;
+    line-height: normal;
+    margin: 0px;
+}
+
+#nav div button{
+    border-color: $orange;
+}

@@ -1,0 +1,32 @@
+<mat-icon mat-dialog-close>close</mat-icon>
+<div id="clean"></div>
+
+<form [formGroup]="userForm">
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label i18n="label text|Title">Titel</mat-label>
+            <input matInput formControlName="title" type="text" name="Tilte" [(ngModel)]="this.data.survey.title" i18n-placeholder="input placeholder|Type in title" placeholder="Titel eingeben" required>
+            <mat-error *ngIf="userForm.controls['title'].invalid">
+                <p i18n="error message|error titel">Titel muss zwischen 5-50 Zeichen enthalten.</p>
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label i18n="label text|description">Beschreibung</mat-label>
+            <input matInput formControlName="desc" type="text" name="Description" [(ngModel)]="data.survey.description" i18n-placeholder="inpt placeholder|Type in Description" placeholder="Beschreibung eingeben" required>
+            <mat-error *ngIf="userForm.controls['desc'].invalid">
+                <p i18n="error message|error desc">Bschreibung muss zwischen 5-50 Zeichen enthalten.</p>
+            </mat-error>
+        </mat-form-field>
+    </div>
+
+    <section>
+        <mat-checkbox [(ngModel)]="data.survey.surveyConducted" [ngModelOptions]="{standalone: true}" i18n="checkbox text|conducted">Durchgeführt</mat-checkbox>
+    </section>
+
+    <div id="clean"></div>
+
+    <div>
+        <button mat-raised-button color="primary" (click)="update()" i18n="button text|update survey" [disabled]="!userForm.valid" mat-dialog-close>Aktualisieren</button>
+    </div>
+</form>

@@ -1,0 +1,8 @@
+<app-header></app-header>
+
+<div *ngIf="surveyResult != null">
+  <h1>{{surveyResult.survey.title}} von {{surveyResult.survey.questionnaire.name}}</h1>
+
+  <div>Gesamt: {{surveyResult.totalAnswers}}</div>
+  <div>Richtig: {{surveyResult.rightAnswers}}</div>
+</div>

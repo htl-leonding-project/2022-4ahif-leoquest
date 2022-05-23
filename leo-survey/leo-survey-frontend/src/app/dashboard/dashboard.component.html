@@ -1,0 +1,25 @@
+<app-header></app-header>
+
+<div id="upperpart">
+    <span routerLink="/startseite" routerLinkActive="true">
+        <mat-icon>arrow_right_alt</mat-icon>
+        <a i18n="Link text|Transfer back to Home">Zurück zur Startseite</a>
+    </span>
+    <button i18n="button text|Transfer to Create Fragebogen" mat-raised-button color="primary" routerLink="/fragebogen-erstellen" routerLinkActive="true"><span>Fragebogen erstellen<mat-icon class="buttonicon">add</mat-icon></span></button>
+</div>
+<div id="lowerpart">
+    <div id="controlls">
+        <mat-form-field appearance="fill">
+            <mat-label>Filter</mat-label>
+            <mat-select name="Filter" [(ngModel)]="filter" (selectionChange)="filterSurveyList()">
+              <mat-option *ngFor="let f of filters" [value]="f">
+                {{f}}
+              </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+    <mat-accordion multi *ngFor="let q of questionnaires">
+        <app-dashboard-fragebogen [questionnaire] = q [editable] = iseditable(q) (copy)="copy(q)" (loeschen) = delete(q) [surveysofQuestionnaire] = filterSurvey(q)></app-dashboard-fragebogen>
+    </mat-accordion>
+</div>

@@ -1,0 +1,438 @@
+// Interviewer
+POST http://localhost:8080/api/interviewer
+Content-Type: application/json
+
+{
+  "name": "Hans Moser"
+}
+
+### get all interviewers
+
+GET http://localhost:8080/api/interviewer
+
+###
+
+GET http://localhost:8080/api/interviewer/id/2
+
+###
+
+PUT http://localhost:8080/api/interviewer/1
+Content-Type: application/json
+
+{
+  "name": "Max Mustermann"
+}
+
+###
+
+DELETE http://localhost:8080/api/interviewer/delete/2
+
+###
+//questionnaire
+POST http://localhost:8080/api/questionnaire
+Content-Type: application/json
+
+{
+  "name": "Feedback Bogen",
+  "description": "4ahitm",
+  "isPublic": "false",
+  "interviewer": {
+    "name": "Hans Moser"
+  }
+}
+
+###
+
+GET http://localhost:8080/api/questionnaire/id/1
+
+###
+
+GET http://localhost:8080/api/questionnaire/interviewer/3
+
+###
+
+GET http://localhost:8080/api/questionnaire/public
+
+###
+
+GET http://localhost:8080/api/questionnaire/public/3
+
+###
+
+GET http://localhost:8080/api/questionnaire/delete/3
+
+###
+
+PUT http://localhost:8080/api/questionnaire/1
+Content-Type: application/json
+
+{
+  "name": "Feedback Bogen",
+  "description": "5ahitm"
+}
+
+###
+
+DELETE http://localhost:8080/api/questionnaire/delete/1
+
+###
+
+GET http://localhost:8080/api/survey
+
+###
+//survey
+POST http://localhost:8080/api/survey
+Content-Type: application/json
+
+{
+  "title": "Feedback Bogen",
+  "description": "5ahitm",
+  "interviewer": {
+    "name": "HTL Leonding"
+  }
+}
+
+###
+
+GET http://localhost:8080/api/survey/id/1
+
+###
+
+GET http://localhost:8080/api/survey/questionnaire/5
+
+###
+
+GET http://localhost:8080/api/questionnaire/id/2
+
+###
+
+POST http://localhost:8080/api/questionnaire/duplicateQuestionnaire/nina
+Content-Type: application/json
+
+{
+  "description": "Feedbackbogen für Lehrerinnen",
+  "id": 2,
+  "interviewer": "HTL Leonding",
+  "isPublic": true,
+  "name": "Lehrerinnen-Feedbackbogen"
+}
+
+
+###
+//transaction
+POST http://localhost:8080/api/transaction
+Content-Type: application/json
+
+{
+  "transactionCode": "1003-2202-abcd",
+  "survey": {
+    "title": "Umfrage 4ahitm",
+    "descritpion": "Lehrer Feedbackbogen 4ahitm",
+    "interviewer": {
+      "name": "Hans Moser"
+    },
+    "questionnaire": {
+      "name": "Feedback Bogen",
+      "description": "4ahitm"
+    },
+    "date": "2021-08-22",
+    "surveyObducted": true
+  },
+  "isUsed": true
+}
+
+###
+
+GET http://localhost:8080/api/transaction/id/1
+
+###
+
+GET http://localhost:8080/api/transaction/generate/20/3
+
+###
+
+GET http://localhost:8080/api/transaction/code/1501-2012-aaaa
+
+###
+
+POST http://localhost:8080/api/transaction/getSurvey/
+Content-Type: application/json
+
+{
+  "transactionCode": "1003-2202-abcd",
+  "isUsed": true,
+  "survey": {
+    "title": null,
+    "descritpion": "test",
+    "interviewer": null,
+    "questionnaire": null,
+    "date": null,
+    "surveyObducted": null
+  }
+}
+
+###
+
+//question
+POST http://localhost:8080/api/question
+Content-Type: application/json
+
+{
+  "text": "Er kann auch schwierige Fragen beantworten, weil er sich in seimen Fachgebiet gut auskennt?",
+  "sequenceNumber": 2,
+  "questiontype": "SINGLECHOICE",
+  "questionnaire": {
+    "name": "Feedback Bogen",
+    "description": "4ahitm"
+  }
+}
+
+###
+
+GET http://localhost:8080/api/question/id/1
+
+###
+
+GET http://localhost:8080/api/question/questions/1
+
+###
+
+DELETE http://localhost:8080/api/question/43
+
+###
+// answer
+POST http://localhost:8080/api/answer
+Content-Type: application/json
+
+{
+  "question": {
+    "text": "Er kann auch schwierige Fragen beantworten, weil er sich in seimen Fachgebiet gut auskennt?",
+    "sequenceNumber": 2,
+    "questiontype": "SINGLECHOICE",
+    "questionnaire": {
+      "name": "Feedback Bogen",
+      "description": "4ahitm"
+    }
+  },
+  "answerText": "völlig richtig",
+  "transaction": {
+    "transactionCode": "1003-2202-abcd",
+    "survey": {
+      "title": "Umfrage 4ahitm",
+      "descritpion": "Lehrer Feedbackbogen 4ahitm",
+      "interviewer": {
+        "name": "Hans Moser"
+      },
+      "questionnaire": {
+        "name": "Feedback Bogen",
+        "description": "4ahitm"
+      },
+      "date": "2021-08-22",
+      "surveyObducted": true
+    },
+    "isUsed": "true"
+  }
+}
+
+###
+
+GET http://localhost:8080/api/answer/id/1
+
+###
+
+DELETE http://localhost:8080/api/answer/1
+
+###
+//answerOption
+POST http://localhost:8080/api/answerOption
+Content-Type: application/json
+
+{
+  "text": "völlig richtig",
+  "sequenceNumber": 1,
+  "value": 4,
+  "question": {
+    "text": "Er kann auch schwierige Fragen beantworten, weil er sich in seimen Fachgebiet gut auskennt?",
+    "sequenceNumber": 2,
+    "questiontype": "SINGLECHOICE",
+    "questionnaire": {
+      "name": "Feedback Bogen",
+      "description": "4ahitm"
+    }
+  }
+}
+
+###
+
+GET http://localhost:8080/api/answerOption/id/1
+
+###
+
+GET http://localhost:8080/api/answerOption/questionnaire/1
+
+
+###
+
+DELETE http://localhost:8080/api/answerOption/1
+
+###
+// chosenOption
+POST http://localhost:8080/api/chosenOption
+Content-Type: application/json
+
+{
+  "answerOption": {
+    "id": 1,
+    "isCorrectAnswer": false,
+    "question": {
+      "id": 1,
+      "questionnaire": {
+        "description": "Feedbackbogen für Lehrer",
+        "id": 1,
+        "interviewer": "HTL Leonding",
+        "isPublic": true,
+        "name": "Lehrer-Feedbackbogen"
+      },
+      "questiontype": "SINGLECHOICE",
+      "sequenceNumber": 1,
+      "text": "Der Lehrer ist fair - gerecht"
+    },
+    "sequenceNumber": 1,
+    "text": "trifft völlig zu",
+    "value": 4
+  },
+  "answer": {
+    "question": {
+      "text": "Er kann auch schwierige Fragen beantworten, weil er sich in seimen Fachgebiet gut auskennt?",
+      "sequenceNumber": 2,
+      "questiontype": "SINGLECHOICE",
+      "questionnaire": {
+        "name": "Feedback Bogen",
+        "description": "4ahitm"
+      }
+    },
+    "answerText": "völlig richtig",
+    "transaction": {
+      "transactionCode": "1003-2202-abcd",
+      "survey": {
+        "title": "Umfrage 4ahitm",
+        "descritpion": "Lehrer Feedbackbogen 4ahitm",
+        "interviewer": {
+          "name": "Hans Moser"
+        },
+        "questionnaire": {
+          "name": "Feedback Bogen",
+          "description": "4ahitm"
+        },
+        "date": "2021-08-22",
+        "surveyObducted": true
+      },
+      "isUsed": "true"
+    }
+  },
+  "question": {
+    "text": "Er kann auch schwierige Fragen beantworten, weil er sich in seimen Fachgebiet gut auskennt?",
+    "sequenceNumber": 2,
+    "questiontype": "SINGLECHOICE",
+    "questionnaire": {
+      "name": "Feedback Bogen",
+      "description": "4ahitm"
+    }
+  }
+}
+
+###
+
+GET http://localhost:8080/api/chosenOption/id/2
+
+###
+
+DELETE http://localhost:8080/api/answer/3
+
+###
+
+DELETE http://localhost:8080/api/answerOption/3
+
+###
+
+DELETE http://localhost:8080/api/chosenOption/3
+
+###
+
+DELETE http://localhost:8080/api/interviewer/delete/4
+
+###
+
+DELETE http://localhost:8080/api/question/4
+
+###
+
+DELETE http://localhost:8080/api/questionnaire/delete/3
+
+###
+
+DELETE http://localhost:8080/api/survey/3
+
+###
+
+DELETE http://localhost:8080/api/transaction/3
+
+###
+
+POST http://localhost:8080/api/transaction
+Content-Type: application/json
+
+{
+  "transactionCode": "1003-2202-abcd",
+  "survey": {
+    "title": "Umfrage 4ahitm",
+    "descritpion": "Lehrer Feedbackbogen 4ahitm",
+    "interviewer": {
+      "name": "Hans Moser"
+    },
+    "questionnaire": {
+      "name": "Feedback Bogen",
+      "description": "4ahitm"
+    },
+    "date": "2021-08-22",
+    "surveyObducted": true
+  },
+  "isUsed": "true"
+}
+
+###
+
+POST http://localhost:8080/api/survey
+Content-Type: application/json
+
+{
+  "title": "Umfrage 4ahitm",
+  "descritpion": "Lehrer Feedbackbogen 4ahitm",
+  "interviewer": {
+    "name": "Hans Moser"
+  },
+  "questionnaire": {
+    "name": "Feedback Bogen",
+    "description": "4ahitm"
+  },
+  "date": "2021-08-22",
+  "surveyObducted": true
+}
+
+###
+
+GET http://localhost:8080/api/survey/evaluation/4
+
+###
+
+GET http://localhost:8080/api/survey/evaluation2/4
+
+###
+
+DELETE http://localhost:8080/api/survey/4
+
+###
+
+
+
+

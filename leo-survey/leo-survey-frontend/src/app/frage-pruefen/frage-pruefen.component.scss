@@ -1,0 +1,32 @@
+
+$grey: #717070;
+$orange:#FF7700;
+
+
+mat-card{
+    width: 80%;
+    margin: 0em auto 2em auto;
+}
+
+mat-card-title{
+    font-size: medium;
+    margin-bottom: 1em;
+}
+
+ul{
+    list-style: none;
+}
+
+p, li{
+    color: $grey;
+    clear: both;
+}
+
+mat-icon{
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float:left;
+    color: $orange;
+}

@@ -1,0 +1,59 @@
+= Besprechungsprotokoll 22.10.2022
+Christine Raffeiner
+1.0, 31.01.2022: Some notes
+ifndef::imagesdir[:imagesdir: images]
+:icons: font
+//:sectnums:    // Nummerierung der Überschriften / section numbering
+//:toc: left
+
+//Need this blank line after ifdef, don't know why...
+ifdef::backend-html5[]
+
+// https://fontawesome.com/v4.7.0/icons/
+icon:file-text-o[link=https://raw.githubusercontent.com/htl-leonding-college/asciidoctor-docker-template/master/asciidocs/{docname}.adoc] ‏ ‏ ‎
+icon:github-square[link=https://github.com/htl-leonding-college/asciidoctor-docker-template] ‏ ‏ ‎
+icon:home[link=https://htl-leonding.github.io/]
+endif::backend-html5[]
+
+
+.Teilnehmer
+|===
+|anwesend |Verteiler
+
+|Christine Raffeiner
+|
+
+|Nina Weissengruber
+|
+
+|Isabel Turner
+|
+|===
+
+.Ort und Zeit
+[cols=2*]
+|===
+|Ort
+|Schule
+
+|von-bis
+|13:40 - 15:50
+|Dauer
+|2h 10min
+|===
+
+
+== Besprochene Themen
+* Beim Diplomarbeitsgespräch haben wir uns zuerst das Beantworten eines Fragebogen im Frontend angesehen und sind dort auf einige Probleme bzw. Verbesserungen gestoßen (z.B. mehr Rückmeldung an den User wie viele Fragen er schon beantwortet hat, Layout/Css-Änderungen und Bug-Fixes (man sieht nicht welche Fragen man schon beantwortet hat.))
+* Zudem sollte die Diplomarbeit auf eine VM, die von der Schule zur verfügung gestellt wird laufen und an Herrn Prof. Stütz der Link zu der Webseite geschickt werden.
+* Auch sind auf den anderen Seiten kleine Änderungen nötig (Button größer etc.) und vor allem sollen Rechtschreibfehler ausgebessert werden.
+* Auch soll der Login nun mittels LDAP implementiert werden und bei einer Frage soll optional ein Bild hinzugefügt werden können.
+* Weiters sind wir beim Testen der Beantwortung der Fragen auf die Idee gekommen Emojies mit Zeichen auszutauschen. Das kann mit einer Lirbary oder eines Algorithmus gelöst werden.
+* Auch sind wir beim Durchbesprechen auf das Problem gestoßen, dass beim Erstellen des Files mit den Transactioncodes mehrere Files nicht voneinander unterschieden werden können. Dieses Problem soll mittels eines aussuchbaren Filenames oder eines Textes im File gelöst werden.
+* Beim Frontend sind die Texte gemischt auf Englisch und Deutsch um das zu vermeiden soll mittels angular i18n gearbeitet werden.
+* Als letztes haben wir noch über die eventeulle Verwendung von Gatling gesprochen, mit dessen Hilfe automatisch Antworten für die Tests angelegt werden sollen. Das kann auch mittels HTTP-Befehlen gelöst werden.
+
+== Nächste Schritte
+* Alle besprochenen Änderungen und Bugs implementieren bzw. ausbessern.
+* Login und die oben genannten Features implementieren.
+* Die Diplomarbeit auf einer VM laufen lassen.

@@ -1,0 +1,104 @@
+$orange:#FF7700;
+$grey: #717070;
+
+#upperpart{
+    width: 70%;
+    margin: 5em auto 1.5em auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#upperpart span{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+#upperpart span a{
+    color: $orange;
+    text-decoration: underline;
+}
+
+#upperpart span mat-icon{
+    color: $orange;
+    transform: rotate(180deg);
+}
+
+mat-stepper{
+    width: 70%;
+    margin: 3em auto 0em auto;
+}
+
+form{
+    margin-top: 2em;
+}
+
+mat-form-field{
+    display: block;
+    margin: 0px auto 10px auto;
+    width: 40%;
+}
+
+button{
+    margin-top: 1em;
+}
+
+.next{
+    float: right;
+}
+
+.back{
+    float: left;
+}
+
+.clear{
+    clear: both;
+}
+
+#content{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5em;
+}
+
+#content mat-form-field{
+    margin: 0em -0.5em 0em 0em!important;
+}
+
+#content button{
+    margin: 0em !important;
+    height: 3.7em;
+}
+
+h4{
+    text-align: center;
+    font-size: small;
+    color: $grey;
+}
+
+h3{
+    color: $orange;
+    text-align: center;
+    font-size: large;
+    margin-bottom: 0em;
+}
+
+#add{
+    border: $grey dashed 2px;
+    padding: 2em;
+    margin: auto;
+    width: 76%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+mat-icon{
+    color: #FF7700;
+}
+
+mat-error{
+    font-size: 8px;
+}

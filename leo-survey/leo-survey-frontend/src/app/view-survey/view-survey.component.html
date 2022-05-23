@@ -1,0 +1,9 @@
+<mat-icon mat-dialog-close>close</mat-icon>
+<div id="clean"></div>
+
+<h3>{{data.survey.title}}</h3>
+<hr>
+
+<h4 *ngIf="data.survey.surveyConducted" i18n="info|conducted text yes"><span>Durchgeführt: </span>Ja</h4>
+<h4 *ngIf="!data.survey.surveyConducted" i18n="info|conducted text no"><span>Durchgeführt: </span>Nein</h4>
+<h4><span i18n="date|creation date">Erstellt: </span>{{data.survey.date}}</h4>

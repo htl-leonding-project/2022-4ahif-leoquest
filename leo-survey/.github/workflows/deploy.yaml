@@ -1,0 +1,72 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: set java version
+        uses: actions/setup-java@v2
+        with: 
+          java-version: '11'
+          distribution: 'adopt'
+      - name: cache npm packages
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: build angular project
+        run: |
+          cd leo-survey-frontend
+          npm install
+          npm run build
+      - name: Restore Maven cache
+        uses: skjolber/maven-cache-github-action@v1.1
+        with:
+          step: restore
+      - name: Package
+        run: |
+          cd leo-survey-backend
+          ./mvnw package -DskipTests
+      - name: Save Maven cache
+        uses: skjolber/maven-cache-github-action@v1.1
+        with:
+          step: save
+      - name: Deploy backend
+        uses: easingthemes/ssh-deploy@v2.2.11
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SOURCE: leo-survey-backend/
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          TARGET: ${{ secrets.REMOTE_TARGET }}
+          EXCLUDE: /.git/
+      - name: Deploy frontend
+        uses: easingthemes/ssh-deploy@v2.2.11
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SOURCE: leo-survey-frontend/dist/da-leo-survey-frontend/
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          TARGET: /var/www/html
+          EXCLUDE: /.git/
+      - name: Start Docker container
+        uses: garygrossgarten/github-action-ssh@v0.6.3
+        with:
+          command: |
+            cd ${{ secrets.REMOTE_TARGET }}
+            docker-compose down
+            docker-compose build
+            docker-compose up -d
+          host: ${{ secrets.REMOTE_HOST }}
+          username: ${{ secrets.REMOTE_USER }}
+          privateKey: ${{ secrets.SSH_PRIVATE_KEY}}

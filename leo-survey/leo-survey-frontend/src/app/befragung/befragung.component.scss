@@ -1,0 +1,23 @@
+$orange:#FF7700;
+$grey: #717070;
+
+h3{
+    margin: 0em;
+    padding: 0em;
+}
+
+mat-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h3 span{
+    font-size:xx-small;
+}
+
+mat-icon{
+    color: $orange;
+    cursor: pointer;
+    margin-left: 0.7em;
+}

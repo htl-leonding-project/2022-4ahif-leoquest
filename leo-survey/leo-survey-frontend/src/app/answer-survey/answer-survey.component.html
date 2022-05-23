@@ -1,0 +1,20 @@
+<div id="content" *ngIf="showAnswers">
+    <h2>{{this.questionnaire!.name}}</h2>
+    <h3>{{this.questionnaire!.description}}</h3>
+    <h3 i18n="headline text|qestion anz">{{this.questions.length}} Fragen</h3>
+    <button mat-flat-button color="primary" (click)="submitAnswers()" i18n="button text|submit">Abschicken</button>
+    <hr>
+
+    <mat-progress-bar mode="determinate" [value]="progressbarValue"></mat-progress-bar>
+
+    <div class="mat-paginator-container">
+        <mat-paginator [showFirstLastButtons]="true" [length]="this.questions.length" [pageSize]="pageSizeOptions[1]" [pageSizeOptions]="pageSizeOptions" aria-label="Select page" (page)="recalc($event)">
+        </mat-paginator>
+    </div>
+
+    <div id="questionsbox">
+        <div *ngFor="let item of this.indexArray, let i=index">
+           <app-questions-to-answer [questionToAnswer]="this.questionsToAnswer[item]"></app-questions-to-answer>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+$orange:#FF7700;
+
+mat-icon{
+    float: right;
+    margin-right: 0.5em;
+    color: $orange;
+    cursor: pointer;
+}
+
+#clean{
+    clear: both;
+}
+
+h4 span{
+    color: $orange;
+    margin-bottom: 0em;
+}
+
+h3{
+    color: $orange;
+    text-align: center;
+    margin-bottom: 0em;
+    margin-top: 0.5em;
+}
+
+hr{
+    display: block;
+    width: 50%;
+    color: $orange;
+    margin-bottom: 2em;
+}
+
+#questions{
+    max-height: 30vh;
+    overflow-y: scroll;
+}
+
+div div{
+    margin-bottom: 0.3em;
+}
+
+ul{
+    margin: 0em;
+    padding-left: 1em;
+}

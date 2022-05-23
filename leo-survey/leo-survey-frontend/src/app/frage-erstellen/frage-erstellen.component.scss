@@ -1,0 +1,36 @@
+$orange:#FF7700;
+
+mat-card{
+    width: 80%;
+    margin: 0em auto 2em auto;
+}
+
+mat-card-title{
+    font-size: medium;
+    margin-bottom: 1em;
+}
+
+mat-form-field{
+    display: block;
+    width: 70%;
+}
+
+#file{
+    display: block;
+    margin-bottom: 1.5em;
+    margin-top: 10px;
+}
+
+mat-icon{
+    color: $orange;
+    cursor: pointer;
+}
+
+#close{
+    color: $orange;
+    float: right;
+}
+
+#clear{
+    clear: both;
+}

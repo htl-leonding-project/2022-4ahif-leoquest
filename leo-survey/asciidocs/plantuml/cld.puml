@@ -1,0 +1,76 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Questionnaire{
+    qn_id : Integer
+    qn_name : String
+    qn_description : String
+    qn_isPublic : Boolean
+}
+
+class Question{
+    q_id : Integer
+    q_text : String
+    q_sequenceNumber : Integer
+    q_type : QuestionType
+    q_questionnaire : Questionnaire
+}
+
+class AnswerOption{
+    ao_id : Integer
+    ao_text : String
+    ao_value : Integer
+    ao_sequenceNumber : Integer
+    ao_is_correct_answer
+    ao_question : Question
+}
+
+class Answer{
+    a_id : Integer
+    a_question : Question
+    a_answer_text : String
+    a_transaction : Transaction
+}
+
+class ChosenOption{
+    co_id : Integer
+    co_answer_option : AnswerOption
+    co_answer : Answer
+    co_question : Question
+}
+
+class Survey{
+    s_id : Integer
+    s_title : String
+    s_description : String
+    s_questionnaire : Questionnaire
+    s_date : LocalDate
+    s_survey_conducted : Boolean
+}
+
+class Transaction{
+    tr_id : Integer
+    tr_transactionscode : String
+    t_is_used : boolean
+    t_survey : Survey
+}
+
+enum QuestionType {
+SINGLECHOICE
+MULTIPLECHOICE
+YESORNO
+FREETEXT
+}
+
+Transaction -up-> Survey
+Survey -up-> Questionnaire
+Question -up-> Questionnaire
+Answer -up-> Question
+AnswerOption -up-> Question
+ChosenOption -up-> Answer
+ChosenOption -up-> AnswerOption
+Question -left- QuestionType
+Answer -down-> Transaction
+ChosenOption --> Question
+
+@enduml

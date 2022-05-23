@@ -1,0 +1,23 @@
+$orange:#FF7700;
+$grey: #717070;
+
+h3{
+    margin-bottom: 5px;
+}
+
+mat-card{
+    width: 40%;
+    margin: 0em auto 0.5em auto;
+}
+
+mat-card-title{
+    color: $orange;
+}
+
+mat-form-field{
+    width: 100%;
+}
+
+mat-radio-button{
+    margin-bottom: 0.2em;
+}

@@ -1,0 +1,57 @@
+= Leo Survey
+Raffeiner, Turner, Weissengruber
+1.0.0, yyyy-mm-dd: Some notes
+ifndef::imagesdir[:imagesdir: images]
+//:toc-placement!:  // prevents the generation of the doc at this position, so it can be printed afterwards
+:sourcedir: ../src/main/java
+:icons: font
+:sectnums:    // Nummerierung der Überschriften / section numbering
+:toc: left
+
+//Need this blank line after ifdef, don't know why...
+ifdef::backend-html5[]
+
+// print the toc here (not at the default position)
+//toc::[]
+
+== Projektteam
+Christine Raffeiner
+
+Isabel Turner
+
+Nina Weissengruber
+
+== Ausgangslage
+Befragungen von Personengruppen werden oft benötigt -
+besonders online Befragungen werden im Rahmen von Home Office,
+Distance Learning usw immer öfter benötigt.
+
+== Zielsetzung
+
+1. Einfaches Gestalten von Fragebogen mit verschiedenen Antworttypen und ev. Fragepfaden
+
+2. Durchführen von Befragungen
+
+3. Auswerten von Befragungen
+
+4. Gewisse Fragebögen sind bereits enthalten (zB Lehrer-Feedback)
+
+5. Datenschutz (zB löschen der Fragebogen Daten)
+
+== Geplantes Ergebnis
+Web-Applikation
+
+- mit Angular-Frontend
+
+- Quarkus-Backend
+
+- ev. Keycloak als Authentifizierungsserver
+
+- ev. Reverse-Proxy
+
+- alles gedockert (docker-compose oder k8s)
+
+== Getting started
+---
+
+https://htl-leonding-project.github.io/2021-da-leo-survey/getting-started.html

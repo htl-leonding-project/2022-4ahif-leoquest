@@ -1,0 +1,64 @@
+= Besprechungsprotokoll 16.07.2021
+Christine Raffeiner
+1.0, 15.07.2021: Some notes
+ifndef::imagesdir[:imagesdir: images]
+:icons: font
+//:sectnums:    // Nummerierung der Überschriften / section numbering
+//:toc: left
+
+//Need this blank line after ifdef, don't know why...
+ifdef::backend-html5[]
+
+// https://fontawesome.com/v4.7.0/icons/
+icon:file-text-o[link=https://raw.githubusercontent.com/htl-leonding-college/asciidoctor-docker-template/master/asciidocs/{docname}.adoc] ‏ ‏ ‎
+icon:github-square[link=https://github.com/htl-leonding-college/asciidoctor-docker-template] ‏ ‏ ‎
+icon:home[link=https://htl-leonding.github.io/]
+endif::backend-html5[]
+
+
+.Teilnehmer
+|===
+|anwesend |Verteiler
+
+|Nina Weissengruber
+|
+
+|Christine Raffeiner
+|
+
+|Isabel Turner
+|
+|===
+
+.Ort und Zeit
+[cols=2*]
+|===
+|Ort
+|Online (Discord)
+
+|von-bis
+|14:00 - 15:55
+|Dauer
+|1h 55min
+|===
+
+
+== Besprochene Themen
+* Zuerst haben wir das von uns erstellte Klassendiagramm besprochen und daran kleine Änderungen vorgenommen. (Schreibfehler korrigiert.)
+* Danach versuchten wir mittels des Tools PlantUML-Generator die erstellten Klassen des CLDs in Code umzuwandeln, um uns Arbeit zu ersparen, doch wegen eines Parse-Errors funktionierte der Vorgang nicht und wir entschieden uns die Klassen doch händisch zu programmieren.
+* Weiters haben wir unser Projekt erstellt und die Dependencies für unser Projekt angepasst.
+* Währenddessen haben wir über die Unterschiede bzw. Vor- und Nachteile von jUnit, AssertJDB und AssertJ gesprochen, da wir diese Libraries für das Testen unseres Servers verwenden.
+* Später haben wir die Klasse Questionnaire einschließlich aller Attribute, einer toString-Methode, einem Repo und einer Test-Klasse, eingeschlossen Tests für das Speichern in der Datenbank, angelegt.
+* Während der Erstellung der Tests haben wir auch eine PostgreSQL Datenbank, die innerhalb eines Docker-Containers läuft, erstellt, konfiguriert und getestet.
+* Da die Datenbank in einem Docker-Container läuft, haben wir kurz besprochen wie man Docker für Windows installiert.
+* Als letztes haben wir noch über den neuen Ablauf des Projektes gesprochen.
+. Model und Tests für die Entities erstellen
+. Repositories erstellen
+. Rest-Anbindungen umsetzen
+. Angular Client erstellen
+. Authentifizierung umsetzen
+. Dockern
+
+== Nächste Schritte
+* Die restlichen Entities, die dazugehörigen Repos (mithilfe von Panach) und die Test-Klassen erstellen.
+* Mithilfe der Tests 3 Fragen des Lehrer-Feedbackbogens in die Datenbank speichern.

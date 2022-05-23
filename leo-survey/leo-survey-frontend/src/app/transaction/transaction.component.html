@@ -1,0 +1,14 @@
+<form [formGroup]="userForm">
+    <h3 i18n="generate codes headline|how many codes">Wie viele Codes werden benötigt?</h3>
+    <mat-form-field appearance="fill">
+        <mat-label i18n="label text|generate codes">Transaktionscodes generieren</mat-label>
+        <input i18n-placeholder="placeholder input|codes count" matInput formControlName="codeanz" type="number" name="anzCodes" placeholder="Anzahl eingeben" [(ngModel)]="this.tansactionscodeanz" required>
+        <mat-error *ngIf="userForm.controls['codeanz'].invalid">
+            <p i18n="error message|error anz">Anzahl an Codes muss zwischen 1 und 100 sein.</p>
+          </mat-error>
+    </mat-form-field>
+    <div>
+        <button mat-raised-button color="primary" [mat-dialog-close]="true" i18n="button text|close">Schließen</button>
+        <button mat-raised-button color="primary" (click)="generateCodes()" cdkFocusInitial i18n="button text|generate" [disabled]="!userForm.valid">Generieren</button>
+    </div>
+</form>

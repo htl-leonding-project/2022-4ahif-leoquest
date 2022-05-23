@@ -1,0 +1,53 @@
+= Leo-Survey
+Raffeiner, Turner, Weissengruber
+1.0.0, yyyy-mm-dd: Some notes
+ifndef::imagesdir[:imagesdir: images]
+//:toc-placement!:  // prevents the generation of the doc at this position, so it can be printed afterwards
+:sourcedir: ../src/main/java
+:icons: font
+:sectnums:    // Nummerierung der Überschriften / section numbering
+:toc: left
+
+//Need this blank line after ifdef, don't know why...
+ifdef::backend-html5[]
+
+// print the toc here (not at the default position)
+//toc::[]
+
+== Getting started
+---
+
+=== Backend
+Nach dem Clonen, muss zuerst der Backend-Ordner in der IDE geöffnet werden.
+
+Anschließend wird im Terminal mittels '.\postgres-create.sh' die DB erstellt.
+Mit '.\postgres-start.sh' wird die DB gestartet.
+
+Quarkus wird mit dem im Bild angeführten Befehl gestartet.
+
+image::../images/postgres_start.PNG[postgres-start]
+image::../images/quarkus_start.PNG[quarkus-start]
+
+==== DB
+User: postgres
+
+Passwort: postgres
+
+Port: 5432
+
+image::../images/db.PNG[db]
+
+=== Frontend
+Anschließend wird nun auch der Frontend-Ordner in der IDE geöffnet.
+
+Da das Projekt frisch gecloned ist, muss man zu Beginn einmalig 'npm install'
+ausführen, um Angular nutzen zu können.
+
+Im Terminal wird zuletzt noch das im Bild angeführte Befehl ausgeführt und durch '--open'
+wird automatisch der Browser geöffnet.
+
+Fertig!
+
+image::../images/frontend.PNG[frontend]
+
+

@@ -1,0 +1,23 @@
+@startuml
+left to right direction
+actor "Interviewer"
+actor "Befragter"
+rectangle LeoSurvey {
+    usecase "Fragebogen erstellen" as Fragebogen
+    usecase "Befragung erstellen" as Befragung
+    usecase "TANs generieren" as TANs
+    usecase "check LDAP member" as LDAP
+    usecase "Befragung auswerten" as Auswertung
+    usecase "Fragebogen ausfüllen" as Ausfuellen
+    usecase "Fragebogen löschen" as Loeschen
+    (TANs) .> (Befragung) : <<extends>>
+    (LDAP) .> (Befragung) : <<extends>>
+}
+
+Interviewer --> Fragebogen
+Interviewer --> Befragung
+Interviewer --> Auswertung
+Interviewer --> Loeschen
+Befragter --> Ausfuellen
+
+@enduml

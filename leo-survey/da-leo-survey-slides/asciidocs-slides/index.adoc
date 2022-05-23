@@ -1,0 +1,67 @@
+= Leo-Survey
+Raffeiner Christine,Turner Isabel & Weissengruber Nina
+1.0, 2020-08-22
+:customcss: css/presentation.css
+:revealjs_customtheme: css/sky.css
+:revealjs_width: 1408
+:revealjs_height: 792
+:source-highlighter: highlightjs
+:highlightjs-theme: css/atom-one-light.css
+:iconfont-remote!:
+:iconfont-name: fonts/fontawesome/css/all
+:author: Raffeiner Christine,Turner Isabel & Weissengruber Nina
+:revnumber: 1.0
+:revdate: {docdate}
+:revremark: Da-Leo-Survey
+:encoding: utf-8
+:lang: de
+:imagesdir: images
+:doctype: article
+:icons: font
+
+== Das Team
+
+image:Chrissy.jpg[Chrissy,width=20%]
+image:Isabel.jpeg[Isabel,width=20%]
+image:nina.jpg[Nina,width=20%]
+
+== Die Idee
+
+image:Logo.jpeg[]
+
+== Fragetypen
+* Freetext
+* Single-Choice
+* Multiple-Choice
+* Yes-OR-NO-Question
+
+== Demo
+
+
+== Systemarchitektur
+image:Systemarchitektur.png[width=60%]
+
+== Systemtests
+image:tests.jpg[width=30%]
+
+== Was unterscheidet uns?
+
+== Wie geht es weiter?
+* Produktivsystem
+* Keycloak
+* Reverse-Proxy
+
+=== Klassendiagramm
+image:CLD.jpeg[width=41%]
+
+=== Klassendiagramm Zukunft
+image:cld.png[width=41%]
+
+=== YouTrack
+image:YouTrack.PNG[width=75%]
+
+== Danke für Ihre Aufmerksamkeit!
+
+[background-video="videos/bg.mp4[]", options="loop, muted"]
+
+

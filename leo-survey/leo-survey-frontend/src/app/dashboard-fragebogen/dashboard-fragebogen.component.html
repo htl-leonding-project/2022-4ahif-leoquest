@@ -1,0 +1,18 @@
+<mat-expansion-panel [expanded]="surveysofQuestionnaire.length != 0">
+    <mat-expansion-panel-header>
+      <mat-panel-title>{{questionnaire.name}} &nbsp; <span>{{questionnaire.description}}</span></mat-panel-title>
+      <mat-panel-description>
+        <mat-icon i18n-matTooltip="tooltip|delete" *ngIf="editable" (click)="deleteqn()" matTooltip="Fragebogen löschen">close</mat-icon>
+        <mat-icon i18n-matTooltip="tooltip|edit" *ngIf="editable" matTooltip="Fragebogen editieren" [routerLink]="'fragebogen-editieren/' + this.questionnaire.id">edit</mat-icon>
+        <mat-icon i18n-matTooltip="tooltip|view" matTooltip="Fragebogen ansehen" (click)="viewQuestionnaire()">visibility</mat-icon>
+        <mat-icon i18n-matTooltip="tooltip|copy" matTooltip="Fragebogen kopieren" (click)="copyQuestionnaire()">content_copy</mat-icon>
+        <mat-icon i18n-matTooltip="tooltip|generate" matTooltip="Befragung generieren" (click)="openTransactionDialog()">question_answer</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <div *ngFor="let s of surveysofQuestionnaire, let i=index">
+      <app-befragung [survey] = s (loeschen)="onDelete(surveysofQuestionnaire[0])"></app-befragung>
+    </div>
+    
+    <p *ngIf="surveysofQuestionnaire.length == 0" i18n="no content text| no surveys">Keine Befragungen vorhanden</p>
+</mat-expansion-panel>

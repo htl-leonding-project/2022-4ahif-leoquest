@@ -1,0 +1,9 @@
+<h3 i18n="headline text|Start Survey">Befragung starten {{dataS.survey!.title}}</h3>
+<hr>
+
+<h4>{{dataS.survey!.description}}</h4>
+<h4><span i18n="headline text span|Created on">Erstellt am: </span>{{dataS.survey!.date}}</h4>
+<div>
+    <button mat-flat-button color="primary" mat-dialog-close routerLink="startseite" i18n="button text|Go Back">Zurück</button>
+    <button mat-flat-button color="primary" (click)="start()" mat-dialog-close cdkFocusInitial i18n="button text|Start">Starten</button>
+</div>

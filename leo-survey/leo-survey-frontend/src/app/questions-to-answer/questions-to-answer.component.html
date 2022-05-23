@@ -1,0 +1,25 @@
+<mat-card>
+    <mat-card-title i18n="card title|question">Frage {{this.questionToAnswer.question.sequenceNumber}}</mat-card-title>
+    <h3>{{this.questionToAnswer.question.text}}</h3>
+    <div *ngIf="this.questionToAnswer.question.questiontype == this.freetext">
+        <mat-form-field appearance="fill">
+            <mat-label i18n="label text|answertext">Antworttext</mat-label>
+            <input type="text" i18n-placeholder="placeholder text|type in answer" matInput name="textanswer" placeholder="Antwort eingeben" [(ngModel)]="this.questionToAnswer.answer.answerText" maxlength="250">
+            <mat-hint align="end"><p>{{this.questionToAnswer.answer.answerText.length}}/250</p></mat-hint>
+        </mat-form-field>
+    </div>
+
+    <div *ngIf="this.questionToAnswer.question.questiontype == this.yesno || this.questionToAnswer.question.questiontype == this.single">
+        <mat-radio-group>
+            <div *ngFor="let answero of this.questionToAnswer!.answerOptionArray, let i=index">
+                <mat-radio-button [value]="answero" (change)="setNewChosenValue(answero)" [checked]="checkIfAlreadySelected(answero)">{{answero.text}}</mat-radio-button>
+            </div>
+        </mat-radio-group>       
+    </div>
+
+    <div *ngIf="this.questionToAnswer.question.questiontype == this.muliple">
+        <section *ngFor="let answero of this.questionToAnswer!.answerOptionArray, let i=index">
+            <mat-checkbox value="answero" (change)="addOrRemoveChosenValue(answero)" [checked]="checkIfAlreadySelectedMultiple(answero.id)">{{answero.text}}</mat-checkbox>
+        </section>
+    </div>
+</mat-card>

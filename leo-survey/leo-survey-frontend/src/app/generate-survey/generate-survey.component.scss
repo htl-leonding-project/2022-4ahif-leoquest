@@ -1,0 +1,38 @@
+$orange:#FF7700;
+$grey: #717070;
+
+div{
+    margin: 1em;
+}
+
+h2{
+    text-align: center;
+    color: $orange;
+    line-height: normal;
+}
+
+hr{
+    width: 40%;
+    color: $orange;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 3em;
+}
+
+mat-form-field{
+    display: block;
+    margin-bottom: 10px;
+    width: 90%;
+}
+
+button{
+    width: 90%;
+}
+
+mat-error{
+    font-size: 8px;
+}

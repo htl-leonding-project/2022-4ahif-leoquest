@@ -1,0 +1,30 @@
+$orange:#FF7700;
+
+h3{
+    color: $orange;
+    text-align: center;
+    margin-bottom: 0em;
+    margin-top: 0.5em;
+}
+
+hr{
+    display: block;
+    width: 50%;
+    color: $orange;
+    margin-bottom: 2em;
+}
+
+#clean{
+    clear: both;
+}
+
+h4 span{
+    color: $orange;
+}
+
+div{
+    margin: auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}

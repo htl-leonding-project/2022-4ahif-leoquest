@@ -1,0 +1,79 @@
+<app-header></app-header>
+
+<div id="upperpart">
+  <span routerLink="/dashboard" routerLinkActive="true">
+      <mat-icon>arrow_right_alt</mat-icon>
+      <a i18n="Link text|Transfer back to Dashboard">Zurück zum Dashboard</a>
+  </span>
+</div>
+
+<mat-stepper labelPosition="bottom" #stepper>
+    <mat-step>
+      <form [formGroup]="userForm">
+        <ng-template matStepLabel i18n="Step one|Questionnaire">Fragebogen</ng-template>
+            <mat-form-field appearance="fill">
+                <mat-label i18n="label text| Questionnaire name">Umfragename</mat-label>
+                <input matInput formControlName="name" i18n-placeholder="placeholder text|placeholder for questionnaire name" placeholder="Umfragename eingeben" name="questinnairename" [(ngModel)]="this.questionnaire.name" required>   
+                <mat-error *ngIf="userForm.controls['name'].invalid">
+                  <p i18n="error message|error name">Name muss zwischen 5-50 Zeichen enthalten.</p>
+                </mat-error>
+              </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label i18n="label text|Description">Beschreibung</mat-label>
+                <input matInput formControlName="desc" i18n-placeholder="placeholder text|placeholder for description" placeholder="Beschreibung eingeben" name="questinnairedescription" [(ngModel)]="this.questionnaire.description" required>
+                <mat-error *ngIf="userForm.controls['name'].invalid">
+                  <p i18n="error message|error desc">Beschreibung muss zwischen 5-250 Zeichen enthalten.</p>
+                </mat-error>
+              </mat-form-field>
+            <mat-form-field appearance="fill">
+              <mat-select name="visibility" [(ngModel)]="this.questionnaire.isPublic" [ngModelOptions]="{standalone: true}">
+                <mat-option [value]="true" i18n="visibility value| public">öffentlich</mat-option>
+                <mat-option [value]="false" i18n="visibility value| private">privat</mat-option>
+              </mat-select>
+            </mat-form-field>
+          <div>
+          <button i18n="Next step| Continue to step 2" class="next" mat-raised-button color="primary" [disabled]="!userForm.valid" matStepperNext>Weiter</button>
+          <div class="clear"></div>
+        </div>
+      </form>
+    </mat-step>
+
+    <mat-step>
+      <form>
+        <ng-template i18n="label text| text for label 2" matStepLabel>Fragen eingeben</ng-template>
+        <div id="content">
+            <mat-form-field appearance="fill">
+                <mat-label i18n="label text|how many questions">Wie viele Fragen sollen erstellt werden?</mat-label>
+                <input matInput type="number" name="anzahl" [(ngModel)]="numberOfQuestions" [disabled]="choseamountofquestions">
+            </mat-form-field>
+            <button mat-raised-button color="primary" (click)="createQuestions()" [disabled]="choseamountofquestions">OK</button>
+        </div>
+        <div *ngFor="let s of surveyarray">
+          <app-frage-erstellen (deleteQ)="deleteQuestioninArray(s.question.sequenceNumber)" [administration]="s"></app-frage-erstellen>
+        </div>
+        <div id="add" (click)="addQuestion()">
+          <mat-icon>add</mat-icon>
+        </div>
+        <div>
+          <button i18n="Previous step| Continue to step 1" class="back" mat-raised-button matStepperPrevious color="primary">Zurück</button>
+          <button i18n="Next step| Continue to step 3" class="next" mat-raised-button matStepperNext color="primary">Weiter</button>
+          <div class="clear"></div>
+        </div>
+      </form>
+    </mat-step>
+
+    <mat-step>
+      <ng-template matStepLabel i18n="label text|check">Überprüfung</ng-template>
+      <h3><b>{{questionnaire.name}}</b></h3>
+      <h4>{{questionnaire.description}}</h4>
+      <div *ngFor="let s of surveyarray">
+        <app-frage-pruefen [administration]="s"></app-frage-pruefen>
+      </div>
+      <div>
+        <button class="back" mat-raised-button matStepperPrevious color="primary" i18n="Previous step| Continue to step 2">Zurück</button>
+        <button [disabled]="this.sendQn" class="next" mat-raised-button color="primary" (click)="checkandsend()" i18n="button label| Finish">Fertig</button>
+        <div class="clear"></div>
+      </div>
+    </mat-step>
+</mat-stepper>
+  

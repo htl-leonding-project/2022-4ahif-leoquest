@@ -1,0 +1,56 @@
+= Besprechungsprotokoll 05.08.2021
+Christine Raffeiner
+1.0, 15.07.2021: Some notes
+ifndef::imagesdir[:imagesdir: images]
+:icons: font
+//:sectnums:    // Nummerierung der Überschriften / section numbering
+//:toc: left
+
+//Need this blank line after ifdef, don't know why...
+ifdef::backend-html5[]
+
+// https://fontawesome.com/v4.7.0/icons/
+icon:file-text-o[link=https://raw.githubusercontent.com/htl-leonding-college/asciidoctor-docker-template/master/asciidocs/{docname}.adoc] ‏ ‏ ‎
+icon:github-square[link=https://github.com/htl-leonding-college/asciidoctor-docker-template] ‏ ‏ ‎
+icon:home[link=https://htl-leonding.github.io/]
+endif::backend-html5[]
+
+
+.Teilnehmer
+|===
+|anwesend |Verteiler
+
+|Nina Weissengruber
+|
+
+|Christine Raffeiner
+|
+
+|Isabel Turner (tw.)
+|
+|===
+
+.Ort und Zeit
+[cols=2*]
+|===
+|Ort
+|Online (Discord)
+
+|von-bis
+|09:45 - 11:35
+|Dauer
+|1h 50min
+|===
+
+
+== Besprochene Themen
+* Wir haben ein YouTrack-Project erstellt und dafür eine VCS-Anbindung angelegt.
+* Danach haben wir einige Issues und einen Sprint für das Projekt angelegt und besprochen wie YouTrack allgemein funktioniert.
+* Zudem haben wir auch über die Verwendung von User-Stories und Sprint-Backlogs gesprochen.
+* Weiteres haben wir die richtige Weise einen Commit zu gestalten besprochen.
+* Später haben wir von Herrn Professor Stütz eine neue gedockerte PostgreSQL-Datenbank erhalten, die im Gegensatz zu der alten eine Web-Oberfläche besitzt.
+* Als letztes haben wir noch einige Referenzen (@JoinColumn) bei unseren Klassen ausgebessert.
+
+== Nächste Schritte
+* Mit Unit-Test einen Fragebogen mit allen Fragetypen und Antworten zu den Fragen erstellen. Anschließend die Ergebnisse mit Unit-Tests testen.
+* Restliche Referenzen für die Tabellen ausbessern.

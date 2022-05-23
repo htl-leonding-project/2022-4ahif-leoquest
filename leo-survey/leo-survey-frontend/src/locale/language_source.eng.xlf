@@ -1,0 +1,853 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="3292363768460657245" datatype="html">
+        <source>Richtige Antwort</source>
+        <target>Right Answer</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/answer-option-erstellen/answer-option-erstellen.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description">right answer</note>
+        <note priority="1" from="meaning">checkbox text</note>
+      </trans-unit>
+      <trans-unit id="878423452191694276" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{this.questions.length}}"/> Fragen</source>
+        <target><x id="INTERPOLATION" equiv-text="{{this.questions.length}}"/> Question</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/answer-survey/answer-survey.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">qestion anz</note>
+        <note priority="1" from="meaning">headline text</note>
+      </trans-unit>
+      <trans-unit id="7482781395421530713" datatype="html">
+        <source>Abschicken</source>
+        <target>Submit</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/answer-survey/answer-survey.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/confirm-submit/confirm-submit.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">submit</note>
+        <note priority="1" from="meaning">button text</note>
+      </trans-unit>
+      <trans-unit id="3077509254583197510" datatype="html">
+        <source>Befragung löschen</source>
+        <target>Delete Survey</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/befragung/befragung.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">delete</note>
+        <note priority="1" from="meaning">tooltip</note>
+      </trans-unit>
+      <trans-unit id="3934019145418364840" datatype="html">
+        <source>Befragung editieren</source>
+        <target>Edit Survey</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/befragung/befragung.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">edit</note>
+        <note priority="1" from="meaning">tooltip</note>
+      </trans-unit>
+      <trans-unit id="3378686259361639171" datatype="html">
+        <source>Befragung ansehen</source>
+        <target>View Survey</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/befragung/befragung.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">view</note>
+        <note priority="1" from="meaning">tooltip</note>
+      </trans-unit>
+      <trans-unit id="2128498608215143473" datatype="html">
+        <source>Befragung auswerten</source>
+        <target>Conduct Survey</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/befragung/befragung.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description">evaluate</note>
+        <note priority="1" from="meaning">tooltip</note>
+      </trans-unit>
+      <trans-unit id="8805255318453323668" datatype="html">
+        <source>Transaktionscodes generieren</source>
+        <target>Generate Transactioncodes</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/befragung/befragung.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">generate codes</note>
+        <note priority="1" from="meaning">tooltip</note>
+      </trans-unit>
+      <trans-unit id="44690647918925686" datatype="html">
+        <source>Wirklich löschen?</source>
+        <target>Do you really want to delete?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/confirm-delete/confirm-delete.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">Do you wanna delete?</note>
+        <note priority="1" from="meaning">delete confirm headline</note>
+      </trans-unit>
+      <trans-unit id="8774230912639141166" datatype="html">
+        <source>Schließen</source>
+        <target>Close</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/confirm-delete/confirm-delete.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/transaction/transaction.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <note priority="1" from="description"> close</note>
+        <note priority="1" from="meaning">button text</note>
+      </trans-unit>
+      <trans-unit id="1568077611023794445" datatype="html">
+        <source>Löschen</source>
+        <target>Delete</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/confirm-delete/confirm-delete.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description"> delete</note>
+        <note priority="1" from="meaning">button text</note>
+      </trans-unit>
+      <trans-unit id="7778625473989390310" datatype="html">
+        <source>Wirklich abschicken?</source>
+        <target>Do you really want to submit?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/confirm-submit/confirm-submit.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">Do you wanna delete?</note>
+        <note priority="1" from="meaning">delete confirm headline</note>
+      </trans-unit>
+      <trans-unit id="5295027952204622293" datatype="html">
+        <source>Offene Fragen: </source>
+        <target>Open Questions: </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/confirm-submit/confirm-submit.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <note priority="1" from="description">open questions</note>
+        <note priority="1" from="meaning">info text</note>
+      </trans-unit>
+      <trans-unit id="1044958510202578871" datatype="html">
+        <source>Zurück</source>
+        <target>Back</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/confirm-submit/confirm-submit.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/start-survey/start-survey.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description"> back</note>
+        <note priority="1" from="meaning">button text</note>
+      </trans-unit>
+      <trans-unit id="5592072082835188362" datatype="html">
+        <source>Fragebogen löschen</source>
+        <target>Delete Questionnaire</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard-fragebogen/dashboard-fragebogen.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">delete</note>
+        <note priority="1" from="meaning">tooltip</note>
+      </trans-unit>
+      <trans-unit id="8315533399874399305" datatype="html">
+        <source>Fragebogen editieren</source>
+        <target>Edit Questionnaire</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard-fragebogen/dashboard-fragebogen.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">edit</note>
+        <note priority="1" from="meaning">tooltip</note>
+      </trans-unit>
+      <trans-unit id="1517960808413747586" datatype="html">
+        <source>Fragebogen ansehen</source>
+        <target>View Questionnaire</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard-fragebogen/dashboard-fragebogen.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description">view</note>
+        <note priority="1" from="meaning">tooltip</note>
+      </trans-unit>
+      <trans-unit id="1551439739466271792" datatype="html">
+        <source>Fragebogen kopieren</source>
+        <target>Copy Questionnaire</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard-fragebogen/dashboard-fragebogen.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">copy</note>
+        <note priority="1" from="meaning">tooltip</note>
+      </trans-unit>
+      <trans-unit id="6183268527925606718" datatype="html">
+        <source>Befragung generieren</source>
+        <target>Generate Survey</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard-fragebogen/dashboard-fragebogen.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <note priority="1" from="description">generate</note>
+        <note priority="1" from="meaning">tooltip</note>
+      </trans-unit>
+      <trans-unit id="6607388392205140160" datatype="html">
+        <source>Keine Befragungen vorhanden</source>
+        <target>No Surveys</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard-fragebogen/dashboard-fragebogen.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <note priority="1" from="description"> no surveys</note>
+        <note priority="1" from="meaning">no content text</note>
+      </trans-unit>
+      <trans-unit id="4664237430354462868" datatype="html">
+        <source>Zurück zur Startseite</source>
+        <target>Back to Home</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">Transfer back to Home</note>
+        <note priority="1" from="meaning">Link text</note>
+      </trans-unit>
+      <trans-unit id="8167204839602919791" datatype="html">
+        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>Fragebogen erstellen<x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon class=&quot;buttonicon&quot;&gt;"/>add<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <target><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>Create Questionnaire<x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon class=&quot;buttonicon&quot;&gt;"/>add<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">Transfer to Create Fragebogen</note>
+        <note priority="1" from="meaning">button text</note>
+      </trans-unit>
+      <trans-unit id="4877348821669074720" datatype="html">
+        <source>Zurück zum Dashboard</source>
+        <target>Back to Dashboard</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/edit-questionnaire/edit-questionnaire.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/fragebogen-erstellen/fragebogen-erstellen.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">Transfer back to Dashboard</note>
+        <note priority="1" from="meaning">Link text</note>
+      </trans-unit>
+      <trans-unit id="6866025047012516212" datatype="html">
+        <source>Fragebogen</source>
+        <target>Questionnaire</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/edit-questionnaire/edit-questionnaire.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/fragebogen-erstellen/fragebogen-erstellen.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description">Questionnaire</note>
+        <note priority="1" from="meaning">Step one</note>
+      </trans-unit>
+      <trans-unit id="7452147320700902626" datatype="html">
+        <source>Umfragename</source>
+        <target>Questionnaire name</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/edit-questionnaire/edit-questionnaire.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/fragebogen-erstellen/fragebogen-erstellen.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <note priority="1" from="description"> Questionnaire name</note>
+        <note priority="1" from="meaning">label text</note>
+      </trans-unit>
+      <trans-unit id="7720208263900050541" datatype="html">
+        <source>Umfragename eingeben</source>
+        <target>Type in Questionnaire name</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/edit-questionnaire/edit-questionnaire.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/fragebogen-erstellen/fragebogen-erstellen.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <note priority="1" from="description">placeholder for questionnaire name</note>
+        <note priority="1" from="meaning">placeholder text</note>
+      </trans-unit>
+      <trans-unit id="2327972458408554497" datatype="html">
+        <source>Name muss zwischen 5-50 Zeichen enthalten.</source>
+        <target>Name must have bewtween 5 and 50 Characters.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/edit-questionnaire/edit-questionnaire.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/fragebogen-erstellen/fragebogen-erstellen.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <note priority="1" from="description">error name</note>
+        <note priority="1" from="meaning">error message</note>
+      </trans-unit>
+      <trans-unit id="3323258843026036589" datatype="html">
+        <source>Beschreibung</source>
+        <target>Description</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/edit-questionnaire/edit-questionnaire.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/edit-survey/edit-survey.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/fragebogen-erstellen/fragebogen-erstellen.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/generate-survey/generate-survey.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <note priority="1" from="description">Description</note>
+        <note priority="1" from="meaning">label text</note>
+      </trans-unit>
+      <trans-unit id="5794087149783227623" datatype="html">
+        <source>Beschreibung eingeben</source>
+        <target>Type in Description</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/edit-questionnaire/edit-questionnaire.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/fragebogen-erstellen/fragebogen-erstellen.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <note priority="1" from="description">placeholder for description</note>
+        <note priority="1" from="meaning">placeholder text</note>
+      </trans-unit>
+      <trans-unit id="5039150435954571840" datatype="html">
+        <source>Beschreibung muss zwischen 5-250 Zeichen enthalten.</source>
+        <target>Description must have bewtween 5 and 50 Characters.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/edit-questionnaire/edit-questionnaire.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/fragebogen-erstellen/fragebogen-erstellen.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <note priority="1" from="description">error desc</note>
+        <note priority="1" from="meaning">error message</note>
+      </trans-unit>
+      <trans-unit id="5807501593030743047" datatype="html">
+        <source>öffentlich</source>
+        <target>public</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/edit-questionnaire/edit-questionnaire.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/fragebogen-erstellen/fragebogen-erstellen.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <note priority="1" from="description"> public</note>
+        <note priority="1" from="meaning">visibility value</note>
+      </trans-unit>
+      <trans-unit id="506920813577021643" datatype="html">
+        <source>privat</source>
+        <target>private</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/edit-questionnaire/edit-questionnaire.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/fragebogen-erstellen/fragebogen-erstellen.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+        <note priority="1" from="description"> private</note>
+        <note priority="1" from="meaning">visibility value</note>
+      </trans-unit>
+      <trans-unit id="1192990317647174827" datatype="html">
+        <source>Weiter</source>
+        <target>Next</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/edit-questionnaire/edit-questionnaire.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/edit-questionnaire/edit-questionnaire.component.html</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/fragebogen-erstellen/fragebogen-erstellen.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/fragebogen-erstellen/fragebogen-erstellen.component.html</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+        <note priority="1" from="description"> Continue to step 2</note>
+        <note priority="1" from="meaning">Next step</note>
+      </trans-unit>
+      <trans-unit id="3504981644318636207" datatype="html">
+        <source>Fragen eingeben</source>
+        <target>Type in Questions</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/edit-questionnaire/edit-questionnaire.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/fragebogen-erstellen/fragebogen-erstellen.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+        <note priority="1" from="description"> text for label 2</note>
+        <note priority="1" from="meaning">label text</note>
+      </trans-unit>
+      <trans-unit id="3211559217472020202" datatype="html">
+        <source>Wie viele Fragen sollen erstellt werden?</source>
+        <target>How many Questions do you want to create?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/edit-questionnaire/edit-questionnaire.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/fragebogen-erstellen/fragebogen-erstellen.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+        <note priority="1" from="description">how many questions</note>
+        <note priority="1" from="meaning">label text</note>
+      </trans-unit>
+      <trans-unit id="4200869095497868607" datatype="html">
+        <source>Zurück</source>
+        <target>Back</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/edit-questionnaire/edit-questionnaire.component.html</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/fragebogen-erstellen/fragebogen-erstellen.component.html</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+        <note priority="1" from="description"> Continue to step 1</note>
+        <note priority="1" from="meaning">Previous step</note>
+      </trans-unit>
+      <trans-unit id="4804791319419644450" datatype="html">
+        <source>Überprüfung</source>
+        <target>Check</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/edit-questionnaire/edit-questionnaire.component.html</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/fragebogen-erstellen/fragebogen-erstellen.component.html</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+        <note priority="1" from="description">check</note>
+        <note priority="1" from="meaning">label text</note>
+      </trans-unit>
+      <trans-unit id="4120923964474474700" datatype="html">
+        <source>Zurück</source>
+        <target>Back</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/edit-questionnaire/edit-questionnaire.component.html</context>
+          <context context-type="linenumber">73</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/fragebogen-erstellen/fragebogen-erstellen.component.html</context>
+          <context context-type="linenumber">73</context>
+        </context-group>
+        <note priority="1" from="description"> Continue to step 2</note>
+        <note priority="1" from="meaning">Previous step</note>
+      </trans-unit>
+      <trans-unit id="4639292936293536242" datatype="html">
+        <source>Fertig</source>
+        <target>Finish</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/edit-questionnaire/edit-questionnaire.component.html</context>
+          <context context-type="linenumber">74</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/fragebogen-erstellen/fragebogen-erstellen.component.html</context>
+          <context context-type="linenumber">74</context>
+        </context-group>
+        <note priority="1" from="description"> Finish</note>
+        <note priority="1" from="meaning">button label</note>
+      </trans-unit>
+      <trans-unit id="3791776622453391772" datatype="html">
+        <source>Titel</source>
+        <target>Title</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/edit-survey/edit-survey.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/generate-survey/generate-survey.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">Title</note>
+        <note priority="1" from="meaning">label text</note>
+      </trans-unit>
+      <trans-unit id="160436082954587487" datatype="html">
+        <source>Titel eingeben</source>
+        <target>Type in Title</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/edit-survey/edit-survey.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/generate-survey/generate-survey.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description">Type in title</note>
+        <note priority="1" from="meaning">input placeholder</note>
+      </trans-unit>
+      <trans-unit id="557707314214225602" datatype="html">
+        <source>Titel muss zwischen 5-50 Zeichen enthalten.</source>
+        <target>Title must have between 5 and 50 Charaters.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/edit-survey/edit-survey.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/generate-survey/generate-survey.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <note priority="1" from="description">error titel</note>
+        <note priority="1" from="meaning">error message</note>
+      </trans-unit>
+      <trans-unit id="180887832128304020" datatype="html">
+        <source>Beschreibung eingeben</source>
+        <target>Type in Description</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/edit-survey/edit-survey.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/generate-survey/generate-survey.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <note priority="1" from="description">Type in Description</note>
+        <note priority="1" from="meaning">inpt placeholder</note>
+      </trans-unit>
+      <trans-unit id="7997050548876052466" datatype="html">
+        <source>Bschreibung muss zwischen 5-50 Zeichen enthalten.</source>
+        <target>Description must have bewtween 5 and 50 Characters.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/edit-survey/edit-survey.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/generate-survey/generate-survey.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <note priority="1" from="description">error desc</note>
+        <note priority="1" from="meaning">error message</note>
+      </trans-unit>
+      <trans-unit id="1221341127046932829" datatype="html">
+        <source>Durchgeführt</source>
+        <target>conducted</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/edit-survey/edit-survey.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <note priority="1" from="description">conducted</note>
+        <note priority="1" from="meaning">checkbox text</note>
+      </trans-unit>
+      <trans-unit id="8071718726942364851" datatype="html">
+        <source>Aktualisieren</source>
+        <target>Update</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/edit-survey/edit-survey.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <note priority="1" from="description">update survey</note>
+        <note priority="1" from="meaning">button text</note>
+      </trans-unit>
+      <trans-unit id="3486919352050544378" datatype="html">
+        <source>Frage <x id="INTERPOLATION" equiv-text="{{administration.question.sequenceNumber}}"/></source>
+        <target>Question <x id="INTERPOLATION" equiv-text="{{administration.question.sequenceNumber}}"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/frage-erstellen/frage-erstellen.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">card title</note>
+        <note priority="1" from="meaning">Title</note>
+      </trans-unit>
+      <trans-unit id="9141077651563672342" datatype="html">
+        <source>Fragetext eingeben</source>
+        <target>Type in Question text</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/frage-erstellen/frage-erstellen.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">Question text</note>
+        <note priority="1" from="meaning">label text</note>
+      </trans-unit>
+      <trans-unit id="7061929940261878957" datatype="html">
+        <source>Fragetext</source>
+        <target>Question text</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/frage-erstellen/frage-erstellen.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description">question text</note>
+        <note priority="1" from="meaning">input placeholder</note>
+      </trans-unit>
+      <trans-unit id="8346745968060962709" datatype="html">
+        <source>Fragetyp</source>
+        <target>Question type</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/frage-erstellen/frage-erstellen.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <note priority="1" from="description">questiontype</note>
+        <note priority="1" from="meaning">label text</note>
+      </trans-unit>
+      <trans-unit id="4006545405512202996" datatype="html">
+        <source>Befragung erstellen</source>
+        <target>Generate Survey</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/generate-survey/generate-survey.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <note priority="1" from="description">Generate Survey</note>
+        <note priority="1" from="meaning">headline text</note>
+      </trans-unit>
+      <trans-unit id="7553728103269233106" datatype="html">
+        <source>Erstellen</source>
+        <target>Create</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/generate-survey/generate-survey.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note priority="1" from="description">generate survey</note>
+        <note priority="1" from="meaning">button text</note>
+      </trans-unit>
+      <trans-unit id="4429502758651296682" datatype="html">
+        <source>Logo</source>
+        <target>Logo</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/header.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">Logo text</note>
+        <note priority="1" from="meaning">Logo</note>
+      </trans-unit>
+      <trans-unit id="2575889446830544240" datatype="html">
+        <source>Einloggen</source>
+        <target>Login</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/header.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">Login button text</note>
+        <note priority="1" from="meaning">button text</note>
+      </trans-unit>
+      <trans-unit id="6124895930165734709" datatype="html">
+        <source>Frage <x id="INTERPOLATION" equiv-text="{{this.questionToAnswer.question.sequenceNumber}}"/></source>
+        <target>Question <x id="INTERPOLATION" equiv-text="{{this.questionToAnswer.question.sequenceNumber}}"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/questions-to-answer/questions-to-answer.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <note priority="1" from="description">question</note>
+        <note priority="1" from="meaning">card title</note>
+      </trans-unit>
+      <trans-unit id="96168284218307034" datatype="html">
+        <source>Antworttext</source>
+        <target>Answer</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/questions-to-answer/questions-to-answer.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">answertext</note>
+        <note priority="1" from="meaning">label text</note>
+      </trans-unit>
+      <trans-unit id="3130028789451782931" datatype="html">
+        <source>Antwort eingeben</source>
+        <target>Type in Answer</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/questions-to-answer/questions-to-answer.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description">type in answer</note>
+        <note priority="1" from="meaning">placeholder text</note>
+      </trans-unit>
+      <trans-unit id="4920467293243416962" datatype="html">
+        <source>Befragung starten <x id="INTERPOLATION" equiv-text="{{dataS.survey!.title}}"/></source>
+        <target>Start Survey <x id="INTERPOLATION" equiv-text="{{dataS.survey!.title}}"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/start-survey/start-survey.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">Start Survey</note>
+        <note priority="1" from="meaning">headline text</note>
+      </trans-unit>
+      <trans-unit id="4010744323015271161" datatype="html">
+        <source>Erstellt am: </source>
+        <target>Created: </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/start-survey/start-survey.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">Created on</note>
+        <note priority="1" from="meaning">headline text span</note>
+      </trans-unit>
+      <trans-unit id="1212831035664447284" datatype="html">
+        <source>Starten</source>
+        <target>Start</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/start-survey/start-survey.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">Start</note>
+        <note priority="1" from="meaning">button text</note>
+      </trans-unit>
+      <trans-unit id="7130186267284173534" datatype="html">
+        <source>Transaktionscode</source>
+        <target>Transactionscode</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/startseite/startseite.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">Input Transaction label</note>
+        <note priority="1" from="meaning">Input Label</note>
+      </trans-unit>
+      <trans-unit id="5699760118477274670" datatype="html">
+        <source>Weiter</source>
+        <target>Continue</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/startseite/startseite.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <note priority="1" from="description">Transfer to Answer Questions</note>
+        <note priority="1" from="meaning">Button label</note>
+      </trans-unit>
+      <trans-unit id="4920396375151350432" datatype="html">
+        <source>Wie viele Codes werden benötigt?</source>
+        <target>How many codes do you need?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/transaction/transaction.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <note priority="1" from="description">how many codes</note>
+        <note priority="1" from="meaning">generate codes headline</note>
+      </trans-unit>
+      <trans-unit id="6847264694295949378" datatype="html">
+        <source>Transaktionscodes generieren</source>
+        <target>Generate Transactionscodes</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/transaction/transaction.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">generate codes</note>
+        <note priority="1" from="meaning">label text</note>
+      </trans-unit>
+      <trans-unit id="653635790327886449" datatype="html">
+        <source>Anzahl eingeben</source>
+        <target>Type in Answer</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/transaction/transaction.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">codes count</note>
+        <note priority="1" from="meaning">placeholder input</note>
+      </trans-unit>
+      <trans-unit id="2886410482465604675" datatype="html">
+        <source>Anzahl an Codes muss zwischen 1 und 100 sein.</source>
+        <target>Number musst range between 1 and 100.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/transaction/transaction.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description">error anz</note>
+        <note priority="1" from="meaning">error message</note>
+      </trans-unit>
+      <trans-unit id="6732954042346267983" datatype="html">
+        <source>Generieren</source>
+        <target>Generate</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/transaction/transaction.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <note priority="1" from="description">generate</note>
+        <note priority="1" from="meaning">button text</note>
+      </trans-unit>
+      <trans-unit id="6798539079911875409" datatype="html">
+        <source>Ersteller:</source>
+        <target>Interviewer:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/view-questionnaire/view-questionnaire.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description">Interviewer</note>
+        <note priority="1" from="meaning">headline text</note>
+      </trans-unit>
+      <trans-unit id="5708759611188287329" datatype="html">
+        <source>Fragen:</source>
+        <target>Questions:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/view-questionnaire/view-questionnaire.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <note priority="1" from="description">Questions</note>
+        <note priority="1" from="meaning">headline text</note>
+      </trans-unit>
+      <trans-unit id="1080510970820831288" datatype="html">
+        <source>Keine Fragen vorhanden</source>
+        <target>No existing Questions</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/view-questionnaire/view-questionnaire.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <note priority="1" from="description">no questions</note>
+        <note priority="1" from="meaning">no context text</note>
+      </trans-unit>
+      <trans-unit id="4446338247790807767" datatype="html">
+        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>Durchgeführt: <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>Ja</source>
+        <target><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>Conducted: <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>Yes</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/view-survey/view-survey.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description">conducted text yes</note>
+        <note priority="1" from="meaning">info</note>
+      </trans-unit>
+      <trans-unit id="659949762576719775" datatype="html">
+        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>Durchgeführt: <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>Nein</source>
+        <target><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>Conducted: <x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>No</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/view-survey/view-survey.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">conducted text no</note>
+        <note priority="1" from="meaning">info</note>
+      </trans-unit>
+      <trans-unit id="7023670346120587728" datatype="html">
+        <source>Erstellt: </source>
+        <target>Created: </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/view-survey/view-survey.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <note priority="1" from="description">creation date</note>
+        <note priority="1" from="meaning">date</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

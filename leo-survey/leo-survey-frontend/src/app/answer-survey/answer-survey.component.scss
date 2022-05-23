@@ -1,0 +1,47 @@
+$orange:#FF7700;
+$grey: #717070;
+
+#content{
+    margin-top: 0.5em;
+    overflow-x: hidden;
+}
+
+h2{
+    color: $orange;
+    text-align: center;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+}
+
+h3{
+    text-align: center;
+    color: $grey;
+}
+
+hr{
+    display: block;
+    width: 50%;
+    color: $orange;
+    margin-bottom: 2em;
+}
+
+mat-progress-bar{
+    width: 40%;
+    display: block;
+    margin: 0em auto 0.5em auto;
+}
+
+.mat-paginator-container{
+    display: flex !important;
+    justify-content: center !important;
+}
+
+button{
+    display: block;
+    margin: 0em auto 0.5em auto;
+}
+
+#questionsbox{
+    height: 75vh;
+    overflow-y: scroll;
+}

@@ -1,0 +1,53 @@
+= Besprechungsprotokoll 15.07.2021
+Christine Raffeiner
+1.0, 15.07.2021: Some notes
+ifndef::imagesdir[:imagesdir: images]
+:icons: font
+//:sectnums:    // Nummerierung der Überschriften / section numbering
+//:toc: left
+
+//Need this blank line after ifdef, don't know why...
+ifdef::backend-html5[]
+
+// https://fontawesome.com/v4.7.0/icons/
+icon:file-text-o[link=https://raw.githubusercontent.com/htl-leonding-college/asciidoctor-docker-template/master/asciidocs/{docname}.adoc] ‏ ‏ ‎
+icon:github-square[link=https://github.com/htl-leonding-college/asciidoctor-docker-template] ‏ ‏ ‎
+icon:home[link=https://htl-leonding.github.io/]
+endif::backend-html5[]
+
+
+.Teilnehmer
+|===
+|anwesend |Verteiler
+
+|Nina Weissengruber
+|
+
+|Christine Raffeiner
+|
+
+|Isabel Turner
+|
+|===
+
+.Ort und Zeit
+[cols=2*]
+|===
+|Ort
+|Online (Discord)
+
+|von-bis
+|18:00 - 19:00
+|Dauer
+|1h 0min
+|===
+
+
+== Besprochene Themen
+* Wir haben das Use-Case-Diagramm vom repo leo-survey besprochen und einige Änderungen daran vorgenommen (Use Cases hinzugefügt), um diese in unserem Use-Case-Diagramm so zu übernehmen.
+* Weiters haben wir auch das Datenmodell des repos leo-survey durchgesprochen und beschlossen dieses mit leichten Änderungen (Attribute hinzugefügt und Entities umbenannt) als, unser Datenmodell zu übernehmen.
+* Anschließend haben wir uns für unserer Datenbank auf eine PostgreSQL entschieden.
+* Danach haben wir beschlossen erstmals noch kein ERD zu erstellen, sondern es uns später generieren zu lassen.
+
+== Nächste Schritte
+* Bis morgen ein Klassen-Diagramm erstellen.

@@ -1,0 +1,7 @@
+CREATE USER isabel WITH PASSWORD 'isabel';
+
+CREATE DATABASE isabeldb;
+
+GRANT All PRIVILEGES ON DATABASE isabeldb TO isabel;
+
+--REVOKE ALL PRIVILEGES ON kinds FROM isabel;

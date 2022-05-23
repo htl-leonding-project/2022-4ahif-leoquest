@@ -1,0 +1,12 @@
+.DS_Store
+db/
+target/
+/.idea/
+/asciidocs-slides/revealjs/
+/build-slides-revealjs/
+/build-docs-pdf/
+.idea
+*.iml
+
+
+

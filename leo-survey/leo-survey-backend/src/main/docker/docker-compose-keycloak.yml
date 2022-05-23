@@ -1,0 +1,22 @@
+version: '3.9'
+services:
+  keycloak:
+    container_name: keycloak
+    environment:
+      - KEYCLOAK_USER=admin
+      - KEYCLOAK_PASSWORD=admin
+      - DB_VENDOR=h2
+    ports:
+      - '8180:8080'
+    image: 'quay.io/keycloak/keycloak:15.0.2'
+    volumes:
+      - ./certs:/etc/ssl/certs/java
+      - ./imports:/opt/jboss/keycloak/imports
+    command: [ '-b', '0.0.0.0', '-Dkeycloak.profile.feature.upload_scripts=enabled', '-Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts', '-Djavax.net.ssl.trustStorePassword=changeit', '-Dkeycloak.migration.action=import', '-Dkeycloak.migration.provider=singleFile','-Dkeycloak.migration.strategy=IGNORE_EXISTING' ,'-Dkeycloak.migration.file=/opt/jboss/keycloak/imports/keycloak_settings.json' ]
+    networks:
+      - keycloak_network
+
+networks:
+  keycloak_network:
+    name: keycloak_network
+    driver: bridge

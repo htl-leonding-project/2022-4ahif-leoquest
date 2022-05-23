@@ -1,0 +1,11 @@
+<mat-card>
+    <h3>{{survey.title}} <span>{{survey.description}}</span></h3>
+    <div>
+      <mat-icon i18n-matTooltip="tooltip|delete" (click)="onDelete()" matTooltip="Befragung löschen">close</mat-icon>
+      <mat-icon i18n-matTooltip="tooltip|edit" (click)="editSurvey()" matTooltip="Befragung editieren">edit</mat-icon>
+      <mat-icon i18n-matTooltip="tooltip|view" (click)="view()" matTooltip="Befragung ansehen">visibility</mat-icon>
+      <mat-icon i18n-matTooltip="tooltip|evaluate" matTooltip="Befragung auswerten" (click)="evaluateSurvey()">insert_chart</mat-icon>
+      <mat-icon i18n-matTooltip="tooltip|evaluate" matTooltip="Befragung auswerten 2" (click)="evaluateSurvey2()">addchart</mat-icon>
+      <mat-icon i18n-matTooltip="tooltip|generate codes" (click)="generateCodes()" matTooltip="Transaktionscodes generieren">qr_code_2</mat-icon>
+    </div>
+  </mat-card>

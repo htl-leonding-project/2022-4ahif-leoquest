@@ -1,0 +1,45 @@
+$orange:#FF7700;
+$grey: #9c9c9c;
+
+//Content
+#content{
+    height: calc(100% - 12% - 1.25em);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../../assets/images/Background.png');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: $grey;
+    overflow: hidden;
+}
+
+form{
+    display: flex;
+    align-items: flex-start;
+    width: 35%;
+}
+
+mat-form-field{
+    width: 100%;
+}
+
+form button{
+    margin-left: -0.2em;
+    padding: 0.55em 0em 0.55em 0em;
+    width:23%;
+}
+
+mat-label{
+    color: #3f51b5;//blau
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {  
+    background: rgba(255, 255, 255, 0.5);
+}

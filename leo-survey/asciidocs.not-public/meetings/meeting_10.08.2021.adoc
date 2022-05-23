@@ -1,0 +1,46 @@
+= Besprechungsprotokoll 10.08.2021
+Christine Raffeiner
+1.0, 15.07.2021: Some notes
+ifndef::imagesdir[:imagesdir: images]
+:icons: font
+//:sectnums:    // Nummerierung der Überschriften / section numbering
+//:toc: left
+
+//Need this blank line after ifdef, don't know why...
+ifdef::backend-html5[]
+
+// https://fontawesome.com/v4.7.0/icons/
+icon:file-text-o[link=https://raw.githubusercontent.com/htl-leonding-college/asciidoctor-docker-template/master/asciidocs/{docname}.adoc] ‏ ‏ ‎
+icon:github-square[link=https://github.com/htl-leonding-college/asciidoctor-docker-template] ‏ ‏ ‎
+icon:home[link=https://htl-leonding.github.io/]
+endif::backend-html5[]
+
+
+.Teilnehmer
+|===
+|anwesend |Verteiler
+
+|Christine Raffeiner
+|
+|===
+
+.Ort und Zeit
+[cols=2*]
+|===
+|Ort
+|Online (Discord)
+
+|von-bis
+|18:45 - 19:15
+|Dauer
+|0h 30min
+|===
+
+
+== Besprochene Themen
+* Wir haben uns die 2 REST-Schnittstellen für das Erstellen eines Interviewers und eines Questionnaires angesehen.
+* Bei beiden Methoden wurde die Annotation @Path entfernt und weiters auch bei den Test-Pfaden dieser Teil des Pfades herausgenommen.
+* Danach haben wir noch über die Benennung von Pfaden im Web gesprochen. (z.B. nicht GetByID sondern get-by-Id).
+
+== Nächste Schritte
+* Die restlichen REST-Schnittstellen überlegen und diese für die restlichen Klassen implementieren. Dazu HTTP-Test erstellen und ausprobieren.

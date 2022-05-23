@@ -1,0 +1,33 @@
+$grey: #717070;
+$orange:#FF7700;
+
+input{
+    margin-right: 1em;
+    margin-bottom: 0.5em;
+    border: none;
+    color: $grey;
+}
+
+div{
+    display: inline-block;
+}
+
+div input{
+    text-align: right;
+}
+
+section{
+    display: inline-block;
+}
+
+mat-icon{
+    display: inline;
+    color: $orange;
+    cursor: pointer;
+    float: right;
+    margin-right: 2em;
+}
+
+#clear{
+    clear: both;
+}

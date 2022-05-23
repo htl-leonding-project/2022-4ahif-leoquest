@@ -1,0 +1,73 @@
+ @startuml
+
+ class Question {
+   + id: Long
+   + name: String
+   + text: String
+   + sql: String
+   + points: int
+   + createDate: LocalDate
+   + package : ExercisePackage
+ }
+
+ class DataModel {
+   + id: Long
+   + name: String
+   + owner: Teacher
+   + comment: String
+   + erd: BLOB [image]
+ }
+
+ class SqlScript {
+   + id: Long
+   + dataModel: DataModel
+   + createScript: String;
+   + dropScript : String;
+   + insertScript : String;
+ }
+
+ class Student{
+   + classname : String
+ }
+
+ class Teacher{
+
+ }
+
+ abstract class Person {
+   + id : Long
+   + firstName: String
+   + lastName: String
+   + password: String
+ }
+
+ class ExercisePackage{
+   + id : Long
+   + name : String
+   + dataModel : DataModel
+ }
+
+ class Assignment{
+    + id : Long
+    + student : Student
+    + package : ExercisePackage
+  }
+
+  class Evaluation{
+    + id : Long
+    + reachedpoints : Integer
+    + student : Student
+    question : Question
+  }
+
+ Person <|-- Student
+ Person <|-- Teacher
+ Teacher "1" *--> "*" DataModel :owns
+ Student "*" *--> "1" Assignment
+ Assignment "1" <--* "*" ExercisePackage
+ DataModel "1" *--> "*" ExercisePackage : contains
+ ExercisePackage "1" *--> "*" Question :contains
+ SqlScript "1" --> "1" DataModel :creating
+ Student "1" *--> "*" Evaluation
+ Evaluation "*" <--* "1" Question
+ @enduml

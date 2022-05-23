@@ -1,0 +1,46 @@
+$orange:#FF7700;
+
+form div{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1em;
+}
+
+mat-form-field{
+    display: block;
+    margin-bottom: 10px;
+    width: 90%;
+}
+
+button{
+    margin: auto;
+    width: 90%;
+}
+
+mat-error{
+    font-size: 8px;
+}
+
+mat-icon{
+    float: right;
+    margin-right: 0.5em;
+    color: $orange;
+    cursor: pointer;
+}
+
+section{
+    float: left !important;
+    margin-left: 5%;
+}
+
+hr{
+    display: block;
+    width: 50%;
+    color: $orange;
+    margin-bottom: 2em;
+}
+
+#clean{
+    clear: both;
+}

@@ -1,0 +1,54 @@
+= Besprechungsprotokoll 24.08.2021
+Christine Raffeiner
+1.0, 15.07.2021: Some notes
+ifndef::imagesdir[:imagesdir: images]
+:icons: font
+//:sectnums:    // Nummerierung der Überschriften / section numbering
+//:toc: left
+
+//Need this blank line after ifdef, don't know why...
+ifdef::backend-html5[]
+
+// https://fontawesome.com/v4.7.0/icons/
+icon:file-text-o[link=https://raw.githubusercontent.com/htl-leonding-college/asciidoctor-docker-template/master/asciidocs/{docname}.adoc] ‏ ‏ ‎
+icon:github-square[link=https://github.com/htl-leonding-college/asciidoctor-docker-template] ‏ ‏ ‎
+icon:home[link=https://htl-leonding.github.io/]
+endif::backend-html5[]
+
+
+.Teilnehmer
+|===
+|anwesend |Verteiler
+
+|Christine Raffeiner
+|
+
+|Nina Weissengruber
+|
+
+|Isabel Turner (tw.)
+|
+|===
+
+.Ort und Zeit
+[cols=2*]
+|===
+|Ort
+|Online (Discord)
+
+|von-bis
+|20:00 - 22:25
+|Dauer
+|2h 25min
+|===
+
+
+== Besprochene Themen
+* Zuerst haben wir ein YouTrack Problem "repariert", dass uns es nicht erlaubte, die von einer anderen Person erstellten Tasks zu bearbeiten oder zu verschieben.
+* Danach haben einen wir Intuit Karate-Test für die REST-Schnittstelle des Interviewers angelegt. Dabei sind wir auf ein Problem mit der findAll-Methode gestoßen.
+* Auch haben wir über das Erstellte ScreenDesign gesprochen, welches Grundsätzlich in Ordnung ist, doch müssen noch Veränderungen getätigt werden (Dashboard).
+
+== Nächste Schritte
+* Bei der Klasse Questionnaire soll der Interviewer eingetragen werden.
+* Für die Klassen Questionnaire, Interviewer, Question und AnswerOption sollen bei jedem Start Daten importiert werden (import.sql-File erstellen).
+* Für die Klassen Questionnaire, Interviewer, Question und AnswerOption sind Karate-Tests für die REST-Schnittstellen zu implementieren. Sollten hier Fehler auftreten sollen Repository-Tests erstellt werden.
