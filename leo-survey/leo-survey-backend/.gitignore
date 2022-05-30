@@ -1,8 +1,6 @@
 db/
 db-postgres/
 
-src/main/resources/application.properties
-
 #Maven
 target/
 pom.xml.tag
